@@ -842,3 +842,19 @@ LoadError (cannot load such file -- bcrypt):
 app/models/summoner.rb:4:in `<class:Summoner>'
 app/models/summoner.rb:1:in `<main>'
 app/controllers/summoners_controller.rb:7:in `new'
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 10:23:45 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 522ms (Views: 488.4ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 10:23:46 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 60ms (Views: 56.4ms | ActiveRecord: 0.0ms)
+
+
