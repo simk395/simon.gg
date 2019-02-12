@@ -1,7 +1,7 @@
 class Summoner < ApplicationRecord
     has_many :match_histories
     has_many :games, through: :match_histories
-
+    has_secure_passwords
     #grabs player profile
     def league_profile
         profile = RestClient.get("https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/#{self.summoner_name}?api_key=#{self.key}")
@@ -24,8 +24,8 @@ class Summoner < ApplicationRecord
         end
     end
 
-    def single_game(game_id, key)
-        game = RestClient.get("https://na1.api.riotgames.com/lol/match/v4/matches/#{game_id}?api_key=#{key}")
+    def single_game(game_id)
+        game = RestClient.get("https://na1.api.riotgames.com/lol/match/v4/matches/#{game_id}?api_key=#{self.key}")
         game = JSON.parse(game)
     end
 
