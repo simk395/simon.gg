@@ -4,7 +4,7 @@ class ApplicationRecord < ActiveRecord::Base
   self.abstract_class = true
 
 def key
-  "RGAPI-334d3bdd-cc8b-4100-9855-d5ca242ca373"
+  "RGAPI-7a99712b-658e-4c95-88bd-ad7cee2e2a45"
 end
 
 # def single_game
