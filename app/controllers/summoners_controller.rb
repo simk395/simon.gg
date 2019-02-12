@@ -17,7 +17,7 @@ class SummonersController < ApplicationController
     end
 
     def show
-        
+        @summoner.find(params[:id])
     end
 
     def summoner_params
