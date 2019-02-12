@@ -1,2 +1,3 @@
-class MatchHistories < ApplicationController
+class MatchHistoriesController < ApplicationController
+
 end
