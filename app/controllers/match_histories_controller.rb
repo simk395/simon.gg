@@ -1,0 +1,2 @@
+class MatchHistories < ApplicationController
+end
