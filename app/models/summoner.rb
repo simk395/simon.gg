@@ -18,13 +18,13 @@ class Summoner < ApplicationRecord
         return 404
     end
      #GIVES ARRAY OF HASHES
-    def find_game_ids
-        matches = RestClient.get("https://na1.api.riotgames.com/lol/match/v4/matchlists/by-account/#{self.acc_id}?endIndex=10&beginIndex=0&api_key=#{self.key}")
-        @matches = JSON.parse(matches)
-        @game_ids = @matches["matches"].map do |id|
-            id["gameId"]
-        end
-    end
+    # def find_game_ids
+    #     matches = RestClient.get("https://na1.api.riotgames.com/lol/match/v4/matchlists/by-account/#{self.acc_id}?endIndex=10&beginIndex=0&api_key=#{self.key}")
+    #     @matches = JSON.parse(matches)
+    #     @game_ids = @matches["matches"].map do |id|
+    #         id["gameId"]
+    #     end
+    # end
 
     def recent_10_games
         # self.game_ids.map do |id|
@@ -33,10 +33,10 @@ class Summoner < ApplicationRecord
         # end
     end
 
-    def single_game(game_id)
-        game = RestClient.get("https://na1.api.riotgames.com/lol/match/v4/matches/#{game_id}?api_key=#{self.key}")
-        game = JSON.parse(game)
-    end
+    # def single_game(game_id)
+    #     game = RestClient.get("https://na1.api.riotgames.com/lol/match/v4/matches/#{game_id}?api_key=#{self.key}")
+    #     game = JSON.parse(game)
+    # end
 
     #gives account id
     def acc_id
@@ -46,9 +46,7 @@ class Summoner < ApplicationRecord
     def player_names
         var = self.recent_10_games
         var["participantIdentities"]["player"].each do |players|
-           
-                players["summonerName"]
-
+            players["summonerName"]
         end
     end
 =begin
@@ -66,4 +64,14 @@ participantId"=>1
         self.find_game_ids
         self.recent_10_games
     end
+
+    def make_games
+        @game_ids.each do |game|
+            Game.create(game: game)
+        end
+    end
 end
+
+#click on game
+#game create
+#show game

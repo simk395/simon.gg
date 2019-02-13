@@ -23,9 +23,13 @@ class SummonersController < ApplicationController
 
     def show
       @summoner = Summoner.find(params['id'])
-      profile = @summoner.league_profile
+      @profile = @summoner.league_profile
+      @matches = @summoner.recent_10_games
     end
 
+    def find_game
+        @game = Game.find_by(params["game"])
+    end
 
     private
     def summoner_params
