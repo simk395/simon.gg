@@ -8,7 +8,7 @@ class Summoner < ApplicationRecord
     #     @profile = JSON.parse(profile)
     # end
 
-    @@champ_ids = {"266" => "Aatrox", "103" => "Ahri","84"=>"Akali","12"=>"Alistar","32"=>"Amumu",
+        @@champ_ids = {"266" => "Aatrox", "103" => "Ahri","84"=>"Akali","12"=>"Alistar","32"=>"Amumu",
         "34"=>"Anivia","1"=>"Annie","22"=>"Ashe","136"=>"Aurelion Sol","268"=>"Azir",
         "432"=>"Bard","53"=>"Blitzcrank","63"=>"Brand","201"=>"Braum","51"=>"Caitlyn",
          "164"=>"Camille","69"=>"Cassiopeia","31"=>"Cho'Gath","42"=>"Corki","122"=>"Darius",
@@ -39,7 +39,11 @@ class Summoner < ApplicationRecord
          "115"=>"Ziggs","26"=>"Zilean","142"=>"Zoe", "143" => "Zyra"}
 
     def find_champ
-        
+        game = self.single_game
+        players = {}
+        game["participants"].map do |hash|
+            players[hash["participantId"]] = hash["championId"]
+        end
     end
 
     def league_profile
@@ -68,7 +72,9 @@ class Summoner < ApplicationRecord
          end
     end
 
-    def single_game(game_id)
+    def single_game
+        #remember to add param for method
+        game_id = 2975777720
         game = RestClient.get("https://na1.api.riotgames.com/lol/match/v4/matches/#{game_id}?api_key=#{self.key}")
         game = JSON.parse(game)
     end

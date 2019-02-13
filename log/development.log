@@ -5626,6 +5626,7 @@ Migrating to ChangeIntegerLimitInGames (20190212222958)
   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
   [1m[36mSummoner Create (1.1ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["summoner_name", "Simonoski"], ["created_at", "2019-02-13 15:34:44.417359"], ["updated_at", "2019-02-13 15:34:44.417359"]]
   [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+<<<<<<< HEAD
   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
   [1m[36mSummoner Create (2.4ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["summoner_name", "Simonoski"], ["created_at", "2019-02-13 17:00:03.052064"], ["updated_at", "2019-02-13 17:00:03.052064"]]
   [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
@@ -6117,5 +6118,510 @@ Processing by GamesController#show as HTML
   Rendering games/show.html.erb within layouts/application
   Rendered games/show.html.erb within layouts/application (1.5ms)
 Completed 200 OK in 38ms (Views: 35.4ms | ActiveRecord: 0.0ms)
+
+
+=======
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-13 11:35:47 -0500
+  [1m[35m (7.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnoncher/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 887ms (Views: 757.5ms | ActiveRecord: 66.5ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-13 11:35:55 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Wleak7N4ga7ptNutDUZ9+/1H3dlu3lEE2kBg6l98iTMCzA+K8aKUUh37KGPNHh+eh8N1r6jXab/dl1CevwWIWg==", "summoner"=>{"summoner_name"=>"john"}, "commit"=>"Submit"}
+  [1m[35m (40.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[36mSummoner Create (16.4ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["summoner_name", "john"], ["created_at", "2019-02-13 16:35:56.019625"], ["updated_at", "2019-02-13 16:35:56.019625"]]
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[36mSummoner Load (2.3ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" ORDER BY "summoners"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:12
+Completed 500 Internal Server Error in 803ms (ActiveRecord: 62.8ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"summoners"}, missing required keys: [:id]):
+  
+app/controllers/summoners_controller.rb:14:in `create'
+>>>>>>> afb045ed24584df7db48481977ff5365ba0f9f00
+Started GET "/games/10" for 127.0.0.1 at 2019-02-13 13:55:07 -0500
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"10"}
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 321ms (Views: 306.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/10" for 127.0.0.1 at 2019-02-13 13:56:04 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"10"}
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 24ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSummoner Create (4.6ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["summoner_name", "Simonoski"], ["created_at", "2019-02-13 19:00:13.693089"], ["updated_at", "2019-02-13 19:00:13.693089"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSummoner Create (0.9ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["summoner_name", "Simonoski"], ["created_at", "2019-02-13 19:09:55.636561"], ["updated_at", "2019-02-13 19:09:55.636561"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2019-02-13 14:11:30 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 55ms (Views: 24.4ms | ActiveRecord: 13.8ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-13 14:11:34 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nS9YMv7wuYOGZkLWuakt6FMRWGkVIyYvAXxhknm/S/IVu6pradquqp8SuAQ632YqElHvHemAzVq00u6QQMVgxw==", "summoner"=>{"summoner_name"=>"Simonoski"}, "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[36mSummoner Create (0.9ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["summoner_name", "Simonoski"], ["created_at", "2019-02-13 19:11:34.713202"], ["updated_at", "2019-02-13 19:11:34.713202"]]
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[36mSummoner Load (1.0ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" ORDER BY "summoners"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:12
+Redirected to http://localhost:3000/summoners/47
+Completed 302 Found in 575ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/summoners/47" for 127.0.0.1 at 2019-02-13 14:11:34 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"47"}
+  [1m[36mSummoner Load (0.3ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:25
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 10396ms (Views: 60.8ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/summoners-rift.jpeg" for 127.0.0.1 at 2019-02-13 14:11:45 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/summoners-rift.jpeg"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/summoners" for 127.0.0.1 at 2019-02-13 14:12:15 -0500
+Processing by SummonersController#index as HTML
+  Rendering summoners/index.html.erb within layouts/application
+  Rendered summoners/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 28ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 14:12:18 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 54ms (Views: 24.9ms | ActiveRecord: 9.4ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-13 14:12:22 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dECUjG50jn9iMpzDnU5Ri45QlgWAvKWdC/oFtgoNndP81GbV+V6ZVntGZhEeOBpJzxAhcXwfTui+VIq0M3e25g==", "summoner"=>{"summoner_name"=>"hahahahsadkaklcan"}, "commit"=>"Submit"}
+Redirected to http://localhost:3000/v1/stats/player_history/NA/31812229
+Completed 302 Found in 1023ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/v1/stats/player_history/NA/31812229" for 127.0.0.1 at 2019-02-13 14:12:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/v1/stats/player_history/NA/31812229"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSummoner Create (1.0ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["summoner_name", "Simonoski"], ["created_at", "2019-02-13 19:17:41.565990"], ["updated_at", "2019-02-13 19:17:41.565990"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSummoner Create (0.8ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["summoner_name", "Simonoski"], ["created_at", "2019-02-13 19:23:32.152531"], ["updated_at", "2019-02-13 19:23:32.152531"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSummoner Create (0.8ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["summoner_name", "Simonoski"], ["created_at", "2019-02-13 19:24:50.027183"], ["updated_at", "2019-02-13 19:24:50.027183"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/summoenrs/new" for 127.0.0.1 at 2019-02-13 14:30:10 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/summoenrs/new"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/summoners/1" for 127.0.0.1 at 2019-02-13 14:30:19 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSummoner Load (0.5ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:25
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 7713ms (Views: 21.9ms | ActiveRecord: 19.0ms)
+
+
+Started GET "/summoners-rift.jpeg" for 127.0.0.1 at 2019-02-13 14:30:26 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/summoners-rift.jpeg"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/games" for 127.0.0.1 at 2019-02-13 14:30:31 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Yd3suVIGGxof1ZZj74bpevEj0VLmhBTo74d49ZGlEIbpSR7gxSwMMwahbLFs8KK4sGNmJhon/51aKff3qN87sw==", "game"=>{"game"=>"2975777720"}, "commit"=>"Check Game"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (14.9ms)[0m  [1m[32mINSERT INTO "games" ("game", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["game", 2975777720], ["created_at", "2019-02-13 19:30:31.131731"], ["updated_at", "2019-02-13 19:30:31.131731"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:9
+Redirected to http://localhost:3000/games/16
+Completed 302 Found in 22ms (ActiveRecord: 16.8ms)
+
+
+Started GET "/games/16" for 127.0.0.1 at 2019-02-13 14:30:31 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  [1m[36mSummoner Load (3.5ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" INNER JOIN "match_histories" ON "summoners"."id" = "match_histories"."summoner_id" WHERE "match_histories"."game_id" = $1 LIMIT $2[0m  [["game_id", 16], ["LIMIT", 11]]
+  ↳ /Users/flatironschool/.rvm/rubies/ruby-2.3.3/lib/ruby/gems/2.3.0/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 2.7ms)
+
+
+  
+  [1m[36mCACHE Summoner Load (0.1ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" INNER JOIN "match_histories" ON "summoners"."id" = "match_histories"."summoner_id" WHERE "match_histories"."game_id" = $1 LIMIT $2[0m  [["game_id", 16], ["LIMIT", 11]]
+  ↳ /Users/flatironschool/.rvm/rubies/ruby-2.3.3/lib/ruby/gems/2.3.0/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+NoMethodError (undefined method `find_game' for #<ActiveRecord::Associations::CollectionProxy []>
+Did you mean?  find
+               find_all
+               find_each):
+  
+app/controllers/games_controller.rb:15:in `show'
+Started PUT "/__web_console/repl_sessions/7101fac2924bc3d35eaf544d3990033d" for 127.0.0.1 at 2019-02-13 14:30:39 -0500
+Started PUT "/__web_console/repl_sessions/7101fac2924bc3d35eaf544d3990033d" for 127.0.0.1 at 2019-02-13 14:30:39 -0500
+Started PUT "/__web_console/repl_sessions/7101fac2924bc3d35eaf544d3990033d" for 127.0.0.1 at 2019-02-13 14:30:41 -0500
+Started PUT "/__web_console/repl_sessions/7101fac2924bc3d35eaf544d3990033d" for 127.0.0.1 at 2019-02-13 14:30:41 -0500
+Started PUT "/__web_console/repl_sessions/7101fac2924bc3d35eaf544d3990033d" for 127.0.0.1 at 2019-02-13 14:30:43 -0500
+Started PUT "/__web_console/repl_sessions/7101fac2924bc3d35eaf544d3990033d" for 127.0.0.1 at 2019-02-13 14:30:44 -0500
+Started PUT "/__web_console/repl_sessions/7101fac2924bc3d35eaf544d3990033d" for 127.0.0.1 at 2019-02-13 14:30:45 -0500
+  [1m[36mSummoner Load (1.0ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" INNER JOIN "match_histories" ON "summoners"."id" = "match_histories"."summoner_id" WHERE "match_histories"."game_id" = $1 LIMIT $2[0m  [["game_id", 16], ["LIMIT", 11]]
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Started PUT "/__web_console/repl_sessions/7101fac2924bc3d35eaf544d3990033d" for 127.0.0.1 at 2019-02-13 14:30:47 -0500
+Started PUT "/__web_console/repl_sessions/7101fac2924bc3d35eaf544d3990033d" for 127.0.0.1 at 2019-02-13 14:30:52 -0500
+  [1m[36mSummoner Load (1.0ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" INNER JOIN "match_histories" ON "summoners"."id" = "match_histories"."summoner_id" WHERE "match_histories"."game_id" = $1 LIMIT $2[0m  [["game_id", 16], ["LIMIT", 11]]
+  ↳ /Users/flatironschool/.rvm/rubies/ruby-2.3.3/lib/ruby/gems/2.3.0/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+Started PUT "/__web_console/repl_sessions/7101fac2924bc3d35eaf544d3990033d" for 127.0.0.1 at 2019-02-13 14:30:55 -0500
+Started PUT "/__web_console/repl_sessions/7101fac2924bc3d35eaf544d3990033d" for 127.0.0.1 at 2019-02-13 14:30:56 -0500
+Started PUT "/__web_console/repl_sessions/7101fac2924bc3d35eaf544d3990033d" for 127.0.0.1 at 2019-02-13 14:30:57 -0500
+Started GET "/games/16" for 127.0.0.1 at 2019-02-13 14:32:11 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  [1m[36mSummoner Load (0.7ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" INNER JOIN "match_histories" ON "summoners"."id" = "match_histories"."summoner_id" WHERE "match_histories"."game_id" = $1 LIMIT $2[0m  [["game_id", 16], ["LIMIT", 11]]
+  ↳ /Users/flatironschool/.rvm/rubies/ruby-2.3.3/lib/ruby/gems/2.3.0/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 14.9ms)
+
+
+  
+  [1m[36mCACHE Summoner Load (0.0ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" INNER JOIN "match_histories" ON "summoners"."id" = "match_histories"."summoner_id" WHERE "match_histories"."game_id" = $1 LIMIT $2[0m  [["game_id", 16], ["LIMIT", 11]]
+  ↳ /Users/flatironschool/.rvm/rubies/ruby-2.3.3/lib/ruby/gems/2.3.0/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+NoMethodError (undefined method `find_game' for #<ActiveRecord::Associations::CollectionProxy []>
+Did you mean?  find
+               find_all
+               find_each):
+  
+app/controllers/games_controller.rb:15:in `show'
+Started PUT "/__web_console/repl_sessions/0ab81a241c59bdce7007a3d3db9f8a36" for 127.0.0.1 at 2019-02-13 14:32:15 -0500
+Started PUT "/__web_console/repl_sessions/0ab81a241c59bdce7007a3d3db9f8a36" for 127.0.0.1 at 2019-02-13 14:32:15 -0500
+Started PUT "/__web_console/repl_sessions/0ab81a241c59bdce7007a3d3db9f8a36" for 127.0.0.1 at 2019-02-13 14:32:17 -0500
+Started PUT "/__web_console/repl_sessions/0ab81a241c59bdce7007a3d3db9f8a36" for 127.0.0.1 at 2019-02-13 14:32:18 -0500
+Started PUT "/__web_console/repl_sessions/0ab81a241c59bdce7007a3d3db9f8a36" for 127.0.0.1 at 2019-02-13 14:32:42 -0500
+Started GET "/games/16" for 127.0.0.1 at 2019-02-13 14:32:44 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  [1m[36mSummoner Load (0.7ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" INNER JOIN "match_histories" ON "summoners"."id" = "match_histories"."summoner_id" WHERE "match_histories"."game_id" = $1 LIMIT $2[0m  [["game_id", 16], ["LIMIT", 11]]
+  ↳ /Users/flatironschool/.rvm/rubies/ruby-2.3.3/lib/ruby/gems/2.3.0/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 18.3ms)
+
+
+  
+  [1m[36mCACHE Summoner Load (0.0ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" INNER JOIN "match_histories" ON "summoners"."id" = "match_histories"."summoner_id" WHERE "match_histories"."game_id" = $1 LIMIT $2[0m  [["game_id", 16], ["LIMIT", 11]]
+  ↳ /Users/flatironschool/.rvm/rubies/ruby-2.3.3/lib/ruby/gems/2.3.0/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+NoMethodError (undefined method `find_game' for #<ActiveRecord::Associations::CollectionProxy []>
+Did you mean?  find
+               find_all
+               find_each):
+  
+app/controllers/games_controller.rb:15:in `show'
+Started PUT "/__web_console/repl_sessions/65ce7e11d144d700639512ee0e25f750" for 127.0.0.1 at 2019-02-13 14:32:46 -0500
+Started PUT "/__web_console/repl_sessions/65ce7e11d144d700639512ee0e25f750" for 127.0.0.1 at 2019-02-13 14:32:47 -0500
+Started PUT "/__web_console/repl_sessions/65ce7e11d144d700639512ee0e25f750" for 127.0.0.1 at 2019-02-13 14:32:53 -0500
+Started PUT "/__web_console/repl_sessions/65ce7e11d144d700639512ee0e25f750" for 127.0.0.1 at 2019-02-13 14:32:56 -0500
+Started PUT "/__web_console/repl_sessions/65ce7e11d144d700639512ee0e25f750" for 127.0.0.1 at 2019-02-13 14:32:58 -0500
+Started PUT "/__web_console/repl_sessions/65ce7e11d144d700639512ee0e25f750" for 127.0.0.1 at 2019-02-13 14:32:58 -0500
+Started PUT "/__web_console/repl_sessions/65ce7e11d144d700639512ee0e25f750" for 127.0.0.1 at 2019-02-13 14:33:02 -0500
+Started PUT "/__web_console/repl_sessions/65ce7e11d144d700639512ee0e25f750" for 127.0.0.1 at 2019-02-13 14:33:03 -0500
+Started PUT "/__web_console/repl_sessions/65ce7e11d144d700639512ee0e25f750" for 127.0.0.1 at 2019-02-13 14:33:12 -0500
+Started PUT "/__web_console/repl_sessions/65ce7e11d144d700639512ee0e25f750" for 127.0.0.1 at 2019-02-13 14:33:12 -0500
+Started PUT "/__web_console/repl_sessions/65ce7e11d144d700639512ee0e25f750" for 127.0.0.1 at 2019-02-13 14:33:14 -0500
+Started PUT "/__web_console/repl_sessions/65ce7e11d144d700639512ee0e25f750" for 127.0.0.1 at 2019-02-13 14:33:18 -0500
+Started PUT "/__web_console/repl_sessions/65ce7e11d144d700639512ee0e25f750" for 127.0.0.1 at 2019-02-13 14:33:19 -0500
+Started PUT "/__web_console/repl_sessions/65ce7e11d144d700639512ee0e25f750" for 127.0.0.1 at 2019-02-13 14:33:23 -0500
+Started PUT "/__web_console/repl_sessions/65ce7e11d144d700639512ee0e25f750" for 127.0.0.1 at 2019-02-13 14:33:27 -0500
+Started PUT "/__web_console/repl_sessions/65ce7e11d144d700639512ee0e25f750" for 127.0.0.1 at 2019-02-13 14:33:28 -0500
+Started PUT "/__web_console/repl_sessions/65ce7e11d144d700639512ee0e25f750" for 127.0.0.1 at 2019-02-13 14:33:28 -0500
+Started GET "/games/16" for 127.0.0.1 at 2019-02-13 14:35:02 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mGame Load (0.7ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  [1m[36mSummoner Load (0.5ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" INNER JOIN "match_histories" ON "summoners"."id" = "match_histories"."summoner_id" WHERE "match_histories"."game_id" = $1 LIMIT $2[0m  [["game_id", 16], ["LIMIT", 11]]
+  ↳ /Users/flatironschool/.rvm/rubies/ruby-2.3.3/lib/ruby/gems/2.3.0/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 12.9ms)
+
+
+  
+  [1m[36mCACHE Summoner Load (0.0ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" INNER JOIN "match_histories" ON "summoners"."id" = "match_histories"."summoner_id" WHERE "match_histories"."game_id" = $1 LIMIT $2[0m  [["game_id", 16], ["LIMIT", 11]]
+  ↳ /Users/flatironschool/.rvm/rubies/ruby-2.3.3/lib/ruby/gems/2.3.0/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+NoMethodError (undefined method `find_game' for #<ActiveRecord::Associations::CollectionProxy []>
+Did you mean?  find
+               find_all
+               find_each):
+  
+app/controllers/games_controller.rb:15:in `show'
+Started PUT "/__web_console/repl_sessions/3a7c4082127f61aa1687c1380de21532" for 127.0.0.1 at 2019-02-13 14:35:05 -0500
+Started PUT "/__web_console/repl_sessions/3a7c4082127f61aa1687c1380de21532" for 127.0.0.1 at 2019-02-13 14:35:06 -0500
+Started PUT "/__web_console/repl_sessions/3a7c4082127f61aa1687c1380de21532" for 127.0.0.1 at 2019-02-13 14:35:09 -0500
+Started GET "/games/16" for 127.0.0.1 at 2019-02-13 14:35:33 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  [1m[36mSummoner Load (0.6ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" INNER JOIN "match_histories" ON "summoners"."id" = "match_histories"."summoner_id" WHERE "match_histories"."game_id" = $1 LIMIT $2[0m  [["game_id", 16], ["LIMIT", 11]]
+  ↳ /Users/flatironschool/.rvm/rubies/ruby-2.3.3/lib/ruby/gems/2.3.0/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 14.3ms)
+
+
+  
+  [1m[36mCACHE Summoner Load (0.1ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" INNER JOIN "match_histories" ON "summoners"."id" = "match_histories"."summoner_id" WHERE "match_histories"."game_id" = $1 LIMIT $2[0m  [["game_id", 16], ["LIMIT", 11]]
+  ↳ /Users/flatironschool/.rvm/rubies/ruby-2.3.3/lib/ruby/gems/2.3.0/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+NoMethodError (undefined method `find_game' for #<ActiveRecord::Associations::CollectionProxy []>
+Did you mean?  find
+               find_all
+               find_each):
+  
+app/controllers/games_controller.rb:15:in `show'
+Started PUT "/__web_console/repl_sessions/dd80e863c035dcf66af3f3797ebd6dcd" for 127.0.0.1 at 2019-02-13 14:35:35 -0500
+Started PUT "/__web_console/repl_sessions/dd80e863c035dcf66af3f3797ebd6dcd" for 127.0.0.1 at 2019-02-13 14:35:36 -0500
+Started GET "/games/16" for 127.0.0.1 at 2019-02-13 14:35:40 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  [1m[36mSummoner Load (0.9ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" INNER JOIN "match_histories" ON "summoners"."id" = "match_histories"."summoner_id" WHERE "match_histories"."game_id" = $1 LIMIT $2[0m  [["game_id", 16], ["LIMIT", 11]]
+  ↳ /Users/flatironschool/.rvm/rubies/ruby-2.3.3/lib/ruby/gems/2.3.0/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.6ms)
+
+
+  
+  [1m[36mCACHE Summoner Load (0.0ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" INNER JOIN "match_histories" ON "summoners"."id" = "match_histories"."summoner_id" WHERE "match_histories"."game_id" = $1 LIMIT $2[0m  [["game_id", 16], ["LIMIT", 11]]
+  ↳ /Users/flatironschool/.rvm/rubies/ruby-2.3.3/lib/ruby/gems/2.3.0/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+NoMethodError (undefined method `find_game' for #<ActiveRecord::Associations::CollectionProxy []>
+Did you mean?  find
+               find_all
+               find_each):
+  
+app/controllers/games_controller.rb:15:in `show'
+Started PUT "/__web_console/repl_sessions/6df9d9566a3f91e4f88aec3e9f5fcd14" for 127.0.0.1 at 2019-02-13 14:35:43 -0500
+Started PUT "/__web_console/repl_sessions/6df9d9566a3f91e4f88aec3e9f5fcd14" for 127.0.0.1 at 2019-02-13 14:35:43 -0500
+Started GET "/games/16" for 127.0.0.1 at 2019-02-13 14:37:13 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  [1m[36mSummoner Load (0.6ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" INNER JOIN "match_histories" ON "summoners"."id" = "match_histories"."summoner_id" WHERE "match_histories"."game_id" = $1 LIMIT $2[0m  [["game_id", 16], ["LIMIT", 11]]
+  ↳ /Users/flatironschool/.rvm/rubies/ruby-2.3.3/lib/ruby/gems/2.3.0/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 15.0ms)
+
+
+  
+  [1m[36mCACHE Summoner Load (0.0ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" INNER JOIN "match_histories" ON "summoners"."id" = "match_histories"."summoner_id" WHERE "match_histories"."game_id" = $1 LIMIT $2[0m  [["game_id", 16], ["LIMIT", 11]]
+  ↳ /Users/flatironschool/.rvm/rubies/ruby-2.3.3/lib/ruby/gems/2.3.0/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+NoMethodError (undefined method `find_game' for #<ActiveRecord::Associations::CollectionProxy []>
+Did you mean?  find
+               find_all
+               find_each):
+  
+app/controllers/games_controller.rb:15:in `show'
+Started PUT "/__web_console/repl_sessions/6a2ffdbae9da8eebb65158af4448dcbc" for 127.0.0.1 at 2019-02-13 14:37:15 -0500
+Started PUT "/__web_console/repl_sessions/6a2ffdbae9da8eebb65158af4448dcbc" for 127.0.0.1 at 2019-02-13 14:37:17 -0500
+Started GET "/games/16" for 127.0.0.1 at 2019-02-13 14:37:48 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  [1m[36mSummoner Load (0.5ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" INNER JOIN "match_histories" ON "summoners"."id" = "match_histories"."summoner_id" WHERE "match_histories"."game_id" = $1 LIMIT $2[0m  [["game_id", 16], ["LIMIT", 11]]
+  ↳ /Users/flatironschool/.rvm/rubies/ruby-2.3.3/lib/ruby/gems/2.3.0/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 13.1ms)
+
+
+  
+  [1m[36mCACHE Summoner Load (0.0ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" INNER JOIN "match_histories" ON "summoners"."id" = "match_histories"."summoner_id" WHERE "match_histories"."game_id" = $1 LIMIT $2[0m  [["game_id", 16], ["LIMIT", 11]]
+  ↳ /Users/flatironschool/.rvm/rubies/ruby-2.3.3/lib/ruby/gems/2.3.0/gems/did_you_mean-1.0.0/lib/did_you_mean/core_ext/name_error.rb:10
+NoMethodError (undefined method `find_game' for #<ActiveRecord::Associations::CollectionProxy []>
+Did you mean?  find
+               find_all
+               find_each):
+  
+app/controllers/games_controller.rb:15:in `show'
+Started PUT "/__web_console/repl_sessions/fd95a65036fd1031d11757d47508ab33" for 127.0.0.1 at 2019-02-13 14:37:50 -0500
+Started PUT "/__web_console/repl_sessions/fd95a65036fd1031d11757d47508ab33" for 127.0.0.1 at 2019-02-13 14:37:51 -0500
+Started PUT "/__web_console/repl_sessions/fd95a65036fd1031d11757d47508ab33" for 127.0.0.1 at 2019-02-13 14:37:52 -0500
+Started PUT "/__web_console/repl_sessions/fd95a65036fd1031d11757d47508ab33" for 127.0.0.1 at 2019-02-13 14:37:59 -0500
+Started PUT "/__web_console/repl_sessions/fd95a65036fd1031d11757d47508ab33" for 127.0.0.1 at 2019-02-13 14:38:00 -0500
+Started PUT "/__web_console/repl_sessions/fd95a65036fd1031d11757d47508ab33" for 127.0.0.1 at 2019-02-13 14:38:03 -0500
+Started PUT "/__web_console/repl_sessions/fd95a65036fd1031d11757d47508ab33" for 127.0.0.1 at 2019-02-13 14:38:07 -0500
+Started GET "/games/16" for 127.0.0.1 at 2019-02-13 14:40:18 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 5.6ms)
+
+
+  
+NoMethodError (undefined method `find_game' for #<Game:0x007fb7137589e8>
+Did you mean?  find_game_ids
+               find_champ):
+  
+app/controllers/games_controller.rb:15:in `show'
+Started GET "/games/16" for 127.0.0.1 at 2019-02-13 14:40:56 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 8.5ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/models/game.rb:16:in `find_champ'
+app/controllers/games_controller.rb:15:in `show'
+Started GET "/games/16" for 127.0.0.1 at 2019-02-13 14:41:25 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 904ms (Views: 20.8ms | ActiveRecord: 5.5ms)
 
 

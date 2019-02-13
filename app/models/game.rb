@@ -13,7 +13,11 @@ class Game < ApplicationRecord
         game = JSON.parse(game)
     end
 
-    def find_player_champion
-        
+    def find_champ(game_id)
+        game = self.single_game
+        players = {}
+        game["participants"].map do |hash|
+            players[hash["participantId"]] = hash["championId"]
+        end
     end
 end
