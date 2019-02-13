@@ -12,7 +12,7 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find(params['id'])
-    @champions = @game.find_champ(@game.game)
+    @champions = @game.champ_name
   end
 
   def game_params
