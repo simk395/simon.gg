@@ -1,5 +1,7 @@
 # README
 
+Non-profit project, all materials belong to Riot Games.
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
