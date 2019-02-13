@@ -1,1 +1,45 @@
 <h1>Match info</h1>
+
+<% n = 0 %>
+<% @game["participants"].each do |player| %>
+  <% players = [] %>
+  <% @game["participantIdentities"].select do |player| %>
+  <% players << player["player"]["summonerName"]  %>
+  <% end %>
+<p>Summoner Name - <%= players[n] %></p>
+<p>Highest Rank Achieved - <%= player['highestAchievedSeasonTier'] %></p>
+<p>Champion ID - <%= player["championId"] %></p>
+<p>Team ID - <%= player["teamId"] %></p>
+<p>Damage - <%= player["stats"]["totalDamageDealt"] %></p>
+<p>K - <%= player["stats"]["kills"] %></p>
+<p>D - <%= player["stats"]["deaths"] %></p>
+<p>A - <%= player["stats"]["assists"] %></p>
+<br>
+<% n = n+1 %>
+<% end %>
+
+
+
+
+
+
+Highest Rank Achived
+<%# @game["participants"][0]["highestAchievedSeasonTier"] %>
+
+Champion ID
+<%# @game["participants"][0]["championId"] %>
+
+Team idea
+<%#= @game["participants"][0]["teamId"] %>
+
+Total Damage
+<%#= @game["participants"][0]["stats"]["totalDamageDealt"] %>
+
+Kills
+<%# @game["participants"][0]["stats"]["kills"] %>
+
+Deaths
+<%# @game["participants"][0]["stats"]["deaths"] %>
+
+Assists
+<%# @game["participants"][0]["stats"]["assists"] %>

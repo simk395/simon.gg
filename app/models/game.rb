@@ -7,4 +7,9 @@ class Game < ApplicationRecord
         client = RestClient.get("https://na1.api.riotgames.com/lol/match/v4/matchlists/by-account/#{account_id}?endIndex=10&beginIndex=0&api_key=#{api_key_master}")
         client_parsed = JSON.parse(client)
     end
+
+    def single_game
+        game = RestClient.get("https://na1.api.riotgames.com/lol/match/v4/matches/#{self.game}?api_key=#{self.key}")
+        game = JSON.parse(game)
+    end
 end

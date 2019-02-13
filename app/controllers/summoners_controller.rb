@@ -25,7 +25,10 @@ class SummonersController < ApplicationController
       # byebug
 
       @summoner = Summoner.find(params['id'])
-      profile = @summoner.league_profile
+      @profile = @summoner.league_profile
+      @matches = @summoner.recent_10_games
+      
+
     end
 
 
