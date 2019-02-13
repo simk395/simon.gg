@@ -17,7 +17,20 @@ class Game < ApplicationRecord
         game = self.single_game
         players = {}
         game["participants"].map do |hash|
-            players[hash["participantId"]] = hash["championId"]
+            players[hash["participantId"]] = hash["championId"].to_s
         end
+    end
+
+    def champ_name
+        champ_names = []
+        keys = self.find_champ(self.game)
+        keys.each do |number|
+            self.champions.each do |names|
+                if names.include?(number)
+                    champ_names << names[1]
+                end
+            end
+        end 
+        champ_names
     end
 end
