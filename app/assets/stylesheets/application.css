@@ -142,4 +142,8 @@
 
  }
 
- 
+ /* create page */
+
+ .bg-video{
+     rgba(0,0,0,0.5)
+ }
