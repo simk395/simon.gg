@@ -1,4 +1,4 @@
-<img src="/summoners-rift.jpeg" class="summoner-bg"/>
+<img src="/summoners-rift.jpg" class="summoner-bg"/>
 
 
 <div class="container">
@@ -11,6 +11,7 @@
 
 <% 10.times do |i| %>
 <%= form_for @game do |f| %>
+
     <%= f.hidden_field :game, value: "#{@matches[num]["gameId"]}" %>
     <%= f.submit "Check Game" %>
     <% person = @matches[num]["participantIdentities"].select do |player|  %>
@@ -27,13 +28,14 @@
     Kills <%= stats["kills"] %>
     Deaths <%= stats["deaths"] %>
     Assists <%= stats["assists"] %>
-
     Champion ID: <%= @matches[num]["participants"][person]["championId"] %>
     <%= @matches[num]["gameDuration"]/60 %> minutes
 <% end %>
 <% num = num + 1 %>
 <% end %>
-
+<%= form_tag(summoner_path(@summoner), method: :delete) do %>
+  <%= submit_tag "DELETE THIS account" %>
+<% end %>
 
 
 <!-- Display a card with basic profile information like rank and win/loss and top 3 champions -->

@@ -10068,3 +10068,705 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/summoners/edit" for 127.0.0.1 at 2019-02-13 16:32:48 -0500
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnoncher/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mSummoner Load (3.0ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:25
+Completed 404 Not Found in 143ms (ActiveRecord: 67.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Summoner with 'id'=edit):
+  
+app/controllers/summoners_controller.rb:25:in `show'
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-13 16:32:52 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 1333ms (Views: 1307.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/summoners/2/edit" for 127.0.0.1 at 2019-02-13 16:32:59 -0500
+Processing by SummonersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  Rendering summoners/edit.html.erb within layouts/application
+  Rendered summoners/edit.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+     5: <!-- Create a form to take in the summoner name -->
+     6: <!-- Submit the summoner name to api to get acount information to create a summoner -->
+     7: 
+     8: <%= form_for @summoner do |f| %>
+     9: <%= f.text_field :summoner_name, class: "text-field", spellcheck: "false", placeholder: "Summoner Name", autocomplete: "off" %>
+    10: <%= f.submit "Submit", type: "hidden" %>
+    11: <% end %>
+  
+app/views/summoners/edit.html.erb:8:in `_app_views_summoners_edit_html_erb__2684128543287029754_70159334406200'
+Started GET "/summoners/2/edit" for 127.0.0.1 at 2019-02-13 16:34:08 -0500
+Processing by SummonersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSummoner Load (2.0ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:25
+  Rendering summoners/edit.html.erb within layouts/application
+  Rendered summoners/edit.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 243ms (Views: 65.9ms | ActiveRecord: 30.1ms)
+
+
+Started GET "/summoners/2/edit" for 127.0.0.1 at 2019-02-13 16:45:17 -0500
+  
+SyntaxError (/Users/johnoncher/dev/mod_2/Project/simon.gg/app/controllers/summoners_controller.rb:29: syntax error, unexpected ')', expecting ']'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/controllers/summoners_controller.rb:33: syntax error, unexpected ')', expecting ']'):
+  
+app/controllers/summoners_controller.rb:29: syntax error, unexpected ')', expecting ']'
+app/controllers/summoners_controller.rb:33: syntax error, unexpected ')', expecting ']'
+Started GET "/summoners/2/edit" for 127.0.0.1 at 2019-02-13 16:45:39 -0500
+  
+SyntaxError (/Users/johnoncher/dev/mod_2/Project/simon.gg/app/controllers/summoners_controller.rb:33: syntax error, unexpected ')', expecting ']'):
+  
+app/controllers/summoners_controller.rb:33: syntax error, unexpected ')', expecting ']'
+Started GET "/summoners/2/edit" for 127.0.0.1 at 2019-02-13 16:45:52 -0500
+Processing by SummonersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSummoner Load (3.4ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:25
+  Rendering summoners/edit.html.erb within layouts/application
+  Rendered summoners/edit.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 415ms (Views: 50.1ms | ActiveRecord: 187.0ms)
+
+
+Started PATCH "/summoners/2" for 127.0.0.1 at 2019-02-13 16:45:59 -0500
+Processing by SummonersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9vl6gAsqSFgd6KygrpAHd8ZS0HlOqOykIV280GRh7yquYu+ZSfBdpOmnX25uyGUSvNZ4D4ih1B8mioykhBjuQw==", "summoner"=>{"summoner_name"=>"john"}, "commit"=>"Submit", "id"=>"2"}
+  [1m[36mSummoner Load (1.5ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:29
+Completed 500 Internal Server Error in 849ms (ActiveRecord: 1.5ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/summoners_controller.rb:32:in `update'
+Started GET "/summoners/2" for 127.0.0.1 at 2019-02-13 16:46:45 -0500
+  
+SyntaxError (/Users/johnoncher/dev/mod_2/Project/simon.gg/app/controllers/summoners_controller.rb:32: syntax error, unexpected ':', expecting ')'
+          @summoner.update(:summoner_name: summoner_params)
+                                          ^):
+  
+app/controllers/summoners_controller.rb:32: syntax error, unexpected ':', expecting ')'
+Started GET "/summoners/2" for 127.0.0.1 at 2019-02-13 16:47:09 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSummoner Load (1.8ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:44
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 7197ms (Views: 88.2ms | ActiveRecord: 28.8ms)
+
+
+Started GET "/summoners-rift.jpeg" for 127.0.0.1 at 2019-02-13 16:47:17 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/summoners-rift.jpeg"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/summoners/edit/2" for 127.0.0.1 at 2019-02-13 16:47:27 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/summoners/edit/2"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/summoners/2/edit/" for 127.0.0.1 at 2019-02-13 16:47:36 -0500
+Processing by SummonersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSummoner Load (1.0ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:25
+  Rendering summoners/edit.html.erb within layouts/application
+  Rendered summoners/edit.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 62ms (Views: 51.6ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/summoners/2" for 127.0.0.1 at 2019-02-13 16:47:41 -0500
+Processing by SummonersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yENesjE5up3WBMlEZZQd0EzDTs4miybFwvz83PAVYTmQ2Murc+OvYSJLOoqlzH+1NkfmuOCCHn7FK8yoEGxgUA==", "summoner"=>{"summoner_name"=>"john"}, "commit"=>"Submit", "id"=>"2"}
+  [1m[36mSummoner Load (0.7ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:29
+  [1m[35m (39.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:32
+  [1m[36mSummoner Update (54.7ms)[0m  [1m[33mUPDATE "summoners" SET "summoner_name" = $1, "updated_at" = $2 WHERE "summoners"."id" = $3[0m  [["summoner_name", "john"], ["updated_at", "2019-02-13 21:47:42.299164"], ["id", 2]]
+  ↳ app/controllers/summoners_controller.rb:32
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:32
+  [1m[36mSummoner Load (0.4ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:33
+Redirected to http://localhost:3000/summoners/2
+Completed 302 Found in 988ms (ActiveRecord: 98.9ms)
+
+
+Started GET "/summoners/2" for 127.0.0.1 at 2019-02-13 16:47:42 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSummoner Load (0.3ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:44
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (11.6ms)
+Completed 500 Internal Server Error in 1919ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    11: 
+    12: <% 10.times do |i| %>
+    13: <%= form_for @game do |f| %>
+    14:     <%= f.hidden_field :game, value: "#{@matches[num]["gameId"]}" %>
+    15:     <%= f.submit "Check Game" %>
+    16:     <% person = @matches[num]["participantIdentities"].select do |player|  %>
+    17:     <% @summoner.summoner_name.downcase == player["player"]["summonerName"].downcase %>
+  
+app/views/summoners/show.html.erb:14:in `block (2 levels) in _app_views_summoners_show_html_erb___1175711362582274768_70159380827620'
+app/views/summoners/show.html.erb:13:in `block in _app_views_summoners_show_html_erb___1175711362582274768_70159380827620'
+app/views/summoners/show.html.erb:12:in `times'
+app/views/summoners/show.html.erb:12:in `_app_views_summoners_show_html_erb___1175711362582274768_70159380827620'
+Started PUT "/__web_console/repl_sessions/a5b774461deea2de1d820414eb3adb18" for 127.0.0.1 at 2019-02-13 16:48:23 -0500
+Started PUT "/__web_console/repl_sessions/a5b774461deea2de1d820414eb3adb18" for 127.0.0.1 at 2019-02-13 16:48:24 -0500
+Started PUT "/__web_console/repl_sessions/a5b774461deea2de1d820414eb3adb18" for 127.0.0.1 at 2019-02-13 16:51:11 -0500
+Started PUT "/__web_console/repl_sessions/a5b774461deea2de1d820414eb3adb18" for 127.0.0.1 at 2019-02-13 16:51:44 -0500
+Started PUT "/__web_console/repl_sessions/a5b774461deea2de1d820414eb3adb18" for 127.0.0.1 at 2019-02-13 16:51:51 -0500
+Started PUT "/__web_console/repl_sessions/a5b774461deea2de1d820414eb3adb18" for 127.0.0.1 at 2019-02-13 16:52:08 -0500
+Started PUT "/__web_console/repl_sessions/a5b774461deea2de1d820414eb3adb18" for 127.0.0.1 at 2019-02-13 16:52:17 -0500
+Started PUT "/__web_console/repl_sessions/a5b774461deea2de1d820414eb3adb18" for 127.0.0.1 at 2019-02-13 16:52:50 -0500
+Started PUT "/__web_console/repl_sessions/a5b774461deea2de1d820414eb3adb18" for 127.0.0.1 at 2019-02-13 16:56:44 -0500
+Started GET "/summoners/4" for 127.0.0.1 at 2019-02-13 16:57:31 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSummoner Load (1.4ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:44
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (165104.0ms)
+Completed 500 Internal Server Error in 171996ms (ActiveRecord: 9.9ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `block in _app_views_summoners_show_html_erb___1175711362582274768_70159356866480'
+app/views/summoners/show.html.erb:14:in `block in _app_views_summoners_show_html_erb___1175711362582274768_70159356866480'
+app/views/summoners/show.html.erb:12:in `times'
+app/views/summoners/show.html.erb:12:in `_app_views_summoners_show_html_erb___1175711362582274768_70159356866480'
+Started GET "/summoners/2" for 127.0.0.1 at 2019-02-13 17:00:29 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSummoner Load (10.9ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:44
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (43434.8ms)
+Completed 500 Internal Server Error in 46377ms (ActiveRecord: 97.6ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `block (2 levels) in _app_views_summoners_show_html_erb___1175711362582274768_70159386329180'
+app/views/summoners/show.html.erb:16:in `block (2 levels) in _app_views_summoners_show_html_erb___1175711362582274768_70159386329180'
+app/views/summoners/show.html.erb:14:in `block in _app_views_summoners_show_html_erb___1175711362582274768_70159386329180'
+app/views/summoners/show.html.erb:12:in `times'
+app/views/summoners/show.html.erb:12:in `_app_views_summoners_show_html_erb___1175711362582274768_70159386329180'
+Started GET "/summoners/2/" for 127.0.0.1 at 2019-02-13 17:01:23 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSummoner Load (84.1ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:44
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (55470.9ms)
+Completed 500 Internal Server Error in 57876ms (ActiveRecord: 84.1ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `block in _app_views_summoners_show_html_erb___1175711362582274768_70159378302240'
+app/views/summoners/show.html.erb:35:in `block in _app_views_summoners_show_html_erb___1175711362582274768_70159378302240'
+app/views/summoners/show.html.erb:12:in `times'
+app/views/summoners/show.html.erb:12:in `_app_views_summoners_show_html_erb___1175711362582274768_70159378302240'
+Started GET "/summoners/5/edit" for 127.0.0.1 at 2019-02-13 17:02:29 -0500
+Processing by SummonersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSummoner Load (13.4ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:25
+  Rendering summoners/edit.html.erb within layouts/application
+  Rendered summoners/edit.html.erb within layouts/application (40.7ms)
+Completed 200 OK in 1247ms (Views: 1189.0ms | ActiveRecord: 13.4ms)
+
+
+Started PATCH "/summoners/5" for 127.0.0.1 at 2019-02-13 17:02:40 -0500
+Processing by SummonersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tqsh59vw+mt/IQt8THBefBy4atCTVIdEqU4ql2VmUL/uMLT+mSrvl4tu+LKMKDwZZjzCplVdv/+umRrjhR9R1g==", "summoner"=>{"summoner_name"=>"fatninja001"}, "commit"=>"Submit", "id"=>"5"}
+  [1m[36mSummoner Load (17.0ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:29
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:32
+  [1m[36mSummoner Update (43.9ms)[0m  [1m[33mUPDATE "summoners" SET "summoner_name" = $1, "updated_at" = $2 WHERE "summoners"."id" = $3[0m  [["summoner_name", "fatninja001"], ["updated_at", "2019-02-13 22:02:40.913699"], ["id", 5]]
+  ↳ app/controllers/summoners_controller.rb:32
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:32
+  [1m[36mSummoner Load (3.0ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:33
+Redirected to http://localhost:3000/summoners/5
+Completed 302 Found in 909ms (ActiveRecord: 74.3ms)
+
+
+Started GET "/summoners/5" for 127.0.0.1 at 2019-02-13 17:02:41 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSummoner Load (2.5ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:44
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (9027.9ms)
+Completed 200 OK in 16673ms (Views: 9087.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/summoners-rift.jpeg" for 127.0.0.1 at 2019-02-13 17:02:57 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/summoners-rift.jpeg"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/summoners/2/" for 127.0.0.1 at 2019-02-13 17:03:32 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSummoner Load (1.2ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:44
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (25206.8ms)
+Completed 500 Internal Server Error in 27081ms (ActiveRecord: 1.2ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `block in _app_views_summoners_show_html_erb___1175711362582274768_70159387865120'
+app/views/summoners/show.html.erb:14:in `block in _app_views_summoners_show_html_erb___1175711362582274768_70159387865120'
+app/views/summoners/show.html.erb:12:in `times'
+app/views/summoners/show.html.erb:12:in `_app_views_summoners_show_html_erb___1175711362582274768_70159387865120'
+Started GET "/summoners/6/" for 127.0.0.1 at 2019-02-13 17:04:08 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mSummoner Load (2.2ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:44
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (223.6ms)
+Completed 200 OK in 9853ms (Views: 936.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/summoners-rift.jpeg" for 127.0.0.1 at 2019-02-13 17:04:18 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/summoners-rift.jpeg"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/summoners/6/edit" for 127.0.0.1 at 2019-02-13 17:04:27 -0500
+Processing by SummonersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mSummoner Load (1.7ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:25
+  Rendering summoners/edit.html.erb within layouts/application
+  Rendered summoners/edit.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 1066ms (Views: 1017.4ms | ActiveRecord: 1.7ms)
+
+
+Started PATCH "/summoners/6" for 127.0.0.1 at 2019-02-13 17:04:35 -0500
+Processing by SummonersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b/jd7UKfpXfSvvGri8VIL+C0TKbr7USbeNHw5FWhgkE3Y0j0AEWwiybxAmVLnSpKmjDk0C3kfCB/BsCQtdiDKA==", "summoner"=>{"summoner_name"=>"fatninja001"}, "commit"=>"Submit", "id"=>"6"}
+  [1m[36mSummoner Load (2.8ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:29
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:32
+  [1m[36mSummoner Update (15.5ms)[0m  [1m[33mUPDATE "summoners" SET "summoner_name" = $1, "updated_at" = $2 WHERE "summoners"."id" = $3[0m  [["summoner_name", "fatninja001"], ["updated_at", "2019-02-13 22:04:35.752661"], ["id", 6]]
+  ↳ app/controllers/summoners_controller.rb:32
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:32
+  [1m[36mSummoner Load (3.3ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:33
+Redirected to http://localhost:3000/summoners/6
+Completed 302 Found in 779ms (ActiveRecord: 25.7ms)
+
+
+Started GET "/summoners/6" for 127.0.0.1 at 2019-02-13 17:04:35 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mSummoner Load (1.9ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:44
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (300.4ms)
+Completed 200 OK in 9312ms (Views: 1408.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/summoners-rift.jpeg" for 127.0.0.1 at 2019-02-13 17:04:45 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/summoners-rift.jpeg"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/summoners/6/edit" for 127.0.0.1 at 2019-02-13 17:05:12 -0500
+Processing by SummonersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mSummoner Load (2.6ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:25
+  Rendering summoners/edit.html.erb within layouts/application
+  Rendered summoners/edit.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 904ms (Views: 837.9ms | ActiveRecord: 2.6ms)
+
+
+Started PATCH "/summoners/6" for 127.0.0.1 at 2019-02-13 17:05:17 -0500
+Processing by SummonersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UgSaz4ym32mKjLSfYuswa2MQjJW+tBuxslf1vdgce6YKnw/WznzKlX7DR1Gis1IOGZQk43i9Iwq1gMXJOGV6zw==", "summoner"=>{"summoner_name"=>"joncher"}, "commit"=>"Submit", "id"=>"6"}
+  [1m[36mSummoner Load (1.6ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:29
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:32
+  [1m[36mSummoner Update (3.4ms)[0m  [1m[33mUPDATE "summoners" SET "summoner_name" = $1, "updated_at" = $2 WHERE "summoners"."id" = $3[0m  [["summoner_name", "joncher"], ["updated_at", "2019-02-13 22:05:18.996220"], ["id", 6]]
+  ↳ app/controllers/summoners_controller.rb:32
+  [1m[35m (56.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:32
+  [1m[36mSummoner Load (7.6ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:33
+Redirected to http://localhost:3000/summoners/6
+Completed 302 Found in 1305ms (ActiveRecord: 71.4ms)
+
+
+Started GET "/summoners/6" for 127.0.0.1 at 2019-02-13 17:05:19 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mSummoner Load (12.6ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:44
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (293.9ms)
+Completed 200 OK in 10040ms (Views: 1391.7ms | ActiveRecord: 12.6ms)
+
+
+Started GET "/summoners-rift.jpeg" for 127.0.0.1 at 2019-02-13 17:05:29 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/summoners-rift.jpeg"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/summoners/6" for 127.0.0.1 at 2019-02-13 17:06:38 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mSummoner Load (2.2ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:44
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (224.4ms)
+Completed 200 OK in 9016ms (Views: 985.9ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2019-02-13 17:08:57 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HfVHdVhhYjRxdC5iVixzGjxDJp2QAPhvcZyPjhobR09FbtJsGrt3yIU73ayWdBF/RseO61YJwNR2S7/6+mJGJg==", "game"=>{"game"=>"2929066038"}, "commit"=>"Check Game"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 37ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.2) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.2) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.2) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-13 17:21:01 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (49.0ms)
+Completed 200 OK in 1380ms (Views: 909.5ms | ActiveRecord: 149.4ms)
+
+
+Started GET "/summoners/4" for 127.0.0.1 at 2019-02-13 17:21:08 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"4"}
+Completed 500 Internal Server Error in 151906ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/summoners_controller.rb:45:in `show'
+Started GET "/summoners/4" for 127.0.0.1 at 2019-02-13 17:23:43 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"4"}
+Completed 500 Internal Server Error in 737760ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/summoners_controller.rb:46:in `show'
+Started GET "/summoners/6" for 127.0.0.1 at 2019-02-13 17:50:21 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mSummoner Load (44.0ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (369.6ms)
+Completed 200 OK in 9613ms (Views: 1638.8ms | ActiveRecord: 143.1ms)
+
+
+Started DELETE "/summoners/6" for 127.0.0.1 at 2019-02-13 17:50:37 -0500
+Processing by SummonersController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wd2sk9ePUy/d6HQUAWJw2JBK3be2q7yMFb0iLtR3ny7JyQdx4tZ5SoYv/pJiM6SHcOWqPVMexp3EnSIVeWha6A==", "commit"=>"DELETE THIS account", "id"=>"6"}
+  [1m[36mSummoner Load (1.7ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:54
+  [1m[36mSummoner Destroy (113.0ms)[0m  [1m[31mDELETE FROM "summoners" WHERE "summoners"."id" = $1[0m  [["id", 6]]
+  ↳ app/controllers/summoners_controller.rb:55
+Redirected to http://localhost:3000/summoners/new
+Completed 302 Found in 196ms (ActiveRecord: 114.7ms)
+
+
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-13 17:50:38 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 1071ms (Views: 1028.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/summoners/6/" for 127.0.0.1 at 2019-02-13 17:50:46 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mSummoner Load (24.5ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+Completed 404 Not Found in 65ms (ActiveRecord: 24.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Summoner with 'id'=6):
+  
+app/controllers/summoners_controller.rb:43:in `show'
