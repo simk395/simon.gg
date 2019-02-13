@@ -1,4 +1,4 @@
-<video autoplay muted loop class="bg- video">
+<video autoplay muted loop class="bg-video">
   <source src="/The_Climb.mp4" type="video/mp4">
 </video>
 
@@ -9,18 +9,9 @@
 
 <!-- Submit the summoner name to api to get acount information to create a summoner -->
 
-
-
-
-
-
-
-
-
-
 <%= form_for @summoner do |f| %>
 <p> Summoner Name </p>
-<%= f.text_field :summoner_name %>
+<%= f.text_field :summoner_name, class: "text-field" %>
 <%= f.submit "Submit" %>
 <% end %>
 
