@@ -32,7 +32,6 @@ ActiveRecord::Schema.define(version: 2019_02_12_222958) do
     t.string "summoner_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "password_digest"
   end
 
 end

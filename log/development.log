@@ -9806,3 +9806,687 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 >>>>>>> 5d0ff7d6d45734ccefa65c4214014426b7dd1874
+Started GET "/games/36" for 127.0.0.1 at 2019-02-13 16:09:25 -0500
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1011.9ms)
+Completed 200 OK in 2010ms (Views: 1337.0ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/games/36" for 127.0.0.1 at 2019-02-13 16:09:40 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (893.6ms)
+Completed 200 OK in 1656ms (Views: 913.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2019-02-13 16:10:45 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hJC7cZWVGbNGOyhZuKiYjVcSUVM6JRpCqyq3htz/sRoMBEkoAr8Oml9P0os73tNPFlLmJ8aG8TcehDiE5YWaLw==", "game"=>{"game"=>"2975759108"}, "commit"=>"Check Game"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (0.7ms)[0m  [1m[32mINSERT INTO "games" ("game", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["game", 2975759108], ["created_at", "2019-02-13 21:10:45.386183"], ["updated_at", "2019-02-13 21:10:45.386183"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:9
+Redirected to http://localhost:3000/games/37
+Completed 302 Found in 8ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/games/37" for 127.0.0.1 at 2019-02-13 16:10:45 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1456.7ms)
+Completed 200 OK in 2128ms (Views: 1503.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/images/champion_loading_art/Kog'Maw_0.jpg" for 127.0.0.1 at 2019-02-13 16:10:47 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/champion_loading_art/Kog'Maw_0.jpg"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/games/37" for 127.0.0.1 at 2019-02-13 16:11:22 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1337.5ms)
+Completed 200 OK in 2168ms (Views: 1370.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2019-02-13 16:11:31 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hJC7cZWVGbNGOyhZuKiYjVcSUVM6JRpCqyq3htz/sRoMBEkoAr8Oml9P0os73tNPFlLmJ8aG8TcehDiE5YWaLw==", "game"=>{"game"=>"2974939281"}, "commit"=>"Check Game"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("game", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["game", 2974939281], ["created_at", "2019-02-13 21:11:31.024110"], ["updated_at", "2019-02-13 21:11:31.024110"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:9
+Redirected to http://localhost:3000/games/38
+Completed 302 Found in 7ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/games/38" for 127.0.0.1 at 2019-02-13 16:11:31 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"38"}
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (961.4ms)
+Completed 200 OK in 1561ms (Views: 997.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2019-02-13 16:13:46 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hJC7cZWVGbNGOyhZuKiYjVcSUVM6JRpCqyq3htz/sRoMBEkoAr8Oml9P0os73tNPFlLmJ8aG8TcehDiE5YWaLw==", "game"=>{"game"=>"2974939281"}, "commit"=>"Check Game"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("game", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["game", 2974939281], ["created_at", "2019-02-13 21:13:46.334878"], ["updated_at", "2019-02-13 21:13:46.334878"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:9
+Redirected to http://localhost:3000/games/39
+Completed 302 Found in 7ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/games/39" for 127.0.0.1 at 2019-02-13 16:13:46 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"39"}
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1590.8ms)
+Completed 200 OK in 2261ms (Views: 1618.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2019-02-13 16:13:51 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hJC7cZWVGbNGOyhZuKiYjVcSUVM6JRpCqyq3htz/sRoMBEkoAr8Oml9P0os73tNPFlLmJ8aG8TcehDiE5YWaLw==", "game"=>{"game"=>"2974924867"}, "commit"=>"Check Game"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (1.0ms)[0m  [1m[32mINSERT INTO "games" ("game", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["game", 2974924867], ["created_at", "2019-02-13 21:13:51.744931"], ["updated_at", "2019-02-13 21:13:51.744931"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:9
+Redirected to http://localhost:3000/games/40
+Completed 302 Found in 9ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/games/40" for 127.0.0.1 at 2019-02-13 16:13:51 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1016.3ms)
+Completed 200 OK in 1654ms (Views: 1038.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2019-02-13 16:13:56 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hJC7cZWVGbNGOyhZuKiYjVcSUVM6JRpCqyq3htz/sRoMBEkoAr8Oml9P0os73tNPFlLmJ8aG8TcehDiE5YWaLw==", "game"=>{"game"=>"2974903739"}, "commit"=>"Check Game"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("game", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["game", 2974903739], ["created_at", "2019-02-13 21:13:56.921390"], ["updated_at", "2019-02-13 21:13:56.921390"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:9
+Redirected to http://localhost:3000/games/41
+Completed 302 Found in 12ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/games/41" for 127.0.0.1 at 2019-02-13 16:13:56 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (2861.4ms)
+Completed 200 OK in 3546ms (Views: 2891.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2019-02-13 16:15:12 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hJC7cZWVGbNGOyhZuKiYjVcSUVM6JRpCqyq3htz/sRoMBEkoAr8Oml9P0os73tNPFlLmJ8aG8TcehDiE5YWaLw==", "game"=>{"game"=>"2974878870"}, "commit"=>"Check Game"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (1.6ms)[0m  [1m[32mINSERT INTO "games" ("game", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["game", 2974878870], ["created_at", "2019-02-13 21:15:12.132132"], ["updated_at", "2019-02-13 21:15:12.132132"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:9
+Redirected to http://localhost:3000/games/42
+Completed 302 Found in 9ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/games/42" for 127.0.0.1 at 2019-02-13 16:15:12 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"42"}
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1105.1ms)
+Completed 200 OK in 2386ms (Views: 1143.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2019-02-13 16:15:21 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hJC7cZWVGbNGOyhZuKiYjVcSUVM6JRpCqyq3htz/sRoMBEkoAr8Oml9P0os73tNPFlLmJ8aG8TcehDiE5YWaLw==", "game"=>{"game"=>"2974903739"}, "commit"=>"Check Game"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (0.6ms)[0m  [1m[32mINSERT INTO "games" ("game", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["game", 2974903739], ["created_at", "2019-02-13 21:15:21.039126"], ["updated_at", "2019-02-13 21:15:21.039126"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:9
+Redirected to http://localhost:3000/games/43
+Completed 302 Found in 10ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/games/43" for 127.0.0.1 at 2019-02-13 16:15:21 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"43"}
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (2643.9ms)
+Completed 200 OK in 3180ms (Views: 2668.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2019-02-13 16:15:41 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/1"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/summoners/1" for 127.0.0.1 at 2019-02-13 16:15:48 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSummoner Load (0.5ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:25
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 10225ms (Views: 25.2ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/summoners-rift.jpeg" for 127.0.0.1 at 2019-02-13 16:15:59 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/summoners-rift.jpeg"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/games" for 127.0.0.1 at 2019-02-13 16:16:03 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gRkwyCWvzJjDoWWTEEmxfLq17ipzbrZ+KQ04myps4hMJjcKRsoXbsdrVn0GTP/q++/VZXo/NXQuco7eZExbJJg==", "game"=>{"game"=>"2974903739"}, "commit"=>"Check Game"}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (1.1ms)[0m  [1m[32mINSERT INTO "games" ("game", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["game", 2974903739], ["created_at", "2019-02-13 21:16:03.208344"], ["updated_at", "2019-02-13 21:16:03.208344"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:9
+Redirected to http://localhost:3000/games/44
+Completed 302 Found in 10ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/games/44" for 127.0.0.1 at 2019-02-13 16:16:03 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1145.1ms)
+Completed 200 OK in 2025ms (Views: 1177.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/summoners-rift.jpeg" for 127.0.0.1 at 2019-02-13 16:16:07 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/summoners-rift.jpeg"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/games" for 127.0.0.1 at 2019-02-13 16:16:09 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gRkwyCWvzJjDoWWTEEmxfLq17ipzbrZ+KQ04myps4hMJjcKRsoXbsdrVn0GTP/q++/VZXo/NXQuco7eZExbJJg==", "game"=>{"game"=>"2974956399"}, "commit"=>"Check Game"}
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (0.9ms)[0m  [1m[32mINSERT INTO "games" ("game", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["game", 2974956399], ["created_at", "2019-02-13 21:16:09.776752"], ["updated_at", "2019-02-13 21:16:09.776752"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:9
+Redirected to http://localhost:3000/games/45
+Completed 302 Found in 11ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/games/45" for 127.0.0.1 at 2019-02-13 16:16:09 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1763.6ms)
+Completed 200 OK in 2360ms (Views: 1794.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2019-02-13 16:16:17 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gRkwyCWvzJjDoWWTEEmxfLq17ipzbrZ+KQ04myps4hMJjcKRsoXbsdrVn0GTP/q++/VZXo/NXQuco7eZExbJJg==", "game"=>{"game"=>"2974956399"}, "commit"=>"Check Game"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (0.5ms)[0m  [1m[32mINSERT INTO "games" ("game", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["game", 2974956399], ["created_at", "2019-02-13 21:16:17.714910"], ["updated_at", "2019-02-13 21:16:17.714910"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:9
+Redirected to http://localhost:3000/games/46
+Completed 302 Found in 7ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/games/46" for 127.0.0.1 at 2019-02-13 16:16:17 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"46"}
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1192.3ms)
+Completed 200 OK in 2252ms (Views: 1225.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2019-02-13 16:16:27 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gRkwyCWvzJjDoWWTEEmxfLq17ipzbrZ+KQ04myps4hMJjcKRsoXbsdrVn0GTP/q++/VZXo/NXQuco7eZExbJJg==", "game"=>{"game"=>"2974956399"}, "commit"=>"Check Game"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (0.8ms)[0m  [1m[32mINSERT INTO "games" ("game", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["game", 2974956399], ["created_at", "2019-02-13 21:16:27.871841"], ["updated_at", "2019-02-13 21:16:27.871841"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:9
+Redirected to http://localhost:3000/games/47
+Completed 302 Found in 8ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/games/47" for 127.0.0.1 at 2019-02-13 16:16:27 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"47"}
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1747.2ms)
+Completed 200 OK in 2514ms (Views: 1779.3ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (251.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "simon_gg_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "simon_gg_test"[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2019-02-13 16:17:29 -0500
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.2) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[35m (15.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6874411228622918085)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateSummoners (20190211192824)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (17.3ms)[0m  [1m[35mCREATE TABLE "summoners" ("id" bigserial primary key, "summoner_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190211192824_create_summoners.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190211192824"]]
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateMatchHistories (20190211192834)
+  [1m[35m (6.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "match_histories" ("id" bigserial primary key, "game_id" integer, "account_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190211192834_create_match_histories.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190211192834"]]
+  ↳ bin/rails:9
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateGames (20190211192858)
+  [1m[35m (6.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE "games" ("id" bigserial primary key, "game" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190211192858_create_games.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190211192858"]]
+  ↳ bin/rails:9
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to RenameAccountIdToSummonerId (20190212010804)
+  [1m[35m (6.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "match_histories" RENAME COLUMN "account_id" TO "summoner_id"[0m
+  ↳ db/migrate/20190212010804_rename_account_id_to_summoner_id.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190212010804"]]
+  ↳ bin/rails:9
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to ChangeIntegerLimitInGames (20190212222958)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (21.4ms)[0m  [1m[35mALTER TABLE "games" ALTER COLUMN "game" TYPE bigint[0m
+  ↳ db/migrate/20190212222958_change_integer_limit_in_games.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190212222958"]]
+  ↳ bin/rails:9
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-02-13 21:18:15.812707"], ["updated_at", "2019-02-13 21:18:15.812707"]]
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6874411228622918085)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2019-02-13 16:18:18 -0500
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 290ms (Views: 259.9ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-13 16:18:22 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9NdH8LZ85PkM83iQ3yigy4KEWHohBV3eLYwP/GBKz2V8Q7WpIVbz0BWHgkJcXusJw8TvDt2mtquYIoD+WTDkUA==", "summoner"=>{"summoner_name"=>"Simonoski"}, "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[36mSummoner Create (1.8ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["summoner_name", "Simonoski"], ["created_at", "2019-02-13 21:18:23.086689"], ["updated_at", "2019-02-13 21:18:23.086689"]]
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[36mSummoner Load (0.8ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" ORDER BY "summoners"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:12
+Redirected to http://localhost:3000/summoners/1
+Completed 302 Found in 615ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/summoners/1" for 127.0.0.1 at 2019-02-13 16:18:23 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSummoner Load (0.3ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:25
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 5841ms (Views: 63.5ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/summoners-rift.jpeg" for 127.0.0.1 at 2019-02-13 16:18:28 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/summoners-rift.jpeg"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/games" for 127.0.0.1 at 2019-02-13 16:18:32 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Px/i/LtoZWilp57ZjnAQphhwSGaU2to4FF94yHzKQRsaI3SZce2vLviZKnlT4uA2SF2VWbwgB1V//LhGIkCMQ==", "game"=>{"game"=>"2974956399"}, "commit"=>"Check Game"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (1.7ms)[0m  [1m[32mINSERT INTO "games" ("game", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["game", 2974956399], ["created_at", "2019-02-13 21:18:32.356928"], ["updated_at", "2019-02-13 21:18:32.356928"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:9
+Redirected to http://localhost:3000/games/1
+Completed 302 Found in 12ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/games/1" for 127.0.0.1 at 2019-02-13 16:18:32 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (914.1ms)
+Completed 200 OK in 1750ms (Views: 955.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/summoners/1" for 127.0.0.1 at 2019-02-13 16:20:22 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSummoner Load (0.5ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:25
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 9674ms (Views: 40.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2019-02-13 16:20:50 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CQwFInLv+05kHtVVwc8qccFT2jSkNsoqrDaTegHmSluBmPd75cXsZ31qL4dCuWGzgBNtQFiVIV8ZmBx4OJxhbg==", "game"=>{"game"=>"2974956399"}, "commit"=>"Check Game"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (0.7ms)[0m  [1m[32mINSERT INTO "games" ("game", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["game", 2974956399], ["created_at", "2019-02-13 21:20:50.974275"], ["updated_at", "2019-02-13 21:20:50.974275"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:9
+Redirected to http://localhost:3000/games/2
+Completed 302 Found in 11ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/games/2" for 127.0.0.1 at 2019-02-13 16:20:50 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGame Load (0.7ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (911.1ms)
+Completed 200 OK in 1523ms (Views: 951.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/games/2" for 127.0.0.1 at 2019-02-13 16:26:21 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1016.5ms)
+Completed 200 OK in 1586ms (Views: 1038.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/games/2" for 127.0.0.1 at 2019-02-13 16:27:00 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGame Load (2.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1534.3ms)
+Completed 200 OK in 2237ms (Views: 1560.8ms | ActiveRecord: 7.0ms)
+
+
