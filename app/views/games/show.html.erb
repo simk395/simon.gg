@@ -51,16 +51,17 @@
 <% @game.single_game["participantIdentities"].map do |player| %>
 <% players_names << player["player"]["summonerName"]  %>
 <% end %>
+<% stats_arr = [] %>
 <% @game.single_game["participants"].each do |player| %>
- <p>Summoner Name - <%= players_names[n] %></p>
- <p>Highest Rank Achieved - <%= player['highestAchievedSeasonTier'] %></p>
- <p>Champion ID - <%= player["championId"] %></p>
- <p>Team ID - <%= player["teamId"] %></p>
- <p>Damage - <%= player["stats"]["totalDamageDealt"] %></p>
-<p>K - <%= player["stats"]["kills"] %></p>
-<p>D - <%= player["stats"]["deaths"] %></p>
-<p>A - <%= player["stats"]["assists"] %></p>
+<% players_hash = {} %>
+<% players_hash[players_names[n]+ " rank"] = player['highestAchievedSeasonTier'] %></p>
+<% players_hash[players_names[n] + " team"] = player["teamId"] %></p>
+<% players_hash[players_names[n] + " damage"] = player["stats"]["totalDamageDealt"] %></p>
+<% players_hash[players_names[n]+ " kills"] = player["stats"]["kills"] %></p>
+<% players_hash[players_names[n]+ " deaths"] = player["stats"]["deaths"] %></p>
+<% players_hash[players_names[n]+ " assists"] = player["stats"]["assists"] %></p>
 <br>
-
+<% stats_arr << players_hash %>
 <% n = n+1 %>
+
 <% end %>
