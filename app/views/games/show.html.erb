@@ -7,7 +7,7 @@
   <div class="player2">
     <img src="/images/champion_loading_art/Aatrox_0.jpg" alt="" class="loading-art">
   </div>
-  
+
   <div class="player3">
     <img src="/images/champion_loading_art/Ashe_0.jpg" class="loading-art" alt="">
   </div>
@@ -47,21 +47,20 @@
 
 
 <% n = 0 %>
-<!--
-play = {}
-<%# @game["participants"].each do |player| %>
-  <%# @game["participantIdentities"].select do |id| %>
-  <%# players << player["player"]["summonerName"]  %>
-  <%# end %>
-<p>Summoner Name - <%# players[n] %></p>
-<p>Highest Rank Achieved - <%# player['highestAchievedSeasonTier'] %></p>
-<p>Champion ID - <%# player["championId"] %></p>
-<p>Team ID - <%# player["teamId"] %></p>
-<p>Damage - <%# player["stats"]["totalDamageDealt"] %></p>
-<p>K - <%# player["stats"]["kills"] %></p>
-<p>D - <%# player["stats"]["deaths"] %></p>
-<p>A - <%# player["stats"]["assists"] %></p>
+<% players_names = [] %>
+<% @game.single_game["participantIdentities"].map do |player| %>
+<% players_names << player["player"]["summonerName"]  %>
+<% end %>
+<% @game.single_game["participants"].each do |player| %>
+ <p>Summoner Name - <%= players_names[n] %></p>
+ <p>Highest Rank Achieved - <%= player['highestAchievedSeasonTier'] %></p>
+ <p>Champion ID - <%= player["championId"] %></p>
+ <p>Team ID - <%= player["teamId"] %></p>
+ <p>Damage - <%= player["stats"]["totalDamageDealt"] %></p>
+<p>K - <%= player["stats"]["kills"] %></p>
+<p>D - <%= player["stats"]["deaths"] %></p>
+<p>A - <%= player["stats"]["assists"] %></p>
 <br>
--->
-<%# n = n+1 %>
-<%# end %>
+
+<% n = n+1 %>
+<% end %>
