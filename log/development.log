@@ -6111,3 +6111,11 @@ Processing by GamesController#show as HTML
 Completed 200 OK in 34ms (Views: 30.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/games/10" for 127.0.0.1 at 2019-02-13 13:41:34 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"10"}
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 38ms (Views: 35.4ms | ActiveRecord: 0.0ms)
+
+
