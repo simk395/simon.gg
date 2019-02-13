@@ -4,7 +4,11 @@ class ApplicationRecord < ActiveRecord::Base
   self.abstract_class = true
 
 def key
-  "RGAPI-7a99712b-658e-4c95-88bd-ad7cee2e2a45"
+  "RGAPI-03c8d3fc-ae4b-4b66-bcb4-4b5d78759d14"
+end
+
+def get_profile
+  RestClient.get("https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/#{self.summoner_name}?api_key=#{self.key}")
 end
 
 # def single_game

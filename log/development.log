@@ -858,6 +858,33 @@ Processing by SummonersController#new as HTML
 Completed 200 OK in 60ms (Views: 56.4ms | ActiveRecord: 0.0ms)
 
 
+<<<<<<< HEAD
+Started GET "/" for 127.0.0.1 at 2019-02-12 11:14:18 -0500
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "simon_gg_development" does not exist
+):
+  
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:692:in `connect'
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:1010:in `retrieve_connection'
+activerecord (5.2.2) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.2) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.2) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+=======
 Started GET "/summoners/show" for 127.0.0.1 at 2019-02-12 10:52:47 -0500
   [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
@@ -873,6 +900,7 @@ Started GET "/summoners/app/assets/images/champion_splash_arts/Ahri_0.jpg" for 1
 ActionController::RoutingError (No route matches [GET] "/summoners/app/assets/images/champion_splash_arts/Ahri_0.jpg"):
   
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+>>>>>>> c99cf2eb7761dadb415e0f59cf9b0d1d64bd72ef
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
 web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
@@ -899,6 +927,33 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 11:15:17 -0500
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "simon_gg_development" does not exist
+):
+  
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:692:in `connect'
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:1010:in `retrieve_connection'
+activerecord (5.2.2) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.2) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.2) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+=======
 Started GET "/summoners/show" for 127.0.0.1 at 2019-02-12 10:53:50 -0500
 Processing by SummonersController#show as HTML
   Parameters: {"id"=>"show"}
@@ -912,6 +967,7 @@ Started GET "/app/assets/images/champion_splash_arts/Ahri_0.jpg" for 127.0.0.1 a
 ActionController::RoutingError (No route matches [GET] "/app/assets/images/champion_splash_arts/Ahri_0.jpg"):
   
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+>>>>>>> c99cf2eb7761dadb415e0f59cf9b0d1d64bd72ef
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
 web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
@@ -938,6 +994,33 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
+Started GET "/summoner/new" for 127.0.0.1 at 2019-02-12 11:15:23 -0500
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "simon_gg_development" does not exist
+):
+  
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:692:in `connect'
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:1010:in `retrieve_connection'
+activerecord (5.2.2) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.2) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.2) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+=======
 Started GET "/summoners/show" for 127.0.0.1 at 2019-02-12 10:55:21 -0500
 Processing by SummonersController#show as HTML
   Parameters: {"id"=>"show"}
@@ -998,6 +1081,7 @@ Started GET "/app/assets/images/champion_splash_arts/Ahri_0.jpg" for 127.0.0.1 a
 ActionController::RoutingError (No route matches [GET] "/app/assets/images/champion_splash_arts/Ahri_0.jpg"):
   
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+>>>>>>> c99cf2eb7761dadb415e0f59cf9b0d1d64bd72ef
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
 web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
@@ -1024,6 +1108,33 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
+Started GET "/" for 127.0.0.1 at 2019-02-12 11:15:39 -0500
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "simon_gg_development" does not exist
+):
+  
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:692:in `connect'
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:1010:in `retrieve_connection'
+activerecord (5.2.2) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.2) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.2) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+=======
 Started GET "/summoners/show" for 127.0.0.1 at 2019-02-12 10:56:06 -0500
 Processing by SummonersController#show as HTML
   Parameters: {"id"=>"show"}
@@ -1076,6 +1187,7 @@ Started GET "/app/assets/images/champion_splash_arts/Ahri_0.jpg" for 127.0.0.1 a
 ActionController::RoutingError (No route matches [GET] "/app/assets/images/champion_splash_arts/Ahri_0.jpg"):
   
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+>>>>>>> c99cf2eb7761dadb415e0f59cf9b0d1d64bd72ef
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
 web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
@@ -1102,6 +1214,28 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 11:16:23 -0500
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "simon_gg_development" does not exist
+):
+  
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:692:in `connect'
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:1010:in `retrieve_connection'
+activerecord (5.2.2) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.2) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.2) lib/active_record/migration.rb:554:in `call'
+=======
 Started GET "/summoners/show" for 127.0.0.1 at 2019-02-12 10:56:30 -0500
 Processing by SummonersController#show as HTML
   Parameters: {"id"=>"show"}
@@ -1158,6 +1292,7 @@ rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
 rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
 actionpack (5.2.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
 activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+>>>>>>> c99cf2eb7761dadb415e0f59cf9b0d1d64bd72ef
 actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
 activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
 actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
@@ -1189,6 +1324,20 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 11:18:07 -0500
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.2) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.2) lib/active_record/migration.rb:556:in `call'
+=======
 Started GET "/summoners/show" for 127.0.0.1 at 2019-02-12 10:56:55 -0500
 Processing by SummonersController#show as HTML
   Parameters: {"id"=>"show"}
@@ -1284,6 +1433,7 @@ rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
 rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
 actionpack (5.2.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
 activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+>>>>>>> c99cf2eb7761dadb415e0f59cf9b0d1d64bd72ef
 actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
 activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
 actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
@@ -1315,6 +1465,143 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
+  [1m[35m (354.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (49.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (31.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6874411228622918085)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateSummoners (20190211192824)
+  [1m[35m (24.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (22.5ms)[0m  [1m[35mCREATE TABLE "summoners" ("id" bigserial primary key, "summoner_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190211192824_create_summoners.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (3.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190211192824"]]
+  ↳ bin/rails:9
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateMatchHistories (20190211192834)
+  [1m[35m (40.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "match_histories" ("id" bigserial primary key, "game_id" integer, "account_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190211192834_create_match_histories.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190211192834"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateGames (20190211192858)
+  [1m[35m (40.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "games" ("id" bigserial primary key, "game" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190211192858_create_games.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190211192858"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to RenameAccountIdToSummonerId (20190212010804)
+  [1m[35m (40.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "match_histories" RENAME COLUMN "account_id" TO "summoner_id"[0m
+  ↳ db/migrate/20190212010804_rename_account_id_to_summoner_id.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190212010804"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddPasswordDigest (20190212150631)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (41.3ms)[0m  [1m[35mALTER TABLE "summoners" ADD "password_digest" character varying[0m
+  ↳ db/migrate/20190212150631_add_password_digest.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190212150631"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (1.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-02-12 16:18:32.069357"], ["updated_at", "2019-02-12 16:18:32.069357"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6874411228622918085)[0m
+  ↳ bin/rails:9
+  [1m[35m (40.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 11:18:39 -0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnoncher/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (76.7ms)
+Completed 200 OK in 949ms (Views: 865.6ms | ActiveRecord: 28.4ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 11:18:53 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DQBH4s2AxCjhx+MzdKvJNBaw08sQ3hE6YZC+aDX1Gw9Vm9L7j1rR1BWIEP2086tRbDR7vdbXKYFmR44c1YwaZg==", "summoner"=>{"summoner_name"=>"joncher", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 3, expected 1)):
+  
+app/controllers/summoners_controller.rb:26:in `summoner_params'
+app/controllers/summoners_controller.rb:7:in `create'
+Started PUT "/__web_console/repl_sessions/0db93eca48ce1e3aeb987c0301ffa8d8" for 127.0.0.1 at 2019-02-12 11:19:17 -0500
+Started PUT "/__web_console/repl_sessions/0db93eca48ce1e3aeb987c0301ffa8d8" for 127.0.0.1 at 2019-02-12 11:19:18 -0500
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 11:23:38 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DQBH4s2AxCjhx+MzdKvJNBaw08sQ3hE6YZC+aDX1Gw9Vm9L7j1rR1BWIEP2086tRbDR7vdbXKYFmR44c1YwaZg==", "summoner"=>{"summoner_name"=>"joncher", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 121ms (ActiveRecord: 72.8ms)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument.):
+  
+app/controllers/summoners_controller.rb:7:in `create'
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 11:23:53 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 57ms (Views: 53.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 11:24:01 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MFMBqoqkqVYwquCVmCkHcDGBQ6LJRHEwWIUQfVB7K6NoyJSzyH68qsTlE1tYcWUVSwXr1A9NSYtfUiAJsAIqyg==", "summoner"=>{"summoner_name"=>"joncher", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument.):
+  
+app/controllers/summoners_controller.rb:7:in `create'
+Started PUT "/__web_console/repl_sessions/c6df3ee1a5293c8a8dcd9bfa233aac41" for 127.0.0.1 at 2019-02-12 11:24:10 -0500
+Started PUT "/__web_console/repl_sessions/c6df3ee1a5293c8a8dcd9bfa233aac41" for 127.0.0.1 at 2019-02-12 11:24:15 -0500
+Started PUT "/__web_console/repl_sessions/c6df3ee1a5293c8a8dcd9bfa233aac41" for 127.0.0.1 at 2019-02-12 11:24:24 -0500
+Started PUT "/__web_console/repl_sessions/c6df3ee1a5293c8a8dcd9bfa233aac41" for 127.0.0.1 at 2019-02-12 11:24:59 -0500
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 11:26:18 -0500
+  
+SyntaxError (/Users/johnoncher/dev/mod_2/Project/simon.gg/app/controllers/summoners_controller.rb:7: syntax error, unexpected '}', expecting =>
+        @summoner = Summoner.new({summoner_params})
+                                                  ^):
+  
+app/controllers/summoners_controller.rb:7: syntax error, unexpected '}', expecting =>
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 11:26:46 -0500
+  
+SyntaxError (/Users/johnoncher/dev/mod_2/Project/simon.gg/app/controllers/summoners_controller.rb:7: syntax error, unexpected '}', expecting =>
+        @summoner = Summoner.new({summoner_params})
+                                                  ^):
+  
+app/controllers/summoners_controller.rb:7: syntax error, unexpected '}', expecting =>
+Started GET "/summoner/new" for 127.0.0.1 at 2019-02-12 11:26:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/summoner/new"):
+=======
 Started GET "/summoners/show" for 127.0.0.1 at 2019-02-12 10:57:36 -0500
 Processing by SummonersController#show as HTML
   Parameters: {"id"=>"show"}
@@ -1365,6 +1652,7 @@ Completed 200 OK in 30ms (Views: 24.2ms | ActiveRecord: 0.0ms)
 Started GET "/Ahri_0.jpg" for 127.0.0.1 at 2019-02-12 10:57:49 -0500
   
 ActionController::RoutingError (No route matches [GET] "/Ahri_0.jpg"):
+>>>>>>> c99cf2eb7761dadb415e0f59cf9b0d1d64bd72ef
   
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -1393,6 +1681,716 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
+Started PUT "/__web_console/repl_sessions/c129e7126b5f0fc61fabd09bed7c0da4" for 127.0.0.1 at 2019-02-12 11:27:39 -0500
+Started PUT "/__web_console/repl_sessions/c129e7126b5f0fc61fabd09bed7c0da4" for 127.0.0.1 at 2019-02-12 11:27:40 -0500
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 11:28:20 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 131ms (Views: 68.2ms | ActiveRecord: 21.5ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 11:28:32 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"79gw94/d4r7rOszPdDeLAh8HC3NxvT3dMLq94qh59Ra3Q6XuzQf3Qh91PwG0b+lnZYOjBbe0BWY3bY2WSAD0fw==", "summoner"=>{"summoner_name"=>"joncher", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'summoner' for Summoner.):
+  
+app/controllers/summoners_controller.rb:7:in `create'
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 11:28:55 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"79gw94/d4r7rOszPdDeLAh8HC3NxvT3dMLq94qh59Ra3Q6XuzQf3Qh91PwG0b+lnZYOjBbe0BWY3bY2WSAD0fw==", "summoner"=>{"summoner_name"=>"joncher", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 526ms (ActiveRecord: 10.8ms)
+
+
+  
+NameError (undefined local variable or method `summoner' for #<SummonersController:0x007ff545ef9088>
+Did you mean?  @summoner):
+  
+app/controllers/summoners_controller.rb:8:in `create'
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 11:29:37 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"79gw94/d4r7rOszPdDeLAh8HC3NxvT3dMLq94qh59Ra3Q6XuzQf3Qh91PwG0b+lnZYOjBbe0BWY3bY2WSAD0fw==", "summoner"=>{"summoner_name"=>"joncher", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:8
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/summoners_controller.rb:8
+  [1m[36mSummoner Load (45.0ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" ORDER BY "summoners"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:11
+Completed 500 Internal Server Error in 148ms (ActiveRecord: 62.2ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/summoners_controller.rb:11:in `create'
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 11:31:50 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 297ms (Views: 143.1ms | ActiveRecord: 79.3ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 11:31:59 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OLsxPPUZxPUyR9uNhqMmBVIOjQ50flz0Iw1wE6RN/XRgIKQlt8PRCcYIKENG+0RgKIoleLJ3ZE8k2kBnRDT8HQ==", "summoner"=>{"summoner_name"=>"joncher", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/summoners_controller.rb:8
+Completed 500 Internal Server Error in 515ms (ActiveRecord: 1.1ms)
+
+
+  
+NameError (undefined local variable or method `new_summoner' for #<SummonersController:0x007ff54e307848>
+Did you mean?  new_summoner_url):
+  
+app/controllers/summoners_controller.rb:13:in `create'
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 11:32:20 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OLsxPPUZxPUyR9uNhqMmBVIOjQ50flz0Iw1wE6RN/XRgIKQlt8PRCcYIKENG+0RgKIoleLJ3ZE8k2kBnRDT8HQ==", "summoner"=>{"summoner_name"=>"joncher", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:8
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/summoners_controller.rb:8
+Redirected to http://localhost:3000/summoners/new
+Completed 302 Found in 79ms (ActiveRecord: 34.5ms)
+
+
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 11:32:20 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 77ms (Views: 70.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 11:32:28 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RjLmwLaVAaDHEn5qPB/ZqYO6clmNZCmIH/Zw6kWt56geqXPZ9E8UXDNdjaT8R7vM+T7aL0ttETMYIUCepdTmwQ==", "summoner"=>{"summoner_name"=>"john", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/summoners_controller.rb:8
+Redirected to http://localhost:3000/summoners/new
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 11:32:28 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 42ms (Views: 37.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 11:32:31 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u5tVZRFlx6Et/8floK99TkVctKln+MRsx7jA+ttIx5DjAMB8U7/SXdmwNCtg9x8rP9gc36Hx/NfAb/COOzHG+Q==", "summoner"=>{"summoner_name"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: summoner_name):
+  
+app/controllers/summoners_controller.rb:29:in `summoner_params'
+app/controllers/summoners_controller.rb:7:in `create'
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 11:32:41 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u5tVZRFlx6Et/8floK99TkVctKln+MRsx7jA+ttIx5DjAMB8U7/SXdmwNCtg9x8rP9gc36Hx/NfAb/COOzHG+Q==", "summoner"=>{"summoner_name"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: summoner_name):
+  
+app/controllers/summoners_controller.rb:29:in `summoner_params'
+app/controllers/summoners_controller.rb:7:in `create'
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 11:33:09 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 181ms (Views: 78.4ms | ActiveRecord: 54.9ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 11:33:19 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b1Ay55U0/RZtrrywhecB2wtc1fAHu00+T7PysSOuZYY3y6f+1+7o6pnhT35Fv2O+cdh9hsGydYVIZMLFw9dk7w==", "summoner"=>{"summoner_name"=>"johnonhcer", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ (byebug):1
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ (byebug):1
+Completed 500 Internal Server Error in 105846ms (ActiveRecord: 2.6ms)
+
+
+  
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 11:35:05 -0500
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/summoners_controller.rb:9:in `create'
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 2153ms (Views: 1841.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 11:35:09 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (43.0ms)
+Completed 200 OK in 963ms (Views: 730.4ms | ActiveRecord: 16.9ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 11:35:21 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0gHv1bW+NiNF7Qxl7Qhe00AAqUJSGBxapxplZ6xPHEGKmnrM92Qj37Gi/6stUDy2OoQBNJQRJOGgzVUTTDYdKA==", "summoner"=>{"summoner_name"=>"john", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 3, expected 1)):
+  
+app/controllers/summoners_controller.rb:29:in `summoner_params'
+app/controllers/summoners_controller.rb:7:in `create'
+Started PUT "/__web_console/repl_sessions/7960bfe199e4bc55dfbc648e02b1fedc" for 127.0.0.1 at 2019-02-12 11:35:44 -0500
+Started PUT "/__web_console/repl_sessions/7960bfe199e4bc55dfbc648e02b1fedc" for 127.0.0.1 at 2019-02-12 11:35:45 -0500
+Started PUT "/__web_console/repl_sessions/7960bfe199e4bc55dfbc648e02b1fedc" for 127.0.0.1 at 2019-02-12 11:35:46 -0500
+Started PUT "/__web_console/repl_sessions/7960bfe199e4bc55dfbc648e02b1fedc" for 127.0.0.1 at 2019-02-12 11:35:48 -0500
+Started PUT "/__web_console/repl_sessions/7960bfe199e4bc55dfbc648e02b1fedc" for 127.0.0.1 at 2019-02-12 11:35:53 -0500
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 11:38:48 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (113.6ms)
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 11:38:52 -0500
+Completed 200 OK in 1918ms (Views: 1402.2ms | ActiveRecord: 104.0ms)
+
+
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (34.8ms)
+Completed 200 OK in 832ms (Views: 631.4ms | ActiveRecord: 10.6ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 11:39:02 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T5+0pJQ3bIId6TqB/hysZrb9QOlRwRoZOTlIdU/fdFsXBCG91u15fummyU8+RM4DzHnon5fIIqI+7ngBr6Z1Mg==", "summoner"=>{"summoner_name"=>"joncher", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 3, expected 1)):
+  
+app/controllers/summoners_controller.rb:29:in `summoner_params'
+app/controllers/summoners_controller.rb:7:in `create'
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 11:39:20 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T5+0pJQ3bIId6TqB/hysZrb9QOlRwRoZOTlIdU/fdFsXBCG91u15fummyU8+RM4DzHnon5fIIqI+7ngBr6Z1Mg==", "summoner"=>{"summoner_name"=>"joncher", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 3, expected 1)):
+  
+app/controllers/summoners_controller.rb:29:in `summoner_params'
+app/controllers/summoners_controller.rb:7:in `create'
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 11:42:17 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 976ms (Views: 723.6ms | ActiveRecord: 33.6ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 11:42:24 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZONKc4TatVaidem6lEDyn3UYiCmU8CdxB6ZVLN53Kts8eN9qxgCgqlY6GnRUGJD6D5wgX1L5H8oAcWVYPg4rsg==", "summoner"=>{"summoner_name"=>"joncher"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 193461ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/summoners_controller.rb:8:in `create'
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (40.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6874411228622918085)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddPasswordDigest (20190212150631)
+  [1m[35m (40.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (62.9ms)[0m  [1m[35mALTER TABLE "summoners" DROP COLUMN "password_digest"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (101.7ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20190212150631"]]
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(6874411228622918085)[0m
+  ↳ bin/rails:9
+  [1m[35m (35.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 11:46:45 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnoncher/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 427ms (Views: 360.1ms | ActiveRecord: 16.7ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 11:46:50 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sDDtcmj6poORxpzv8jnyw5L3PGAUVMrrSGAnFnLLza/oq3hrKiCzf2WJbyEyYZCm6HOUFtJd8lBPtxdikrLMxg==", "summoner"=>{"summoner_name"=>"joncher"}, "commit"=>"Submit"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:10
+  [1m[35m (41.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/summoners_controller.rb:10
+Completed 500 Internal Server Error in 10398ms (ActiveRecord: 41.8ms)
+
+
+  
+NoMethodError (undefined method `password_digest' for #<Summoner:0x007fc64bacd820>
+Did you mean?  password):
+  
+app/controllers/summoners_controller.rb:10:in `create'
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 11:50:32 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 139ms (Views: 87.4ms | ActiveRecord: 11.7ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 11:50:36 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9L7FgFPT0KUP/J7wyakkYqJT4Ed9XYVpBRXJmnlkJH6sJVCZEQnFWfuzbT4J8UYH2NdIMbtUvdICwvnumR0lFw==", "summoner"=>{"summoner_name"=>"joncher"}, "commit"=>"Submit"}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:10
+  [1m[36mSummoner Create (49.5ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["summoner_name", "joncher"], ["created_at", "2019-02-12 16:50:48.016783"], ["updated_at", "2019-02-12 16:50:48.016783"]]
+  ↳ app/controllers/summoners_controller.rb:10
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:10
+  [1m[36mSummoner Load (2.2ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" ORDER BY "summoners"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:11
+Completed 500 Internal Server Error in 833502ms (ActiveRecord: 53.3ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/summoners_controller.rb:13:in `create'
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 12:04:46 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (41.5ms)
+Completed 200 OK in 995ms (Views: 643.4ms | ActiveRecord: 120.6ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 12:04:54 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gpPm+SwcN9hWJnvEPde1VwdbvS6oOC+XAp8zC6muo3DaCHPgbsYiJKJpiAr9j9cyfd8VWG4xFywFSAN/SdeiGQ==", "summoner"=>{"summoner_name"=>"joncher"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 40583ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/summoners_controller.rb:11:in `create'
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 12:05:43 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 772ms (Views: 721.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 12:05:48 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"elSiOpMdry3y5lQHsCCDr75v8pNvHnX+6p4yu5/x4F8izzcj0ce60Qapp8lweOHKxOta5akXTUXtSQLPf4jhNg==", "summoner"=>{"summoner_name"=>"dsbhfbjdsgfvjhsdbjfsdf"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 636ms (ActiveRecord: 0.0ms)
+
+
+  
+RestClient::NotFound (404 Not Found):
+  
+app/models/summoner.rb:7:in `league_profile'
+app/controllers/summoners_controller.rb:9:in `create'
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 12:09:07 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (106.1ms)
+Completed 200 OK in 1990ms (Views: 1659.6ms | ActiveRecord: 74.9ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 12:09:16 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rTI46gIFF1u/s+f/eSslVyy2vjjDqTIpADZUnXwG0dv1qa3zQN8Cp0v8FDG5c0cyVjIWTgWgCpIH4WTpnH/Qsg==", "summoner"=>{"summoner_name"=>"fdsfdsfsfdsfds"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 767ms (ActiveRecord: 0.0ms)
+
+
+  
+RestClient::NotFound (404 Not Found):
+  
+app/models/summoner.rb:7:in `league_profile'
+app/controllers/summoners_controller.rb:9:in `create'
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 12:22:16 -0500
+  
+SyntaxError (/Users/johnoncher/dev/mod_2/Project/simon.gg/app/controllers/summoners_controller.rb:39: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/summoners_controller.rb:39: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 12:22:21 -0500
+  
+SyntaxError (/Users/johnoncher/dev/mod_2/Project/simon.gg/app/controllers/summoners_controller.rb:39: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/summoners_controller.rb:39: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 12:22:53 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (63.3ms)
+Completed 200 OK in 1479ms (Views: 986.1ms | ActiveRecord: 129.4ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 12:23:02 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7VetqB7J2ZW6Xv52BuS00Z2DcmuB3eT6VBViy6JVdse1zDixXBPMaU4RDbjGvNa05wfaHUfU3EFTwlK/Qix3rg==", "summoner"=>{"summoner_name"=>"joncher"}, "commit"=>"Submit"}
+Redirected to http://localhost:3000/summoners/new
+  [1m[35m (40.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:14
+  [1m[36mSummoner Create (83.4ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["summoner_name", "joncher"], ["created_at", "2019-02-12 17:23:38.481169"], ["updated_at", "2019-02-12 17:23:38.481169"]]
+  ↳ app/controllers/summoners_controller.rb:14
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:14
+  [1m[36mSummoner Load (28.1ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" ORDER BY "summoners"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:15
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 12:24:03 -0500
+  [1m[35m (16.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnoncher/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 388ms (Views: 351.9ms | ActiveRecord: 8.3ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 12:24:10 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BGSMZ/y8AGYpFihknhRkSSxoWKE/ewtWc6jQ8KYjQZdc/xl+vmYVmt1Z26peTAYsVuzw1/lyM+10f+CERlpA/g==", "summoner"=>{"summoner_name"=>"jonchsdafsfdsfds"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 10828ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `league_profile'
+app/models/summoner.rb:9:in `league_profile'
+app/controllers/summoners_controller.rb:9:in `create'
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 12:24:29 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 647ms (Views: 634.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 12:24:34 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EyIq+3n7TbV81oBwYk7wRF7TQdQqhOC5slfbsRm3krxLub/iOyFYSYiZc76iFpIhJFfpouyN2AK1gOvF+c6T1Q==", "summoner"=>{"summoner_name"=>"jdosfsdfsdfdsf"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 3326ms (ActiveRecord: 0.0ms)
+
+
+  
+RestClient::NotFound (404 Not Found):
+  
+app/models/summoner.rb:9:in `league_profile'
+app/controllers/summoners_controller.rb:9:in `create'
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 12:33:06 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 261ms (Views: 147.1ms | ActiveRecord: 50.8ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 12:33:12 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uCJRH7Ox8qaMgQVjy3CZ1paWTrshfFEnHZmmdtuKGk3gucQG8WvnWnjO9q0LKPuz7BLmzed1aZwaTpYCO/MbJA==", "summoner"=>{"summoner_name"=>"sdfdsfdsfdsfds"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 542ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/models/summoner.rb:11:in `league_profile'
+app/controllers/summoners_controller.rb:9:in `create'
+Started PUT "/__web_console/repl_sessions/c68fafd6d7db68a020f622a871a50b8d" for 127.0.0.1 at 2019-02-12 12:33:40 -0500
+Started PUT "/__web_console/repl_sessions/c68fafd6d7db68a020f622a871a50b8d" for 127.0.0.1 at 2019-02-12 12:33:41 -0500
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 12:34:01 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 110ms (Views: 92.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 12:34:08 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XRc1YCQ5x+hArVIzL7KedRyPaE7WFU5jcFgPoQPRcigFjKB5ZuPSFLTiof3v6vwQZgvAOBAcdth3jz/V46hzQQ==", "summoner"=>{"summoner_name"=>"fdsfsdfsdurwejrnerufsdusdfhesuew"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 543ms (ActiveRecord: 0.0ms)
+
+
+  
+RestClient::NotFound (404 Not Found):
+  
+app/models/summoner.rb:9:in `league_profile'
+app/controllers/summoners_controller.rb:9:in `create'
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 13:41:42 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 560ms (Views: 74.0ms | ActiveRecord: 429.0ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 13:41:48 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PoVJ83vsLZPuRHsinTPfa1Eu5Akhvq4LcoMAbltFUC9mHtzqOTY4bxoLiOxda70OK6pMf+e3lrB1VDAauzxRRg==", "summoner"=>{"summoner_name"=>"dsbhfsdgfsdafsdfsdfasfds"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 927ms (ActiveRecord: 0.0ms)
+
+
+  
+RestClient::NotFound (404 Not Found):
+  
+app/models/application_record.rb:11:in `get_profile'
+app/models/summoner.rb:7:in `check_profile'
+app/controllers/summoners_controller.rb:9:in `create'
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 13:43:02 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PoVJ83vsLZPuRHsinTPfa1Eu5Akhvq4LcoMAbltFUC9mHtzqOTY4bxoLiOxda70OK6pMf+e3lrB1VDAauzxRRg==", "summoner"=>{"summoner_name"=>"joncher"}, "commit"=>"Submit"}
+Redirected to http://localhost:3000/summoners/new
+  [1m[35m (32.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[36mSummoner Create (349.3ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["summoner_name", "joncher"], ["created_at", "2019-02-12 18:43:03.630242"], ["updated_at", "2019-02-12 18:43:03.630242"]]
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[35m (85.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[36mSummoner Load (46.5ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" ORDER BY "summoners"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:12
+Completed 500 Internal Server Error in 15570ms (ActiveRecord: 513.5ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/summoners_controller.rb:14:in `create'
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 13:45:28 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (49.5ms)
+Completed 200 OK in 981ms (Views: 705.0ms | ActiveRecord: 23.0ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 13:45:39 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aI7/ybPToA4PYteKa1JP3W6rykKrxsbbDXOXW5XW76owFWrQ8Qm18vstJESrCi24FC9iNG3P/mAKpKcvda/uww==", "summoner"=>{"summoner_name"=>"jnsgfdhfbdskhfasfewhfsysdbhvabiurf"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 620ms (ActiveRecord: 0.0ms)
+
+
+  
+RestClient::NotFound (404 Not Found):
+  
+app/models/application_record.rb:11:in `get_profile'
+app/models/summoner.rb:7:in `check_profile'
+app/controllers/summoners_controller.rb:9:in `create'
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 13:49:23 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 1343ms (Views: 872.7ms | ActiveRecord: 128.0ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 13:49:30 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VFNuUxfXdHowsF6mF3MjlqfMiUUNMhT9XfZA3Ta3aiQMyPtKVQ1hhsT/rWjXK0Hz3UghM8s7LEZaIXCp1s5rTQ==", "summoner"=>{"summoner_name"=>"sdfasfwaefwefsdfgrwegerga"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 104398ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `check_profile'
+app/models/summoner.rb:8:in `check_profile'
+app/controllers/summoners_controller.rb:9:in `create'
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 13:51:19 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 725ms (Views: 704.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 13:51:24 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7+eV7z1c3jQ+GdtffksylPAIGLG7mArGqLT0MW9O8ui3fAD2f4bLyMpWKJG+E1Dxioywx32RMn2vY8RFjzfzgQ==", "summoner"=>{"summoner_name"=>"joncher"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 176100ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `check_profile'
+app/models/summoner.rb:8:in `check_profile'
+app/controllers/summoners_controller.rb:9:in `create'
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 13:54:23 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 989ms (Views: 703.9ms | ActiveRecord: 40.1ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 13:54:42 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0AlBPrChMT+rh177jYxSK6TClpT9tzA/MtntFnKT8I6IktQn8nskw1/IrTVN1DBO3kY+4ju+CIQ1Dt1ikurx5w==", "summoner"=>{"summoner_name"=>"joncherdsadsadadasdsada"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 14462ms (ActiveRecord: 0.0ms)
+
+
+  
+RestClient::NotFound (404 Not Found):
+  
+app/models/application_record.rb:11:in `get_profile'
+app/models/summoner.rb:8:in `check_profile'
+app/controllers/summoners_controller.rb:9:in `create'
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 13:55:34 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 158ms (Views: 147.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 13:55:38 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OB9NQ+wYESCDurOM0B8xSiiDN3k9APVHkbYSSlw/A89ghNharsIE3Hf1QEIQR1MvUgefD/sJzfyWYSI+vEYCpg==", "summoner"=>{"summoner_name"=>"fsdfsdfwafwefwaefewf"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 991344ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `check_profile'
+app/models/summoner.rb:8:in `check_profile'
+app/controllers/summoners_controller.rb:9:in `create'
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 14:16:50 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (47.1ms)
+Completed 200 OK in 1210ms (Views: 822.5ms | ActiveRecord: 146.2ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 14:16:58 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7SgZ5LUruNU1/FygmP6MnQn7cEvp9FgjwMVyjUHSW3G1s4z99/GtKcGzr25Ypu74c3/YPS/9YJjHEkL5oataGA==", "summoner"=>{"summoner_name"=>"dadqwdqwwqdqwdqwdqw"}, "commit"=>"Submit"}
+Started GET "/" for 127.0.0.1 at 2019-02-12 14:21:22 -0500
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 14:37:26 -0500
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnoncher/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (28.3ms)
+Completed 200 OK in 806ms (Views: 358.9ms | ActiveRecord: 395.2ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 14:37:33 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/65Pp3Jzcrh27IbqKCxLGaHWXGSbMkNx30PhO9nl4IGnNdq+MKlnRIKjdSTodCl821L0El07e8rYlNFPOZzh6A==", "summoner"=>{"summoner_name"=>"fsdfzsfwewefewfewf"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 718ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `new_summoner_path' for #<Summoner:0x007ff345cd5ab0>):
+  
+app/models/summoner.rb:14:in `league_profile'
+app/controllers/summoners_controller.rb:9:in `create'
+Started PUT "/__web_console/repl_sessions/b40f9e4609606c408f61f096aa5dcb18" for 127.0.0.1 at 2019-02-12 14:37:59 -0500
+Started PUT "/__web_console/repl_sessions/b40f9e4609606c408f61f096aa5dcb18" for 127.0.0.1 at 2019-02-12 14:38:04 -0500
+Started PUT "/__web_console/repl_sessions/b40f9e4609606c408f61f096aa5dcb18" for 127.0.0.1 at 2019-02-12 14:38:08 -0500
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 14:41:46 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 371ms (Views: 174.7ms | ActiveRecord: 54.2ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 14:41:51 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X0z3j+G0DAEiYPhKkGkA1CbGejaiaqzOz9H6tr5FfzkH12KWo24Z/dYvC4RQMWKxXELSQGRjlHXIBsrCXjx+UA==", "summoner"=>{"summoner_name"=>"fweFEWFAWGRDGARSGWEA"}, "commit"=>"Submit"}
+Redirected to http://localhost:3000/summoners/new
+Completed 302 Found in 663ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-12 14:41:52 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 37ms (Views: 33.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-12 14:42:02 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+n+GdCtY4HfYOT3UC50GRt1ikEXlrm4WQz8RWWkGJS+i5BNtaYL1iyx2zhrLxWQjp+Y4MyOnVq1E6CEtiX8kRg==", "summoner"=>{"summoner_name"=>"joncher"}, "commit"=>"Submit"}
+  [1m[35m (8.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[36mSummoner Create (16.6ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["summoner_name", "joncher"], ["created_at", "2019-02-12 19:42:03.387716"], ["updated_at", "2019-02-12 19:42:03.387716"]]
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[36mSummoner Load (2.8ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" ORDER BY "summoners"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:12
+Completed 500 Internal Server Error in 569508ms (ActiveRecord: 32.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/summoners_controller.rb:14:in `create'
+Started GET "/summoners/show" for 127.0.0.1 at 2019-02-12 14:52:13 -0500
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnoncher/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"show"}
+Completed 404 Not Found in 35ms (ActiveRecord: 9.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Summoner without an ID):
+  
+app/controllers/summoners_controller.rb:25:in `show'
+Started GET "/summoners/1" for 127.0.0.1 at 2019-02-12 14:52:45 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Summoner without an ID):
+  
+app/controllers/summoners_controller.rb:25:in `show'
+Started GET "/summoners/show/4" for 127.0.0.1 at 2019-02-12 14:52:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/summoners/show/4"):
+=======
 Started GET "/summoners/show" for 127.0.0.1 at 2019-02-12 10:58:04 -0500
 Processing by SummonersController#show as HTML
   Parameters: {"id"=>"show"}
@@ -1451,6 +2449,7 @@ Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.0ms)
 Started GET "/app/assets/images/champion_splash_arts/Aatrox_0.jpg" for 127.0.0.1 at 2019-02-12 11:03:00 -0500
   
 ActionController::RoutingError (No route matches [GET] "/app/assets/images/champion_splash_arts/Aatrox_0.jpg"):
+>>>>>>> c99cf2eb7761dadb415e0f59cf9b0d1d64bd72ef
   
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -1479,6 +2478,11 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
+Started GET "/summoners/4/show/" for 127.0.0.1 at 2019-02-12 14:53:01 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/summoners/4/show"):
+=======
 Started GET "/summoners/show" for 127.0.0.1 at 2019-02-12 11:03:02 -0500
 Processing by SummonersController#show as HTML
   Parameters: {"id"=>"show"}
@@ -1490,6 +2494,7 @@ Completed 200 OK in 28ms (Views: 25.3ms | ActiveRecord: 0.0ms)
 Started GET "/app/assets/images/champion_splash_arts/Aatrox_0.jpg" for 127.0.0.1 at 2019-02-12 11:03:02 -0500
   
 ActionController::RoutingError (No route matches [GET] "/app/assets/images/champion_splash_arts/Aatrox_0.jpg"):
+>>>>>>> c99cf2eb7761dadb415e0f59cf9b0d1d64bd72ef
   
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -1518,6 +2523,23 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
+Started PUT "/__web_console/repl_sessions/6ec6fe4b4b3e6e441796cd5cbf9463c1" for 127.0.0.1 at 2019-02-12 14:53:10 -0500
+Started PUT "/__web_console/repl_sessions/6ec6fe4b4b3e6e441796cd5cbf9463c1" for 127.0.0.1 at 2019-02-12 14:53:12 -0500
+Started PUT "/__web_console/repl_sessions/6ec6fe4b4b3e6e441796cd5cbf9463c1" for 127.0.0.1 at 2019-02-12 14:53:13 -0500
+Started PUT "/__web_console/repl_sessions/6ec6fe4b4b3e6e441796cd5cbf9463c1" for 127.0.0.1 at 2019-02-12 14:53:20 -0500
+Started PUT "/__web_console/repl_sessions/6ec6fe4b4b3e6e441796cd5cbf9463c1" for 127.0.0.1 at 2019-02-12 14:53:32 -0500
+Started PUT "/__web_console/repl_sessions/6ec6fe4b4b3e6e441796cd5cbf9463c1" for 127.0.0.1 at 2019-02-12 14:53:34 -0500
+Started PUT "/__web_console/repl_sessions/6ec6fe4b4b3e6e441796cd5cbf9463c1" for 127.0.0.1 at 2019-02-12 14:53:34 -0500
+Started PUT "/__web_console/repl_sessions/6ec6fe4b4b3e6e441796cd5cbf9463c1" for 127.0.0.1 at 2019-02-12 14:53:49 -0500
+Started PUT "/__web_console/repl_sessions/6ec6fe4b4b3e6e441796cd5cbf9463c1" for 127.0.0.1 at 2019-02-12 14:53:51 -0500
+  [1m[36mSummoner Load (1.2ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/summoners/4/show/" for 127.0.0.1 at 2019-02-12 14:56:22 -0500
+  [1m[35m (42.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnoncher/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/summoners/4/show"):
+=======
 Started GET "/summoners/show" for 127.0.0.1 at 2019-02-12 11:04:27 -0500
 Processing by SummonersController#show as HTML
   Parameters: {"id"=>"show"}
@@ -1529,6 +2551,7 @@ Completed 200 OK in 27ms (Views: 22.4ms | ActiveRecord: 0.0ms)
 Started GET "/app/assets/images/champion_splash_arts/Aatrox_0.jpg" for 127.0.0.1 at 2019-02-12 11:04:27 -0500
   
 ActionController::RoutingError (No route matches [GET] "/app/assets/images/champion_splash_arts/Aatrox_0.jpg"):
+>>>>>>> c99cf2eb7761dadb415e0f59cf9b0d1d64bd72ef
   
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -1557,6 +2580,11 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
+Started GET "/summoners/3/show/" for 127.0.0.1 at 2019-02-12 14:56:32 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/summoners/3/show"):
+=======
 Started GET "/summoners/show" for 127.0.0.1 at 2019-02-12 11:04:36 -0500
 Processing by SummonersController#show as HTML
   Parameters: {"id"=>"show"}
@@ -1568,6 +2596,7 @@ Completed 200 OK in 30ms (Views: 25.3ms | ActiveRecord: 0.0ms)
 Started GET "/app/assets/images/champion_splash_arts/Aatrox_0.jpg" for 127.0.0.1 at 2019-02-12 11:04:36 -0500
   
 ActionController::RoutingError (No route matches [GET] "/app/assets/images/champion_splash_arts/Aatrox_0.jpg"):
+>>>>>>> c99cf2eb7761dadb415e0f59cf9b0d1d64bd72ef
   
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -1596,6 +2625,13 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
+Started GET "/summoner/3/show/" for 127.0.0.1 at 2019-02-12 14:56:46 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/summoner/3/show"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+=======
 Started GET "/summoners/show" for 127.0.0.1 at 2019-02-12 11:06:45 -0500
 Processing by SummonersController#show as HTML
   Parameters: {"id"=>"show"}
@@ -1625,6 +2661,7 @@ Started GET "/images/champion_splash_arts/Ahri_0.jpg" for 127.0.0.1 at 2019-02-1
 ActionController::RoutingError (No route matches [GET] "/images/champion_splash_arts/Ahri_0.jpg"):
   
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+>>>>>>> c99cf2eb7761dadb415e0f59cf9b0d1d64bd72ef
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
 web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
@@ -1651,9 +2688,15 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
+Started GET "/summoner/3/" for 127.0.0.1 at 2019-02-12 14:56:58 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/summoner/3"):
+=======
 Started GET "/images/champion_splash_arts/Ahri_0.jpg" for 127.0.0.1 at 2019-02-12 11:07:51 -0500
   
 ActionController::RoutingError (No route matches [GET] "/images/champion_splash_arts/Ahri_0.jpg"):
+>>>>>>> c99cf2eb7761dadb415e0f59cf9b0d1d64bd72ef
   
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -1682,6 +2725,87 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
+Started GET "/summoners/3/" for 127.0.0.1 at 2019-02-12 14:57:12 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"3"}
+Completed 404 Not Found in 25ms (ActiveRecord: 11.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Summoner without an ID):
+  
+app/controllers/summoners_controller.rb:26:in `show'
+Started GET "/summoners/3/" for 127.0.0.1 at 2019-02-12 14:57:32 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"3"}
+Completed 500 Internal Server Error in 45782ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/summoners_controller.rb:26:in `show'
+Started GET "/summoners/3/" for 127.0.0.1 at 2019-02-12 14:58:26 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"3"}
+Started GET "/summoners/3/" for 127.0.0.1 at 2019-02-12 14:58:33 -0500
+Completed 500 Internal Server Error in 5645ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/summoners_controller.rb:26:in `show'
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSummoner Load (10.2ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:26
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (1078.8ms)
+Completed 500 Internal Server Error in 1439ms (ActiveRecord: 27.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    5: <!-- Display a card with basic profile information like rank and win/loss and top 3 champions -->
+    6: 
+    7: <!-- Display last 10 games with basic info on the games -->
+    8: <%= @summoner.test %>
+  
+app/models/summoner.rb:40:in `acc_id'
+app/models/summoner.rb:19:in `find_game_ids'
+app/models/summoner.rb:49:in `test'
+app/views/summoners/show.html.erb:8:in `_app_views_summoners_show_html_erb___3974738744793439182_70157204788540'
+Started GET "/summoners/3/" for 127.0.0.1 at 2019-02-12 14:58:52 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSummoner Load (2.8ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:26
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (627.4ms)
+Completed 500 Internal Server Error in 931ms (ActiveRecord: 17.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    5: <!-- Display a card with basic profile information like rank and win/loss and top 3 champions -->
+    6: 
+    7: <!-- Display last 10 games with basic info on the games -->
+    8: <%= @summoner.test %>
+  
+app/models/summoner.rb:40:in `acc_id'
+app/models/summoner.rb:19:in `find_game_ids'
+app/models/summoner.rb:49:in `test'
+app/views/summoners/show.html.erb:8:in `_app_views_summoners_show_html_erb___3974738744793439182_70157166611780'
+Started GET "/summoner/3/" for 127.0.0.1 at 2019-02-12 14:58:59 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/summoner/3"):
+=======
 Started GET "/summoners/show" for 127.0.0.1 at 2019-02-12 11:08:03 -0500
 Processing by SummonersController#show as HTML
   Parameters: {"id"=>"show"}
@@ -1857,6 +2981,7 @@ Completed 200 OK in 30ms (Views: 26.0ms | ActiveRecord: 0.0ms)
 Started GET "/images/champion_splash_arts/Ahri_0" for 127.0.0.1 at 2019-02-12 11:08:59 -0500
   
 ActionController::RoutingError (No route matches [GET] "/images/champion_splash_arts/Ahri_0"):
+>>>>>>> c99cf2eb7761dadb415e0f59cf9b0d1d64bd72ef
   
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -1885,6 +3010,74 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
+Started PUT "/__web_console/repl_sessions/b1d431aeba40ce7f8de62ccc4bcb96c8" for 127.0.0.1 at 2019-02-12 14:59:08 -0500
+Started PUT "/__web_console/repl_sessions/b1d431aeba40ce7f8de62ccc4bcb96c8" for 127.0.0.1 at 2019-02-12 14:59:09 -0500
+Started GET "/summoners/3/" for 127.0.0.1 at 2019-02-12 14:59:21 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSummoner Load (4.1ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:26
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (775.3ms)
+Completed 500 Internal Server Error in 876ms (ActiveRecord: 15.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    5: <!-- Display a card with basic profile information like rank and win/loss and top 3 champions -->
+    6: 
+    7: <!-- Display last 10 games with basic info on the games -->
+    8: <%= @summoner.test %>
+  
+app/models/summoner.rb:40:in `acc_id'
+app/models/summoner.rb:19:in `find_game_ids'
+app/models/summoner.rb:49:in `test'
+app/views/summoners/show.html.erb:8:in `_app_views_summoners_show_html_erb___3974738744793439182_70157155987000'
+Started PUT "/__web_console/repl_sessions/967d9dab28c86c19a09bba6ba8cbd7a4" for 127.0.0.1 at 2019-02-12 15:00:27 -0500
+Started PUT "/__web_console/repl_sessions/967d9dab28c86c19a09bba6ba8cbd7a4" for 127.0.0.1 at 2019-02-12 15:00:29 -0500
+Started PUT "/__web_console/repl_sessions/967d9dab28c86c19a09bba6ba8cbd7a4" for 127.0.0.1 at 2019-02-12 15:00:38 -0500
+Started GET "/summoners/3/" for 127.0.0.1 at 2019-02-12 15:01:57 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSummoner Load (1.9ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:26
+Completed 500 Internal Server Error in 1473ms (ActiveRecord: 31.2ms)
+
+
+  
+NoMethodError (undefined method `acc_id' for #<Hash:0x007f9d7e040c40>):
+  
+app/controllers/summoners_controller.rb:27:in `show'
+Started GET "/summoners/3/" for 127.0.0.1 at 2019-02-12 15:05:09 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"3"}
+Completed 500 Internal Server Error in 500ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `league_profile' for nil:NilClass):
+  
+app/controllers/summoners_controller.rb:26:in `show'
+Started GET "/summoners/3/" for 127.0.0.1 at 2019-02-12 15:05:38 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSummoner Load (4.1ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:27
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (8242.4ms)
+Completed 200 OK in 14468ms (Views: 13294.4ms | ActiveRecord: 29.6ms)
+
+
+Started GET "/summoners/3/" for 127.0.0.1 at 2019-02-12 15:07:37 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSummoner Load (2.8ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:27
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (705.6ms)
+Completed 200 OK in 2439ms (Views: 1326.8ms | ActiveRecord: 2.8ms)
+=======
 Started GET "/summoners/show" for 127.0.0.1 at 2019-02-12 11:10:03 -0500
   [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
@@ -3097,6 +4290,7 @@ Processing by SummonersController#show as HTML
   Rendering summoners/show.html.erb within layouts/application
   Rendered summoners/show.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 34ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+>>>>>>> c99cf2eb7761dadb415e0f59cf9b0d1d64bd72ef
 
 
   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
@@ -3135,3 +4329,21 @@ Completed 200 OK in 34ms (Views: 30.4ms | ActiveRecord: 0.0ms)
   [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
   [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSummoner Create (2.3ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["summoner_name", "Simonoski"], ["created_at", "2019-02-12 22:17:14.662526"], ["updated_at", "2019-02-12 22:17:14.662526"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSummoner Create (0.8ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["summoner_name", "Simonoski"], ["created_at", "2019-02-12 22:28:20.560941"], ["updated_at", "2019-02-12 22:28:20.560941"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSummoner Create (0.8ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["summoner_name", "Simonoski"], ["created_at", "2019-02-12 22:29:14.269897"], ["updated_at", "2019-02-12 22:29:14.269897"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSummoner Create (0.8ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["summoner_name", "Simonoski"], ["created_at", "2019-02-12 22:29:41.148034"], ["updated_at", "2019-02-12 22:29:41.148034"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSummoner Create (1.1ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["summoner_name", "Simonoski"], ["created_at", "2019-02-12 22:31:00.015248"], ["updated_at", "2019-02-12 22:31:00.015248"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSummoner Create (0.8ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["summoner_name", "Simonoski"], ["created_at", "2019-02-12 22:32:06.333885"], ["updated_at", "2019-02-12 22:32:06.333885"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
