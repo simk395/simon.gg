@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :summoners
-  resources :games, only: [:show]
+  resources :games, only: [:show, :new]
   post "/games", to: "games#create", as: 'games' 
   resources :match_histories
   get "/", to: "summoners#new", as: "homepage"

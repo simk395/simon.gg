@@ -10,6 +10,10 @@
 </div>
 
 
+<%= form_for @game do |f| %>
+    <%= f.hidden_field :game, value: "#{@matches[0]["gameId"]}" %>
+    <%= f.submit "Check Game" %>
+<% end %>
 
 <!-- Display a card with basic profile information like rank and win/loss and top 3 champions -->
 

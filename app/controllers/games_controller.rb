@@ -6,12 +6,16 @@ class GamesController < ApplicationController
   end
 
   def create
-    game = Game.create(game: game_id)
-    redirect_to game_path
+    game = Game.create(game_params)
+    redirect_to game_path(game)
   end
 
   def show
     # @game = Game.find(params['id'])
     # @game = @game.single_game
+  end
+
+  def game_params
+    params.require(:game).permit(:game)
   end
 end
