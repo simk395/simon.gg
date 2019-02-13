@@ -27,7 +27,8 @@ class Summoner < ApplicationRecord
     end
 
     def recent_10_games
-        self.game_ids.map do |id|
+       self.find_game_ids
+        @game_ids.map do |id|
             matches = RestClient.get("https://na1.api.riotgames.com/lol/match/v4/matches/#{id}?api_key=#{self.key}")
             @matches = JSON.parse(matches)
          end

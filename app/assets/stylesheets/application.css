@@ -176,3 +176,7 @@
  .text-field:focus{
      outline: none;
  }
+
+ .game-id{
+     font-size: 5rem;
+ }

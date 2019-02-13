@@ -5,6 +5,7 @@
     <div class="inner">
     <p class="summoner-name"><%= @summoner.summoner_name %></p>
     <img src="http://avatar.leagueoflegends.com/na/<%= @summoner.summoner_name %>.png" class="summoner-icon" alt="">
+    <%= link_to @matches[0]["gameId"], games_path, class: "game-id" %>
     </div>
 </div>
 
