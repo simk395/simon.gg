@@ -11,7 +11,7 @@ class SummonersController < ApplicationController
             @summoner.save
             session[:summoner_id] = Summoner.last.id
 
-            redirect_to summoner_path
+            redirect_to summoner_path(session[:summoner_id])
         else
             redirect_to new_summoner_path
         end
