@@ -33,7 +33,7 @@
     <% players_hash["rank"] = @matches[num]["participants"][person]["highestAchievedSeasonTier"] %>
     <% players_hash["matchTime"] = @matches[num]["gameDuration"]/60 %>
     <% @stats_arr << players_hash %>
-    <%= players_hash %>
+    <% players_hash %>
 <% num = num + 1 %>
 <% end %><!--times-->
 

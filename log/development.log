@@ -15099,3 +15099,218 @@ Processing by SummonersController#show as HTML
 Completed 200 OK in 7621ms (Views: 82.4ms | ActiveRecord: 1.4ms)
 
 
+Started GET "/summoners/1" for 127.0.0.1 at 2019-02-14 15:53:05 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSummoner Load (0.4ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (39.3ms)
+Completed 200 OK in 7030ms (Views: 74.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2019-02-14 15:53:18 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R5spfUB2LQVU4bSGWjgGaFgzuH3urfci+0JtwCW7qHsvFfzNIuNVvrvPtpF+G8VaabkWsxyTPQei6fLtJh3j2Q==", "commit"=>"Details"}
+Completed 400 Bad Request in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: game):
+  
+app/controllers/games_controller.rb:19:in `game_params'
+app/controllers/games_controller.rb:9:in `create'
+Started GET "/games/1" for 127.0.0.1 at 2019-02-14 15:53:46 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (1.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1327.9ms)
+Completed 500 Internal Server Error in 1975ms (ActiveRecord: 5.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `rank' for #<#<Class:0x007fdb1909ee20>:0x007fdb190b1430>
+Did you mean?  rand):
+    39:           <%= @stats_arr[0]["name"] %>
+    40:         </p>
+    41:         <img src="/images/champion_loading_art/<%= @champions[0]%>_0.jpg" class="loading-art" alt="">
+    42:         <%= rank(0) %>
+    43:       </div>
+    44:       <div class="game-stats">
+    45:         <%= stats(0) %>
+  
+app/views/games/show.html.erb:42:in `_app_views_games_show_html_erb___1326961451297147699_70289497362420'
+Started GET "/summoners/1" for 127.0.0.1 at 2019-02-14 16:10:52 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSummoner Load (2.2ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (35.8ms)
+Completed 200 OK in 7230ms (Views: 75.3ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/summoners/1" for 127.0.0.1 at 2019-02-14 16:11:33 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSummoner Load (0.6ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (58.3ms)
+Completed 200 OK in 6384ms (Views: 105.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/summoners/1" for 127.0.0.1 at 2019-02-14 16:11:53 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSummoner Load (0.7ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (33.4ms)
+Completed 200 OK in 6464ms (Views: 68.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2019-02-14 16:12:02 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mIBdBf+CO1zH1gbx6CNbUA0Et1Lr+v3eN7eFl7gn6pnwDoi1nRdD5yj4BObMAJhiPI4ZnBnEN/tuHBq6u4GhOw==", "commit"=>"Details"}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: game):
+  
+app/controllers/games_controller.rb:19:in `game_params'
+app/controllers/games_controller.rb:9:in `create'
+Started GET "/summoners/1" for 127.0.0.1 at 2019-02-14 16:13:55 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSummoner Load (0.6ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (61.6ms)
+Completed 200 OK in 9197ms (Views: 98.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/summoners/1" for 127.0.0.1 at 2019-02-14 16:17:50 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSummoner Load (0.8ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (28.5ms)
+Completed 200 OK in 7360ms (Views: 59.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/summoners/1" for 127.0.0.1 at 2019-02-14 16:19:59 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSummoner Load (1.0ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (42.2ms)
+Completed 200 OK in 6971ms (Views: 95.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/summoners/1" for 127.0.0.1 at 2019-02-14 16:25:46 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSummoner Load (0.4ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (47.1ms)
+Completed 200 OK in 6433ms (Views: 73.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/summoners/1" for 127.0.0.1 at 2019-02-14 16:26:43 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSummoner Load (0.5ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (58.8ms)
+Completed 200 OK in 6418ms (Views: 104.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/summoners/1" for 127.0.0.1 at 2019-02-14 16:27:54 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSummoner Load (0.8ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 6940ms (Views: 65.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/summoners/1" for 127.0.0.1 at 2019-02-14 16:28:15 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSummoner Load (0.6ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (43.0ms)
+Completed 200 OK in 6603ms (Views: 78.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/summoners/1" for 127.0.0.1 at 2019-02-14 16:29:03 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSummoner Load (1.5ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (39.6ms)
+Completed 200 OK in 6684ms (Views: 74.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/summoners/1" for 127.0.0.1 at 2019-02-14 16:31:22 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSummoner Load (0.6ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 6259ms (Views: 49.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/summoners/1" for 127.0.0.1 at 2019-02-14 16:31:41 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSummoner Load (0.4ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (35.9ms)
+Completed 200 OK in 5896ms (Views: 58.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/summoners/1" for 127.0.0.1 at 2019-02-14 16:32:49 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSummoner Load (0.5ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (34.7ms)
+Completed 200 OK in 6388ms (Views: 68.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/summoners/1" for 127.0.0.1 at 2019-02-14 16:33:16 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSummoner Load (0.8ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (40.2ms)
+Completed 200 OK in 6231ms (Views: 66.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2019-02-14 16:34:29 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"26QPaZfY1CcRHe53rcrOjQK6QsgD3mEktT98guENgQ+zKtrZ9U2snP4z7GCJ6Q2/MzDsBvHgqwHslOOv4qvKrQ==", "commit"=>"Details"}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: game):
+  
+app/controllers/games_controller.rb:19:in `game_params'
+app/controllers/games_controller.rb:9:in `create'
