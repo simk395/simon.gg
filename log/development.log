@@ -16493,3 +16493,197 @@ Processing by GamesController#show as HTML
 Completed 200 OK in 2096ms (Views: 1478.9ms | ActiveRecord: 1.4ms)
 
 
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-14 16:41:21 -0500
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnoncher/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 441ms (Views: 362.5ms | ActiveRecord: 35.3ms)
+
+
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-14 16:41:23 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 91ms (Views: 84.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-14 16:41:37 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vCuqdx+A7nR5CJzMw51vGDM8WlQ3NFk0XnWHp2GyFT+0PwGVKtnEESLPFkqgzLtH05Mt3tKBIyWPVYeczK3Q+Q==", "summoner"=>{"summoner_name"=>"simonoski"}, "commit"=>"Submit"}
+  [1m[35m (7.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[36mSummoner Create (226.1ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at", "acc_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["summoner_name", "simonoski"], ["created_at", "2019-02-14 21:41:37.895984"], ["updated_at", "2019-02-14 21:41:37.895984"], ["acc_id", "1cCK7viihBXuCkBV_EiXEY8pnqdFWD9MlKZM9XN7D-DLgNI"]]
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[36mSummoner Load (2.3ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" ORDER BY "summoners"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:13
+Redirected to http://localhost:3000/summoners/33
+Completed 302 Found in 1082ms (ActiveRecord: 239.1ms)
+
+
+Started GET "/summoners/33" for 127.0.0.1 at 2019-02-14 16:41:38 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mSummoner Load (1.5ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (322.7ms)
+Completed 200 OK in 6499ms (Views: 381.4ms | ActiveRecord: 15.7ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2019-02-14 16:41:54 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9BRTmOwXz9X2jjqtsHTU8fniADS5fwjxpsIYjLfhDdr8APh62U7lsK1JsCvTJQCuGU13vlzKcuB34hi3Gv7IHA==", "game"=>{"game"=>"2974939281"}, "commit"=>"Game 4"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (2.5ms)[0m  [1m[32mINSERT INTO "games" ("game", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["game", 2974939281], ["created_at", "2019-02-14 21:41:55.084132"], ["updated_at", "2019-02-14 21:41:55.084132"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:9
+Redirected to http://localhost:3000/games/42
+Completed 302 Found in 24ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/games/42" for 127.0.0.1 at 2019-02-14 16:41:55 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"42"}
+  [1m[36mGame Load (0.9ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1070.3ms)
+Completed 200 OK in 1928ms (Views: 1113.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-14 16:45:57 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 109ms (Views: 86.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-14 16:46:00 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Azm8GvLGgQKUPbmcQ69h3rabnSJtzgLw6DfP0eI1r/3Uklkjmpn5aaZ0INTntC9waUC0QkCiP4KAkS7hOQ/33A==", "summoner"=>{"summoner_name"=>"1 Shady"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `response' for #<URI::InvalidURIError:0x007fa96c84e7f8>
+Did you mean?  respond_to?):
+  
+app/models/summoner.rb:23:in `rescue in league_profile'
+app/models/summoner.rb:20:in `league_profile'
+app/controllers/summoners_controller.rb:9:in `create'
+Started POST "/summoners" for 127.0.0.1 at 2019-02-14 16:46:16 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Azm8GvLGgQKUPbmcQ69h3rabnSJtzgLw6DfP0eI1r/3Uklkjmpn5aaZ0INTntC9waUC0QkCiP4KAkS7hOQ/33A==", "summoner"=>{"summoner_name"=>"1 Shady"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `response' for #<URI::InvalidURIError:0x007fa96539a920>
+Did you mean?  respond_to?):
+  
+app/models/summoner.rb:23:in `rescue in league_profile'
+app/models/summoner.rb:20:in `league_profile'
+app/controllers/summoners_controller.rb:9:in `create'
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-14 16:46:20 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 67ms (Views: 61.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-14 16:46:23 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ae6RpOExhnXvUYe7PFCFSpGpBF1E2RZ+Dd7X55TNRBMJ+jpG1GisELSWDT1fAVEVcQZz16FsbG/c/tfcOdKB1Q==", "summoner"=>{"summoner_name"=>"1 Shady"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `response' for #<URI::InvalidURIError:0x007fa96ae0da60>
+Did you mean?  respond_to?):
+  
+app/models/summoner.rb:23:in `rescue in league_profile'
+app/models/summoner.rb:20:in `league_profile'
+app/controllers/summoners_controller.rb:9:in `create'
+Started POST "/summoners" for 127.0.0.1 at 2019-02-14 16:46:40 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ae6RpOExhnXvUYe7PFCFSpGpBF1E2RZ+Dd7X55TNRBMJ+jpG1GisELSWDT1fAVEVcQZz16FsbG/c/tfcOdKB1Q==", "summoner"=>{"summoner_name"=>"1Shady"}, "commit"=>"Submit"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[36mSummoner Create (41.9ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at", "acc_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["summoner_name", "1Shady"], ["created_at", "2019-02-14 21:46:41.243794"], ["updated_at", "2019-02-14 21:46:41.243794"], ["acc_id", "6aitvVfsekCIy_qCfirl53f287wLIFzw5EaNBCGWIi4LkLw"]]
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[35m (37.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[36mSummoner Load (1.1ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" ORDER BY "summoners"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:13
+Redirected to http://localhost:3000/summoners/34
+Completed 302 Found in 673ms (ActiveRecord: 81.2ms)
+
+
+Started GET "/summoners/34" for 127.0.0.1 at 2019-02-14 16:46:41 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mSummoner Load (1.6ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (64.1ms)
+Completed 200 OK in 5901ms (Views: 105.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-14 16:51:08 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 329ms (Views: 83.0ms | ActiveRecord: 196.9ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-14 16:51:21 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"czWmUWY0KUAWPTgdItaTngN3+YgEK2u/j7HxaCTdN7qknkNoDmtRKyR0oVWGzd0w3KzQ6ClHVs3nFxBY/+dvmw==", "summoner"=>{"summoner_name"=>"1 shady"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `response' for #<URI::InvalidURIError:0x007fa96b393b60>
+Did you mean?  respond_to?):
+  
+app/models/summoner.rb:24:in `rescue in league_profile'
+app/models/summoner.rb:21:in `league_profile'
+app/controllers/summoners_controller.rb:9:in `create'
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-14 16:52:05 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 299ms (Views: 82.7ms | ActiveRecord: 157.2ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-14 16:52:16 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ex7CZ7bbqQr/9iVu60YOeo7DpDenCTN/0zNbuNjJQjQbCmmFg4KDb6Qxr+iIF9olbmzTvUK8SW4CE1uDddaH8g==", "summoner"=>{"summoner_name"=>"1 shady"}, "commit"=>"Submit"}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[36mSummoner Create (50.1ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at", "acc_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["summoner_name", "1shady"], ["created_at", "2019-02-14 21:52:17.529241"], ["updated_at", "2019-02-14 21:52:17.529241"], ["acc_id", "6aitvVfsekCIy_qCfirl53f287wLIFzw5EaNBCGWIi4LkLw"]]
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[35m (111.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[36mSummoner Load (94.8ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" ORDER BY "summoners"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:13
+Redirected to http://localhost:3000/summoners/35
+Completed 302 Found in 1161ms (ActiveRecord: 256.8ms)
+
+
+Started GET "/summoners/35" for 127.0.0.1 at 2019-02-14 16:52:17 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mSummoner Load (50.7ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (227.7ms)
+Completed 200 OK in 7220ms (Views: 269.2ms | ActiveRecord: 100.7ms)
+
+
