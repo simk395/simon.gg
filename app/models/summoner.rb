@@ -59,7 +59,7 @@ class Summoner < ApplicationRecord
                     champ_names << names[1]
                 end
             end
-        end 
+        end
         champ_names
     end
 
@@ -95,6 +95,7 @@ participantId"=>1
             Game.create(game: game)
         end
     end
+     
 end
 
 #click on game

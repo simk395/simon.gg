@@ -1,36 +1,10 @@
+<% require '/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb' %>
 <% i = 0 %>
 <% players_names = [] %>
 <% @stats_arr = [] %>
 <img src="/game-bg.jpg" class="game-bg">
 <% players_names = @game.get_summoners %>
 <% @stats_arr = @game.get_players_stats(players_names, i) %>
-
-<% def stats(i) %>
-  <p class="game-player-stat">Damage:
-    <%= @stats_arr[i]["damage"] %>
-  </p>
-  <p class="game-player-stat">Kills:
-    <%= @stats_arr[i]["kills"] %>
-  </p>
-  <p class="game-player-stat">Deaths:
-    <%= @stats_arr[i]["deaths"] %>
-  </p>
-  <p class="game-player-stat">Assists:
-    <%= @stats_arr[i]["assists"] %>
-  </p>
-  <% kda = ((@stats_arr[i]["kills"]+@stats_arr[i]["assists"]).to_f/@stats_arr[i]["deaths"]).round(2) %>
-  <% if @stats_arr[i]["kills"] > 1 && @stats_arr[i]["deaths"] == 0%>
-    <p class="game-player-kda-perfect"><%= kda %></p>
-  <% elsif kda < 1 %>
-    <p class="game-player-kda-bad"><%= kda %>
-  <% elsif kda >= 1 && kda < 3%>
-    <p class="game-player-kda-avg"><%= kda %>
-  <% elsif kda >= 3 && kda < 4%>
-    <p class="game-player-kda-good"><%= kda %>
-  <% elsif kda >= 4%>
-    <p class="game-player-kda-gg"><%= kda %>
-  <% end%>
-<% end%>
 
   <div class="red">
     <div class="player1">

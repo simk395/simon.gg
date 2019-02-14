@@ -7,44 +7,44 @@
     </div>
 </div>
 
-<% num = 0 %>
+<% index = 0 %>
 <% person = 0 %>
 <% @stats_arr = []%>
 
 <% 10.times do |i| %>
-<%= form_for @game do |f| %>
-  <%= f.hidden_field :game, value: "#{@matches[num]["gameId"]}" %>
-  <%= f.submit "Game #{num + 1}" %>
-<% num += 1 %>
-<% end %><!--form_for-->
+  <%= form_for @game do |f| %>
+    <%= f.hidden_field :game, value: "#{@matches[index]["gameId"]}" %>
+    <%= f.submit "Game #{index + 1}" %>
+  <% index += 1 %>
+  <% end %><!--form_for-->
+<% end %><!-- times-->
 
-<% end %>
-<% num = 0 %>
+<% index = 0 %><!-- resets counter -->
+
 <% 10.times do |i| %>
       <% players_hash = {} %>
-    <% @matches[num]["participantIdentities"].each do |player|  %>
+    <% @matches[index]["participantIdentities"].each do |player|  %>
       <% if @summoner.summoner_name.downcase == player["player"]["summonerName"].downcase %>
-
         <% person = player["participantId"]-1%>
       <% end %>  <!--if-->
-    <% end %><!--select-->
-      <% if @matches[num]["teams"][0]["win"] == "Win" && person <= 4 %>
+    <% end %><!--each-->
+      <% if @matches[index]["teams"][0]["win"] == "Win" && person <= 4 %>
         <% players_hash["W/L"] = "Won" %>
       <% else %>
         <% players_hash["W/L"] = "Lost" %>
       <% end %><!--if-->
-    <% player_info = @matches[num]["participants"][person] %>
+    <% player_info = @matches[index]["participants"][person] %>
     <% stats = player_info["stats"] %>
     <% players_hash["kills"] = stats["kills"] %>
     <% players_hash["deaths"] = stats["deaths"] %>
     <% players_hash["assists"] = stats["assists"] %>
-    <% players_hash["championID"] = @matches[num]["participants"][person]["championId"] %>
-    <% players_hash["rank"] = @matches[num]["participants"][person]["highestAchievedSeasonTier"] %>
-    <% players_hash["matchTime"] = @matches[num]["gameDuration"]/60 %>
+    <% players_hash["championID"] = @matches[index]["participants"][person]["championId"] %>
+    <% players_hash["rank"] = @matches[index]["participants"][person]["highestAchievedSeasonTier"] %>
+    <% players_hash["matchTime"] = @matches[index]["gameDuration"]/60 %>
     <% @stats_arr << players_hash %>
     <%= players_hash %>
 
-<% num = num + 1 %>
+<% index += 1 %>
 <% end %><!--times-->
 
 <% def champs %>
