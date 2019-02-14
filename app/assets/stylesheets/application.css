@@ -12,7 +12,7 @@
  *
  *= require_tree .
  *= require_self
- 
+ */
 
  html{
      font-size: 62.5%
@@ -123,7 +123,7 @@
      flex-direction: row;
      justify-content: space-evenly;
      align-items: flex-start;
-    padding: 0rem 10rem 0rem 10rem;
+     padding: 16rem 10rem 0rem 10rem;
  }
 
  .blue{
@@ -190,9 +190,20 @@
  .game-name{
     position: absolute;
     font-size: 3rem;
-    margin: -4.5rem 0rem 0rem 2.4rem;
-    color: white;
-    justify-content: center;
+    margin: -4rem 0rem 0rem 2rem;
+    color: black;
 }
      
- }
+.game-rank{
+    position:absolute;
+    margin: -5rem 0 0 8rem;
+}
+
+.game-stats{
+    margin-left: 1.6rem;
+    padding-top: 2rem;
+}
+
+.game-player-stat{
+    font-size: 2rem;
+}
