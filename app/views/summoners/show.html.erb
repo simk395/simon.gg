@@ -65,13 +65,16 @@
 <% else %>
   <p class="condition-lose"><%= "Defeat" %>
   <% end%>
-  <% end %>
+<% end %>
 
-  <% def details(num)%>
+<% def details(num)%>
     <img class="champ-icon" src="/images/champion_icons/<%= champs[num] %>.png" alt="">
-    <p class="condition"><%=victory_or_loss(0)%></p>
-    <p class="time"><%= @stats_arr[0]["matchTime"] %> mins</p>
-    <p class="champ-name"><%= champs[0] %>
+    <p class="condition"><%=victory_or_loss(num)%></p>
+    <p class="time"><%= @stats_arr[num]["matchTime"] %> mins</p>
+    <% form_for @game do |f| %>
+      <% f.hidden_field :game, value: "#{@matches[num]["gameId"]}" %>
+      <% f.submit "Details", class: "check-game" %>
+    <% end %>
   <% end%>
 
 <div class="container-2">

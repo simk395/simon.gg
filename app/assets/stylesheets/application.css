@@ -67,6 +67,12 @@
     opacity: 0.8;
 }
 
+.check-game{
+    position: absolute;
+    top: 14rem;
+    left: 2rem;
+    font-size: 2rem;
+ }
 .summoner-icon{
     position: absolute;
     top:3.3rem;
@@ -88,7 +94,7 @@
 
 .champ-icon{
     position: absolute;
-    top: 2rem;
+    top: 5rem;
     border-radius: 50%;
     left: 12rem;
 }
@@ -105,7 +111,7 @@
     font-size: 3rem;
     color: blue;
     position: absolute;
-    top: 3rem;
+    top: 2rem;
     left: 1rem;
     display: inline-block;
 }
@@ -114,7 +120,7 @@
     font-size: 3rem;
     color: red;
     position: absolute;
-    top: 3rem;
+    top: 2rem;
     left: 1rem;
     display: inline-block;
 }
@@ -122,7 +128,7 @@
 .time{
     font-size: 2rem;
     position: absolute;
-    top: 8rem;
+    top: 7rem;
     left: 2rem;
     display: inline-block;
 }
@@ -310,15 +316,33 @@
     transform: scale(2);
 }
 
-nav { width: 100%; text-align: center; }
-nav a { 
-	display: block; 
-	padding: 15px 0;
-	border-bottom: 1px solid #C3AA6E;
-	color: #F0EADC;
+nav { 
+    width: 100%; 
+    text-align: center; 
 }
-nav a:hover { background: #E5DAC0; color: #FFF; }
-nav li:last-child a { border-bottom: none; }
+
+nav ul{
+    position: fixed;
+    top: 8rem;
+    padding-left: 1rem;
+
+}
+
+nav li{
+    padding-bottom: 4rem;
+}
+
+nav a { 
+    position: fixed;
+    color: #F0EADC;
+    text-decoration: none;
+    font-size: 2rem;
+}
+nav a:hover { 
+    color: #FFF;
+    opacity: 2;
+ }
+
 
 /*nav*/
 .menu {
@@ -338,11 +362,17 @@ nav li:last-child a { border-bottom: none; }
 .menu-icon {
     position: fixed;
     top:0;
-    left:2.4rem;
+    left:1.4rem;
 	font-size:4rem;
 	color: white;
     cursor: pointer;
-    z-index:1000;    
+    z-index:1000;
+    opacity: .5;   
+    transition: all .3s ;
+}
+
+.menu-icon:hover{
+    opacity:2;
 }
 #menuToggle { display: none; }
 
