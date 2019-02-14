@@ -4,7 +4,7 @@ class ApplicationRecord < ActiveRecord::Base
   self.abstract_class = true
 
 def key
-  "RGAPI-28bf9594-4ba2-4e31-8068-b19b53da7a1c"
+  "RGAPI-b52f3899-b22b-45ab-923e-6389fe799094"
 end
 
 # def get_profile

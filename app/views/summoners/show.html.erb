@@ -6,6 +6,7 @@
     <img src="http://avatar.leagueoflegends.com/na/<%= @summoner.summoner_name %>.png" class="summoner-icon" alt="">
     </div>
 </div>
+
 <% num = 0 %>
 <% person = 0 %>
 <% @stats_arr = []%>
@@ -34,6 +35,73 @@
   <% end %><!--form_for-->
 <% num = num + 1 %>
 <% end %><!--times-->
+
+<% def champs %>
+  <% character=[] %>
+  <% @stats_arr.each do |champions|%>
+    <% @summoner.champions.each do |keys|%>
+        <% if keys.include?(champions["championID"].to_s) %> 
+          <% character << keys[1] %>
+        <% end%>
+      <% end%>
+    <%end %>
+    <% character %>
+<% end%>
+
+<div class="container">
+    <div class="inner">
+      <img class="champ-icon" src="/images/champion_icons/<%= champs[1] %>.png" alt="">
+    </div>
+</div>
+
+<div class="container">
+    <div class="inner">
+    <img class="champ-icon" src="/images/champion_icons/<%= champs[2] %>.png" alt="">
+    </div>
+</div>
+
+<div class="container">
+    <div class="inner">
+    <img class="champ-icon" src="/images/champion_icons/<%= champs[3] %>.png" alt="">
+    </div>
+</div>
+
+<div class="container">
+    <div class="inner">
+    <img class="champ-icon" src="/images/champion_icons/<%= champs[4] %>.png" alt="">
+    </div>
+</div>
+
+<div class="container">
+    <div class="inner">
+    <img class="champ-icon" src="/images/champion_icons/<%= champs[5] %>.png" alt="">
+    </div>
+</div>
+
+<div class="container">
+    <div class="inner">
+    <img class="champ-icon" src="/images/champion_icons/<%= champs[6] %>.png" alt="">
+    </div>
+</div>
+
+<div class="container">
+    <div class="inner">
+    <img class="champ-icon" src="/images/champion_icons/<%= champs[7] %>.png" alt="">
+    </div>
+</div>
+
+<div class="container">
+    <div class="inner">
+    <img class="champ-icon" src="/images/champion_icons/<%= champs[8] %>.png" alt="">
+    </div>
+</div>
+
+<div class="container">
+    <div class="inner">
+    <img class="champ-icon" src="/images/champion_icons/<%= champs[9] %>.png" alt="">
+    </div>
+</div>
+
 
 <!-- delete-->
 <%= form_tag(summoner_path(@summoner), method: :delete) do %>
