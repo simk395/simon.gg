@@ -17,6 +17,7 @@ class Summoner < ApplicationRecord
     end
 
     def league_profile
+        self.summoner_name = self.summoner_name.gsub(/\s+/, "")
         statuscode = begin
                         profile = RestClient.get("https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/#{self.summoner_name}?api_key=#{self.key}")
                     rescue => error
