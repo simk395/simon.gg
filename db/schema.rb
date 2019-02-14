@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_12_222958) do
+ActiveRecord::Schema.define(version: 2019_02_14_211324) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2019_02_12_222958) do
     t.string "summoner_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "acc_id"
   end
 
 end

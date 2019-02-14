@@ -50,9 +50,6 @@ class Summoner < ApplicationRecord
     end
 
     #gives account id
-    def acc_id
-        @profile["accountId"]
-    end
 
     def player_names
         var = self.recent_10_games
