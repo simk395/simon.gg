@@ -1,70 +1,35 @@
-<img src="/game-bg.jpg" class="game-bg">
-
-<% n = 0 %>
+<% i = 0 %>
 <% players_names = [] %>
-<% @game.single_game["participantIdentities"].map do |player| %>
-<% players_names << player["player"]["summonerName"]  %>
-<% end %>
 <% @stats_arr = [] %>
-<% @game.single_game["participants"].each do |player| %>
-<%# "team id" player["teamId"] %>
-<% players_hash = {} %>
-<% byebug %>
-<% players_hash["name"] = players_names[n]%>
-<% players_hash["rank"] = player['highestAchievedSeasonTier'] %>
-<% players_hash["team"] = player["teamId"] %>
-<% players_hash["damage"] = player["stats"]["totalDamageDealtToChampions"] %>
-<% players_hash["kills"] = player["stats"]["kills"] %>
-<% players_hash["deaths"] = player["stats"]["deaths"] %>
-<% players_hash["assists"] = player["stats"]["assists"] %>
+<img src="/game-bg.jpg" class="game-bg">
+<% players_names = @game.get_summoners %>
+<% @stats_arr = @game.get_players_stats(players_names, i) %>
 
-<% @stats_arr << players_hash %>
-<% n = n+1 %>
-<% end %>
-
-<% def rank(n) %>
-<% if @stats_arr[n]["rank"] == "BRONZE" %>
-<%= image_tag("/ranks/BRONZE.png", class: "game-rank") %>
-<% elsif @stats_arr[n]["rank"] == "SILVER"%>
-<%= image_tag("/ranks/SILVER.png",class: "game-rank") %>
-<% elsif @stats_arr[n]["rank"] == "GOLD"%>
-<%= image_tag("/ranks/GOLD.png",class: "game-rank") %>
-<% elsif @stats_arr[n]["rank"] == "PLATINUM"%>
-<%= image_tag("/ranks/PLATINUM.png",class: "game-rank") %>
-<% elsif @stats_arr[n]["rank"] == "DIAMOND"%>
-<%= image_tag("/ranks/DIAMOND.png",class: "game-rank") %>
-<% elsif @stats_arr[n]["rank"] == "MASTER"%>
-<%= image_tag("/ranks/MASTER.png",class: "game-rank") %>
-<% elsif @stats_arr[n]["rank"] == "CHALLENGER"%>
-<%= image_tag("/ranks/CHALLENGER.png",class: "game-rank") %>
-<% end%>
-<% end%>
-
-<% def stats(n) %>
-<p class="game-player-stat">Damage:
-  <%= @stats_arr[n]["damage"] %>
-</p>
-<p class="game-player-stat">Kills:
-  <%= @stats_arr[n]["kills"] %>
-</p>
-<p class="game-player-stat">Deaths:
-  <%= @stats_arr[n]["deaths"] %>
-</p>
-<p class="game-player-stat">Assists:
-  <%= @stats_arr[n]["assists"] %>
-</p>
-<% kda = ((@stats_arr[n]["kills"]+@stats_arr[n]["assists"]).to_f/@stats_arr[n]["deaths"]).round(2) %>
-<% if @stats_arr[n]["kills"] > 1 && @stats_arr[n]["deaths"] == 0%>
-<p class="game-player-kda-perfect"><%= kda %></p>
-<% elsif kda < 1 %>
-<p class="game-player-kda-bad"><%= kda %>
-<% elsif kda >= 1 && kda < 3%>
-<p class="game-player-kda-avg"><%= kda %>
-<% elsif kda >= 3 && kda < 4%>
-<p class="game-player-kda-good"><%= kda %>
-<% elsif kda >= 4%>
-<p class="game-player-kda-gg"><%= kda %>
-<% end%>
+<% def stats(i) %>
+  <p class="game-player-stat">Damage:
+    <%= @stats_arr[i]["damage"] %>
+  </p>
+  <p class="game-player-stat">Kills:
+    <%= @stats_arr[i]["kills"] %>
+  </p>
+  <p class="game-player-stat">Deaths:
+    <%= @stats_arr[i]["deaths"] %>
+  </p>
+  <p class="game-player-stat">Assists:
+    <%= @stats_arr[i]["assists"] %>
+  </p>
+  <% kda = ((@stats_arr[i]["kills"]+@stats_arr[i]["assists"]).to_f/@stats_arr[i]["deaths"]).round(2) %>
+  <% if @stats_arr[i]["kills"] > 1 && @stats_arr[i]["deaths"] == 0%>
+    <p class="game-player-kda-perfect"><%= kda %></p>
+  <% elsif kda < 1 %>
+    <p class="game-player-kda-bad"><%= kda %>
+  <% elsif kda >= 1 && kda < 3%>
+    <p class="game-player-kda-avg"><%= kda %>
+  <% elsif kda >= 3 && kda < 4%>
+    <p class="game-player-kda-good"><%= kda %>
+  <% elsif kda >= 4%>
+    <p class="game-player-kda-gg"><%= kda %>
+  <% end%>
 <% end%>
 
   <div class="red">

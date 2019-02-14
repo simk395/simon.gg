@@ -13605,3 +13605,1213 @@ ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"su
   
 app/views/layouts/application.html.erb:23:in `_app_views_layouts_application_html_erb___4245591042154845474_70334554803680'
 >>>>>>> 28ab164c4885840901dddc45f5e3027b5a08ee4b
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-14 12:01:32 -0500
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnoncher/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by SummonersController#new as HTML
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/application_record.rb:7: syntax error, unexpected <<
+<<<<<<< HEAD
+  ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/application_record.rb:9: syntax error, unexpected ===, expecting keyword_end
+=======
+   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/application_record.rb:11: syntax error, unexpected >>, expecting keyword_end
+>>>>>>> 28ab164c4885840901dddc45f5e3027b5a08ee4b
+  ^):
+  
+app/models/application_record.rb:7: syntax error, unexpected <<
+app/models/application_record.rb:9: syntax error, unexpected ===, expecting keyword_end
+app/models/application_record.rb:11: syntax error, unexpected >>, expecting keyword_end
+app/models/summoner.rb:1:in `<main>'
+app/controllers/summoners_controller.rb:21:in `new'
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-14 12:02:23 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (30.6ms)
+Completed 500 Internal Server Error in 1982ms (ActiveRecord: 901.5ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"summoners"}, missing required keys: [:id]):
+    20:       <% if request.env['PATH_INFO'] == homepage_path %>
+    21:           <%= link_to "EDIT", homepage_path %>
+    22:       <% else %>
+    23:         <li><%= link_to "EDIT", edit_summoner_path %></li>
+    24:         <% end%>
+    25:     </ul>
+    26: </nav>
+  
+app/views/layouts/application.html.erb:23:in `_app_views_layouts_application_html_erb___2156121795453395436_70113487429200'
+Started GET "/" for 127.0.0.1 at 2019-02-14 12:07:20 -0500
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnoncher/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 443ms (Views: 338.0ms | ActiveRecord: 60.4ms)
+
+
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-14 12:07:30 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (21.2ms)
+Completed 500 Internal Server Error in 431ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"summoners"}, missing required keys: [:id]):
+    20:       <% if request.env['PATH_INFO'] == homepage_path %>
+    21:           <%= link_to "EDIT", homepage_path %>
+    22:       <% else %>
+    23:         <li><%= link_to "EDIT", edit_summoner_path %></li>
+    24:         <% end%>
+    25:     </ul>
+    26: </nav>
+  
+app/views/layouts/application.html.erb:23:in `_app_views_layouts_application_html_erb__1823193196571453331_70185816704580'
+Started GET "/games/5" for 127.0.0.1 at 2019-02-14 12:11:45 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (8.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+Completed 500 Internal Server Error in 924ms (ActiveRecord: 24.7ms)
+
+
+  
+RestClient::Forbidden (403 Forbidden):
+  
+app/models/game.rb:12:in `single_game'
+app/models/game.rb:17:in `find_champ'
+app/models/game.rb:26:in `champ_name'
+app/controllers/games_controller.rb:15:in `show'
+Started GET "/games/5" for 127.0.0.1 at 2019-02-14 12:13:29 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (42.6ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (49936.2ms)
+Completed 500 Internal Server Error in 51161ms (ActiveRecord: 211.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `block in _app_views_games_show_html_erb___3718537951053970886_70185881166980'
+app/views/games/show.html.erb:13:in `block in _app_views_games_show_html_erb___3718537951053970886_70185881166980'
+app/views/games/show.html.erb:9:in `each'
+app/views/games/show.html.erb:9:in `_app_views_games_show_html_erb___3718537951053970886_70185881166980'
+Started GET "/games/5" for 127.0.0.1 at 2019-02-14 12:14:23 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (86.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1498.2ms)
+Completed 200 OK in 3544ms (Views: 2247.2ms | ActiveRecord: 272.4ms)
+
+
+Started GET "/games/5" for 127.0.0.1 at 2019-02-14 12:18:54 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (2.7ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (4536.3ms)
+Completed 500 Internal Server Error in 5886ms (ActiveRecord: 34.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `get_summoners' for #<#<Class:0x007faadb91a0b8>:0x007faad647d938>):
+    2: 
+    3: <% n = 0 %>
+    4: <% players_names = [] %>
+    5: <% get_summoners %>
+    6: <% @stats_arr = [] %>
+    7: <% @game.single_game["participants"].each do |player| %>
+    8: <%# "team id" player["teamId"] %>
+  
+app/views/games/show.html.erb:5:in `_app_views_games_show_html_erb___3718537951053970886_70185891584720'
+Started GET "/games/5" for 127.0.0.1 at 2019-02-14 12:19:44 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (3.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (325.0ms)
+Completed 500 Internal Server Error in 1363ms (ActiveRecord: 3.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `single_game' for nil:NilClass
+Did you mean?  singleton_method):
+    2: 
+    3: <% n = 0 %>
+    4: <% players_names = [] %>
+    5: <% @game.get_summoners %>
+    6: <% @stats_arr = [] %>
+    7: <% @game.single_game["participants"].each do |player| %>
+    8: <%# "team id" player["teamId"] %>
+  
+app/models/game.rb:38:in `get_summoners'
+app/views/games/show.html.erb:5:in `_app_views_games_show_html_erb___3718537951053970886_70185873096340'
+Started GET "/games/5" for 127.0.0.1 at 2019-02-14 12:20:46 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (4.6ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (3309.1ms)
+Completed 500 Internal Server Error in 4455ms (ActiveRecord: 55.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `players_names' for #<Game:0x007faadbaf3740>):
+    1: <img src="/game-bg.jpg" class="game-bg">
+    2: 
+    3: <% n = 0 %>
+    4: <% @game.get_summoners %>
+    5: <% @stats_arr = [] %>
+    6: <% @game.single_game["participants"].each do |player| %>
+    7: <%# "team id" player["teamId"] %>
+  
+app/models/game.rb:40:in `block in get_summoners'
+app/models/game.rb:39:in `map'
+app/models/game.rb:39:in `get_summoners'
+app/views/games/show.html.erb:4:in `_app_views_games_show_html_erb___3718537951053970886_70185817954880'
+Started GET "/games/5" for 127.0.0.1 at 2019-02-14 12:21:27 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (82.9ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (6441.3ms)
+Completed 500 Internal Server Error in 8741ms (ActiveRecord: 268.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `players_names' for #<#<Class:0x007faad96917f8>:0x007faad66d5c58>
+Did you mean?  players_hash):
+     6: <% @game.single_game["participants"].each do |player| %>
+     7: <%# "team id" player["teamId"] %>
+     8: <% players_hash = {} %>
+     9: <% players_hash["name"] = players_names[n]%>
+    10: <% players_hash["rank"] = player['highestAchievedSeasonTier'] %>
+    11: <% players_hash["team"] = player["teamId"] %>
+    12: <% players_hash["damage"] = player["stats"]["totalDamageDealtToChampions"] %>
+  
+app/views/games/show.html.erb:9:in `block in _app_views_games_show_html_erb___3718537951053970886_70185902937220'
+app/views/games/show.html.erb:6:in `each'
+app/views/games/show.html.erb:6:in `_app_views_games_show_html_erb___3718537951053970886_70185902937220'
+Started GET "/games/5" for 127.0.0.1 at 2019-02-14 12:22:28 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (2.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1180.2ms)
+Completed 200 OK in 2600ms (Views: 1766.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/games/5" for 127.0.0.1 at 2019-02-14 12:26:37 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (2.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (3653.7ms)
+Completed 500 Internal Server Error in 4832ms (ActiveRecord: 33.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `players_names' for #<Game:0x007faada811cd0>):
+    2: 
+    3: <% n = 0 %>
+    4: <% players_names = [] %>
+    5: <% @game.get_summoners %>
+    6: <% @stats_arr = [] %>
+    7: <% @game.get_player_stats %>
+    8: 
+  
+app/models/game.rb:40:in `block in get_summoners'
+app/models/game.rb:39:in `map'
+app/models/game.rb:39:in `get_summoners'
+app/views/games/show.html.erb:5:in `_app_views_games_show_html_erb___3718537951053970886_70185884255800'
+Started GET "/games/5" for 127.0.0.1 at 2019-02-14 13:35:46 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (25.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (4744.0ms)
+Completed 500 Internal Server Error in 6100ms (ActiveRecord: 220.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `players_names' for #<Game:0x007faad95fa4e8>):
+    2: 
+    3: <% n = 0 %>
+    4: <% players_names = [] %>
+    5: <% @game.get_summoners %>
+    6: <% stats_arr = @game.get_player_stats %>
+    7: <% byebug %>
+    8: <% def rank(n) %>
+  
+app/models/game.rb:40:in `block in get_summoners'
+app/models/game.rb:39:in `map'
+app/models/game.rb:39:in `get_summoners'
+app/views/games/show.html.erb:5:in `_app_views_games_show_html_erb___3718537951053970886_70185884649020'
+Started GET "/games/5" for 127.0.0.1 at 2019-02-14 13:37:12 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (3.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (3648.9ms)
+Completed 500 Internal Server Error in 4704ms (ActiveRecord: 25.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_player_stats' for #<Game:0x007faad97502e8>
+Did you mean?  get_players_stats):
+    3: <% n = 0 %>
+    4: <% players_names = [] %>
+    5: <% players_names = @game.get_summoners %>
+    6: <% stats_arr = @game.get_player_stats %>
+    7: <% byebug %>
+    8: <% def rank(n) %>
+    9: <% if @stats_arr[n]["rank"] == "BRONZE" %>
+  
+app/views/games/show.html.erb:6:in `_app_views_games_show_html_erb___3718537951053970886_70185884271380'
+Started GET "/games/5" for 127.0.0.1 at 2019-02-14 13:38:36 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (2.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (4922.5ms)
+Completed 500 Internal Server Error in 5875ms (ActiveRecord: 2.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `players_names' for #<Game:0x007faad62f9f80>):
+    4: <% players_names = [] %>
+    5: <% players_names = @game.get_summoners %>
+    6: <% stats_arr = [] %>
+    7: <% stats_arr = @game.get_players_stats %>
+    8: <% byebug %>
+    9: <% def rank(n) %>
+   10: <% if @stats_arr[n]["rank"] == "BRONZE" %>
+  
+app/models/game.rb:49:in `block in get_players_stats'
+app/models/game.rb:47:in `each'
+app/models/game.rb:47:in `get_players_stats'
+app/views/games/show.html.erb:7:in `_app_views_games_show_html_erb___3718537951053970886_70185883948680'
+Started GET "/games/5" for 127.0.0.1 at 2019-02-14 13:40:37 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (2.9ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (656.9ms)
+Completed 500 Internal Server Error in 2292ms (ActiveRecord: 35.6ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 2)):
+    4: <% players_names = [] %>
+    5: <% players_names = @game.get_summoners %>
+    6: <% stats_arr = [] %>
+    7: <% stats_arr = @game.get_players_stats %>
+    8: <% byebug %>
+    9: <% def rank(n) %>
+   10: <% if @stats_arr[n]["rank"] == "BRONZE" %>
+  
+app/models/game.rb:46:in `get_players_stats'
+app/views/games/show.html.erb:7:in `_app_views_games_show_html_erb___3718537951053970886_70185881492240'
+Started PUT "/__web_console/repl_sessions/3a5f384be0604b0aaa4e59129197a62b" for 127.0.0.1 at 2019-02-14 13:41:41 -0500
+Started PUT "/__web_console/repl_sessions/3a5f384be0604b0aaa4e59129197a62b" for 127.0.0.1 at 2019-02-14 13:41:45 -0500
+Started PUT "/__web_console/repl_sessions/3a5f384be0604b0aaa4e59129197a62b" for 127.0.0.1 at 2019-02-14 13:41:48 -0500
+Started GET "/games/5" for 127.0.0.1 at 2019-02-14 13:42:29 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (3.5ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (113653.7ms)
+Completed 500 Internal Server Error in 114678ms (ActiveRecord: 3.5ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `_app_views_games_show_html_erb___3718537951053970886_70185884557020'
+app/views/games/show.html.erb:9:in `_app_views_games_show_html_erb___3718537951053970886_70185884557020'
+Started GET "/games/5" for 127.0.0.1 at 2019-02-14 13:44:36 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (3.6ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (2176.0ms)
+Completed 500 Internal Server Error in 3509ms (ActiveRecord: 74.2ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Array into Integer):
+    4: <% players_names = [] %>
+    5: <% players_names = @game.get_summoners %>
+    6: <% stats_arr = [] %>
+    7: <% stats_arr = @game.get_players_stats(players_names, n) %>
+    8: <% byebug %>
+    9: <% def rank(n) %>
+   10: <% if @stats_arr[n]["rank"] == "BRONZE" %>
+  
+app/models/game.rb:50:in `[]'
+app/models/game.rb:50:in `block in get_players_stats'
+app/models/game.rb:48:in `each'
+app/models/game.rb:48:in `get_players_stats'
+app/views/games/show.html.erb:7:in `_app_views_games_show_html_erb___3718537951053970886_70185896762560'
+Started PUT "/__web_console/repl_sessions/b66ffe7379ca5aec8375bf8ac49ce993" for 127.0.0.1 at 2019-02-14 13:45:04 -0500
+Started GET "/games/5" for 127.0.0.1 at 2019-02-14 13:46:14 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (4.6ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1397.0ms)
+Completed 500 Internal Server Error in 2903ms (ActiveRecord: 332.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `+' for nil:NilClass):
+    4: <% players_names = [] %>
+    5: <% players_names = @game.get_summoners %>
+    6: <% stats_arr = [] %>
+    7: <% stats_arr = @game.get_players_stats(players_names, n) %>
+    8: <% byebug %>
+    9: <% def rank(n) %>
+   10: <% if @stats_arr[n]["rank"] == "BRONZE" %>
+  
+app/models/game.rb:57:in `block in get_players_stats'
+app/models/game.rb:48:in `each'
+app/models/game.rb:48:in `get_players_stats'
+app/views/games/show.html.erb:7:in `_app_views_games_show_html_erb___3718537951053970886_70185899120480'
+Started GET "/games/5" for 127.0.0.1 at 2019-02-14 13:46:53 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (3.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1506.6ms)
+Completed 500 Internal Server Error in 3067ms (ActiveRecord: 22.7ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `_app_views_games_show_html_erb___3718537951053970886_70185884651540'
+app/views/games/show.html.erb:9:in `_app_views_games_show_html_erb___3718537951053970886_70185884651540'
+Started GET "/games/5" for 127.0.0.1 at 2019-02-14 13:47:09 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (1.7ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (87575.6ms)
+Completed 500 Internal Server Error in 88298ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    55:     <div class="player1">
+    56:       <div class="loading">
+    57:         <p class="game-name">
+    58:           <%= @stats_arr[0]["name"] %>
+    59:         </p>
+    60:         <img src="/images/champion_loading_art/<%= @champions[0]%>_0.jpg" class="loading-art" alt="">
+    61:         <%= rank(0) %>
+  
+app/views/games/show.html.erb:58:in `_app_views_games_show_html_erb___3718537951053970886_70185872579500'
+Started GET "/games/5" for 127.0.0.1 at 2019-02-14 13:48:52 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (2.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (930.0ms)
+Completed 500 Internal Server Error in 1706ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    54:     <div class="player1">
+    55:       <div class="loading">
+    56:         <p class="game-name">
+    57:           <%= @stats_arr[0]["name"] %>
+    58:         </p>
+    59:         <img src="/images/champion_loading_art/<%= @champions[0]%>_0.jpg" class="loading-art" alt="">
+    60:         <%= rank(0) %>
+  
+app/views/games/show.html.erb:57:in `_app_views_games_show_html_erb___3718537951053970886_70185897433440'
+Started GET "/games/5" for 127.0.0.1 at 2019-02-14 13:49:55 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (1.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1905.8ms)
+Completed 500 Internal Server Error in 2450ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `i' for #<#<Class:0x007faadb9d8e28>:0x007faad2576460>):
+     6: <% @stats_arr = [] %>
+     7: <% @stats_arr = @game.get_players_stats(players_names, i) %>
+     8: <% def rank(n) %>
+     9: <% if @stats_arr[i]["rank"] == "BRONZE" %>
+    10: <%= image_tag("/ranks/BRONZE.png", class: "game-rank") %>
+    11: <% elsif @stats_arr[i]["rank"] == "SILVER"%>
+    12: <%= image_tag("/ranks/SILVER.png",class: "game-rank") %>
+  
+app/views/games/show.html.erb:9:in `rank'
+app/views/games/show.html.erb:60:in `_app_views_games_show_html_erb___3718537951053970886_70185858556080'
+Started GET "/games/5" for 127.0.0.1 at 2019-02-14 13:52:30 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (1.9ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (2594.9ms)
+Completed 500 Internal Server Error in 3386ms (ActiveRecord: 16.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `i' for #<#<Class:0x007faad16c20b8>:0x007faad16c0060>):
+     6: <% @stats_arr = [] %>
+     7: <% @stats_arr = @game.get_players_stats(players_names, i) %>
+     8: <% def rank(n) %>
+     9: <% if @stats_arr[i]["rank"] == "BRONZE" %>
+    10: <%= image_tag("/ranks/BRONZE.png", class: "game-rank") %>
+    11: <% elsif @stats_arr[i]["rank"] == "SILVER"%>
+    12: <%= image_tag("/ranks/SILVER.png",class: "game-rank") %>
+  
+app/views/games/show.html.erb:9:in `rank'
+app/views/games/show.html.erb:60:in `_app_views_games_show_html_erb___3718537951053970886_70185817347600'
+Started PUT "/__web_console/repl_sessions/828a7574b3dd10ee30102bb33a861237" for 127.0.0.1 at 2019-02-14 13:52:39 -0500
+Started PUT "/__web_console/repl_sessions/828a7574b3dd10ee30102bb33a861237" for 127.0.0.1 at 2019-02-14 13:52:40 -0500
+Started PUT "/__web_console/repl_sessions/828a7574b3dd10ee30102bb33a861237" for 127.0.0.1 at 2019-02-14 13:52:42 -0500
+Started GET "/games/5" for 127.0.0.1 at 2019-02-14 13:53:25 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (1.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1612.1ms)
+Completed 500 Internal Server Error in 2418ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `i' for #<#<Class:0x007faad16c20b8>:0x007faad2cebf38>):
+    26: 
+    27: <% def stats(n) %>
+    28: <p class="game-player-stat">Damage:
+    29:   <%= @stats_arr[i]["damage"] %>
+    30: </p>
+    31: <p class="game-player-stat">Kills:
+    32:   <%= @stats_arr[i]["kills"] %>
+  
+app/views/games/show.html.erb:29:in `stats'
+app/views/games/show.html.erb:64:in `_app_views_games_show_html_erb___3718537951053970886_70185847589320'
+Started PUT "/__web_console/repl_sessions/13ff31f791a5f43d497e9ba2a285ed00" for 127.0.0.1 at 2019-02-14 13:53:44 -0500
+Started GET "/games/5" for 127.0.0.1 at 2019-02-14 13:56:13 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (2.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1145.0ms)
+Completed 200 OK in 4208ms (Views: 1242.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/games/5" for 127.0.0.1 at 2019-02-14 14:00:20 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1812.0ms)
+Completed 200 OK in 3109ms (Views: 1961.7ms | ActiveRecord: 99.6ms)
+
+
+Started GET "/games/5" for 127.0.0.1 at 2019-02-14 14:04:00 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:82: syntax error, unexpected '<'
+     <p class="game-player-stat">Damage:
+      ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:82: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:85: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:88: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:91: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:94: syntax error, unexpected '(', expecting keyword_end
+     <% kda = ((@stats_arr[i]["kills"]+@stat...
+               ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:94: syntax error, unexpected ')', expecting keyword_end
+...).to_f/@stats_arr[i]["deaths"]).round(2) %>
+...                               ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:94: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:95: syntax error, unexpected tIVAR, expecting keyword_end
+     <% if @stats_arr[i]["kills"] > 1 && @stats_ar...
+                     ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:95: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:96: syntax error, unexpected '<'
+     <p class="game-player-kda-perfect"><%= kda %></p>
+                                         ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:98: syntax error, unexpected '<'
+     <p class="game-player-kda-bad"><%= kda %>
+                                     ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:99: syntax error, unexpected tINTEGER, expecting keyword_end
+     <% elsif kda >= 1 && kda < 3%>
+                      ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:99: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:100: syntax error, unexpected '<'
+     <p class="game-player-kda-avg"><%= kda %>
+                                     ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:101: syntax error, unexpected tINTEGER, expecting keyword_end
+     <% elsif kda >= 3 && kda < 4%>
+                      ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:101: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:102: syntax error, unexpected '<'
+     <p class="game-player-kda-good"><%= kda %>
+                                      ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:103: syntax error, unexpected tINTEGER, expecting keyword_end
+     <% elsif kda >= 4%>
+                      ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:104: syntax error, unexpected '<'
+     <p class="game-player-kda-gg"><%= kda %>
+                                    ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:104: unterminated string meets end of file):
+  
+app/models/game.rb:82: syntax error, unexpected '<'
+app/models/game.rb:82: syntax error, unexpected ':', expecting keyword_end
+app/models/game.rb:85: syntax error, unexpected ':', expecting keyword_end
+app/models/game.rb:88: syntax error, unexpected ':', expecting keyword_end
+app/models/game.rb:91: syntax error, unexpected ':', expecting keyword_end
+app/models/game.rb:94: syntax error, unexpected '(', expecting keyword_end
+app/models/game.rb:94: syntax error, unexpected ')', expecting keyword_end
+app/models/game.rb:94: syntax error, unexpected '>'
+app/models/game.rb:95: syntax error, unexpected tIVAR, expecting keyword_end
+app/models/game.rb:95: syntax error, unexpected '>'
+app/models/game.rb:96: syntax error, unexpected '<'
+app/models/game.rb:98: syntax error, unexpected '<'
+app/models/game.rb:99: syntax error, unexpected tINTEGER, expecting keyword_end
+app/models/game.rb:99: syntax error, unexpected '>'
+app/models/game.rb:100: syntax error, unexpected '<'
+app/models/game.rb:101: syntax error, unexpected tINTEGER, expecting keyword_end
+app/models/game.rb:101: syntax error, unexpected '>'
+app/models/game.rb:102: syntax error, unexpected '<'
+app/models/game.rb:103: syntax error, unexpected tINTEGER, expecting keyword_end
+app/models/game.rb:104: syntax error, unexpected '<'
+app/models/game.rb:104: unterminated string meets end of file
+app/controllers/games_controller.rb:14:in `show'
+Started GET "/games/5" for 127.0.0.1 at 2019-02-14 14:04:52 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (0.9ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1728.5ms)
+Completed 200 OK in 3843ms (Views: 1775.5ms | ActiveRecord: 29.7ms)
+
+
+Started GET "/games/5" for 127.0.0.1 at 2019-02-14 14:07:25 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:82: syntax error, unexpected '<'
+     <p class="game-player-stat">Damage:
+      ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:82: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:84: syntax error, unexpected '<', expecting keyword_end
+     </p>
+      ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:87: unknown regexp option - p
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:88: syntax error, unexpected '<'
+     <p class="game-player-stat">Deaths:
+      ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:88: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:90: syntax error, unexpected '<', expecting keyword_end
+     </p>
+      ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:93: unknown regexp option - p
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:96: syntax error, unexpected '<'
+     <p class="game-player-kda-perfect"> kda </p>
+      ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:96: unterminated regexp meets end of file
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:96: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/game.rb:82: syntax error, unexpected '<'
+app/models/game.rb:82: syntax error, unexpected ':', expecting keyword_end
+app/models/game.rb:84: syntax error, unexpected '<', expecting keyword_end
+app/models/game.rb:87: unknown regexp option - p
+app/models/game.rb:88: syntax error, unexpected '<'
+app/models/game.rb:88: syntax error, unexpected ':', expecting keyword_end
+app/models/game.rb:90: syntax error, unexpected '<', expecting keyword_end
+app/models/game.rb:93: unknown regexp option - p
+app/models/game.rb:96: syntax error, unexpected '<'
+app/models/game.rb:96: unterminated regexp meets end of file
+app/models/game.rb:96: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/games_controller.rb:14:in `show'
+Started GET "/games/5" for 127.0.0.1 at 2019-02-14 14:33:07 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (2.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1895.3ms)
+Completed 200 OK in 4134ms (Views: 1990.2ms | ActiveRecord: 667.6ms)
+
+
+Started GET "/summoners/22" for 127.0.0.1 at 2019-02-14 14:33:32 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mSummoner Load (49.6ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (104.1ms)
+Completed 200 OK in 7988ms (Views: 192.8ms | ActiveRecord: 63.3ms)
+
+
+Started GET "/images/champion_icons/Master%20Yi.png" for 127.0.0.1 at 2019-02-14 14:33:41 -0500
+Started GET "/images/champion_icons/Kayn.png" for 127.0.0.1 at 2019-02-14 14:33:41 -0500
+Started GET "/images/champion_icons/Kai'Sa.png" for 127.0.0.1 at 2019-02-14 14:33:41 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/champion_icons/Master%20Yi.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/images/champion_icons/Kai'Sa.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/images/champion_icons/Kayn.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/images/champion_icons/Kayn.png" for 127.0.0.1 at 2019-02-14 14:33:48 -0500
+  
+Started GET "/images/champion_icons/Kai'Sa.png" for 127.0.0.1 at 2019-02-14 14:33:48 -0500
+ActionController::RoutingError (No route matches [GET] "/images/champion_icons/Kayn.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/images/champion_icons/Kai'Sa.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/summoners/22" for 127.0.0.1 at 2019-02-14 14:35:11 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mSummoner Load (7.9ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (72.7ms)
+Completed 200 OK in 9238ms (Views: 152.1ms | ActiveRecord: 57.0ms)
+
+
+Started GET "/images/champion_icons/Kayn.png" for 127.0.0.1 at 2019-02-14 14:35:21 -0500
+Started GET "/images/champion_icons/Master%20Yi.png" for 127.0.0.1 at 2019-02-14 14:35:21 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/champion_icons/Kayn.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/images/champion_icons/Master%20Yi.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/images/champion_icons/Kai'Sa.png" for 127.0.0.1 at 2019-02-14 14:35:22 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/champion_icons/Kai'Sa.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/summoners/22" for 127.0.0.1 at 2019-02-14 14:40:18 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mSummoner Load (1.5ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (118.6ms)
+Completed 200 OK in 7874ms (Views: 213.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/images/champion_icons/Kayn.png" for 127.0.0.1 at 2019-02-14 14:40:26 -0500
+Started GET "/images/champion_icons/Master%20Yi.png" for 127.0.0.1 at 2019-02-14 14:40:26 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/champion_icons/Kayn.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/images/champion_icons/Master%20Yi.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/images/champion_icons/Kai'Sa.png" for 127.0.0.1 at 2019-02-14 14:40:28 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/champion_icons/Kai'Sa.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/summoners/22" for 127.0.0.1 at 2019-02-14 14:41:43 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mSummoner Load (3.1ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (156.6ms)
+Completed 200 OK in 7867ms (Views: 306.3ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/images/champion_icons/Master%20Yi.png" for 127.0.0.1 at 2019-02-14 14:41:51 -0500
+Started GET "/images/champion_icons/Kayn.png" for 127.0.0.1 at 2019-02-14 14:41:51 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/champion_icons/Kayn.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/images/champion_icons/Master%20Yi.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/images/champion_icons/Kai'Sa.png" for 127.0.0.1 at 2019-02-14 14:41:53 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/champion_icons/Kai'Sa.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/games" for 127.0.0.1 at 2019-02-14 14:42:21 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a2+/Y72Ql49EchhuMAVkHD1I39iSjMOUzUXXaJkfs4ljexSBiMm96h+1kuhTVLBD3eeoUnc5uYUcZddTNAB2Tw==", "game"=>{"game"=>"2976568049"}, "commit"=>"Game 1"}
+  [1m[35m (41.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (55.6ms)[0m  [1m[32mINSERT INTO "games" ("game", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["game", 2976568049], ["created_at", "2019-02-14 19:42:22.029722"], ["updated_at", "2019-02-14 19:42:22.029722"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (111.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:9
+Redirected to http://localhost:3000/games/35
+Completed 302 Found in 325ms (ActiveRecord: 208.4ms)
+
+
+Started GET "/games/35" for 127.0.0.1 at 2019-02-14 14:42:22 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mGame Load (1.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1137.9ms)
+Completed 200 OK in 1775ms (Views: 1215.9ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/images/champion_icons/Kayn.png" for 127.0.0.1 at 2019-02-14 14:42:30 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/champion_icons/Kayn.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
