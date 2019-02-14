@@ -1,44 +1,9 @@
 <% i = 0 %>
 <% players_names = [] %>
 <% @stats_arr = [] %>
-<<<<<<< HEAD
-<% @game.single_game["participants"].each do |player| %>
-<%# "team id" player["teamId"] %>
-<% players_hash = {} %>
-<% players_hash["name"] = players_names[n]%>
-<% players_hash["rank"] = player['highestAchievedSeasonTier'] %>
-<% players_hash["team"] = player["teamId"] %>
-<% players_hash["damage"] = player["stats"]["totalDamageDealtToChampions"] %>
-<% players_hash["kills"] = player["stats"]["kills"] %>
-<% players_hash["deaths"] = player["stats"]["deaths"] %>
-<% players_hash["assists"] = player["stats"]["assists"] %>
-
-<% @stats_arr << players_hash %>
-<% n = n+1 %>
-<% end %>
-
-<% def rank(n) %>
-<% if @stats_arr[n]["rank"] == "BRONZE" %>
-<%= image_tag("/ranks/BRONZE.png", class: "game-rank") %>
-<% elsif @stats_arr[n]["rank"] == "SILVER"%>
-<%= image_tag("/ranks/SILVER.png",class: "game-rank") %>
-<% elsif @stats_arr[n]["rank"] == "GOLD"%>
-<%= image_tag("/ranks/GOLD.png",class: "game-rank") %>
-<% elsif @stats_arr[n]["rank"] == "PLATINUM"%>
-<%= image_tag("/ranks/PLATINUM.png",class: "game-rank") %>
-<% elsif @stats_arr[n]["rank"] == "DIAMOND"%>
-<%= image_tag("/ranks/DIAMOND.png",class: "game-rank") %>
-<% elsif @stats_arr[n]["rank"] == "MASTER"%>
-<%= image_tag("/ranks/MASTER.png",class: "game-rank") %>
-<% elsif @stats_arr[n]["rank"] == "CHALLENGER"%>
-<%= image_tag("/ranks/CHALLENGER.png",class: "game-rank") %>
-<% end%>
-<% end%>
-=======
 <img src="/game-bg.jpg" class="game-bg">
 <% players_names = @game.get_summoners %>
 <% @stats_arr = @game.get_players_stats(players_names, i) %>
->>>>>>> f74a81d7afadf5c7980bbb1f72d48a333714cb8c
 
 <% def stats(i) %>
   <p class="game-player-stat">Damage:

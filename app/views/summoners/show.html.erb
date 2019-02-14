@@ -11,14 +11,6 @@
 <% person = 0 %>
 <% @stats_arr = []%>
 
-<% 10.times do |i| %>
-<%= form_for @game do |f| %>
-  <%= f.hidden_field :game, value: "#{@matches[num]["gameId"]}" %>
-  <%= f.submit "Game #{num + 1}" %>
-<% num += 1 %>
-<% end %><!--form_for-->
-
-<% end %>
 <% num = 0 %>
 <% 10.times do |i| %>
       <% players_hash = {} %>
@@ -42,9 +34,7 @@
     <% players_hash["matchTime"] = @matches[num]["gameDuration"]/60 %>
     <% @stats_arr << players_hash %>
     <%= players_hash %>
-
 <% num = num + 1 %>
-
 <% end %><!--times-->
 
 <% def champs %>
@@ -65,13 +55,16 @@
 <% else %>
   <p class="condition-lose"><%= "Defeat" %>
   <% end%>
-  <% end %>
+<% end %>
 
-  <% def details(num)%>
+<% def details(num)%>
     <img class="champ-icon" src="/images/champion_icons/<%= champs[num] %>.png" alt="">
-    <p class="condition"><%=victory_or_loss(0)%></p>
-    <p class="time"><%= @stats_arr[0]["matchTime"] %> mins</p>
-    <p class="champ-name"><%= champs[0] %>
+    <p class="condition"><%=victory_or_loss(num)%></p>
+    <p class="time"><%= @stats_arr[num]["matchTime"] %> mins</p>
+    <% form_for @game do |f| %>
+      <% f.hidden_field :game, value: "#{@matches[num]["gameId"]}" %>
+      <% f.submit "Details", class: "check-game" %>
+    <% end %>
   <% end%>
 
 <div class="container-2">
