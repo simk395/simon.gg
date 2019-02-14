@@ -9,19 +9,18 @@
 <% num = 0 %>
 
 <% 10.times do |i| %>
-<%= form_for @game do |f| %>
-
+  <%= form_for @game do |f| %>
     <%= f.hidden_field :game, value: "#{@matches[num]["gameId"]}" %>
     <%= f.submit "Check Game" %>
     <% person = @matches[num]["participantIdentities"].select do |player|  %>
-    <% @summoner.summoner_name.downcase == player["player"]["summonerName"].downcase %>
-    <% end %>
+      <% @summoner.summoner_name.downcase == player["player"]["summonerName"].downcase %>
+    <% end %><!--select-->
     <% my_team = @matches[num]["teams"].select{|team| person[0]["teamId"]==team["team"]} %>
-    <%  if my_team[0]["win"] == "Win" %>
+    <%if my_team[0]["win"] == "Win" %>
       W/L: <%= "Won" %>
     <% else %>
-    W/L: <%= "Lost" %>
-    <% end %>
+      W/L: <%= "Lost" %>
+    <% end %><!--if-->
     <% person = person[0]["participantId"]-1 %>
     <% stats = @matches[num]["participants"][person]["stats"] %>
     Kills <%= stats["kills"] %>
@@ -29,9 +28,11 @@
     Assists <%= stats["assists"] %>
     Champion ID: <%= @matches[num]["participants"][person]["championId"] %>
     <%= @matches[num]["gameDuration"]/60 %> minutes
-<% end %>
+  <% end %><!--form_for-->
 <% num = num + 1 %>
-<% end %>
+<% end %><!--times-->
+
+<!-- delete-->
 <%= form_tag(summoner_path(@summoner), method: :delete) do %>
   <%= submit_tag "DELETE THIS account" %>
 <% end %>
