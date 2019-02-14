@@ -11360,6 +11360,7 @@ ActiveRecord::RecordNotFound (Couldn't find Summoner with 'id'=6):
   
 app/controllers/summoners_controller.rb:43:in `show'
 >>>>>>> 80558a64e9d305a6b74a0631ad81cde693231d62
+<<<<<<< HEAD
 Started GET "/games/1" for 127.0.0.1 at 2019-02-14 10:04:24 -0500
   [1m[35m (8.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
@@ -11859,5 +11860,385 @@ Processing by SummonersController#show as HTML
   Rendering summoners/show.html.erb within layouts/application
   Rendered summoners/show.html.erb within layouts/application (5.3ms)
 Completed 200 OK in 6019ms (Views: 32.9ms | ActiveRecord: 1.3ms)
+=======
+Started GET "/summoners/6/" for 127.0.0.1 at 2019-02-14 09:01:42 -0500
+  [1m[35m (5.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnoncher/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mSummoner Load (43.0ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+Completed 404 Not Found in 144ms (ActiveRecord: 101.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Summoner with 'id'=6):
+  
+app/controllers/summoners_controller.rb:43:in `show'
+Started GET "/summoners/7/" for 127.0.0.1 at 2019-02-14 09:01:48 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mSummoner Load (161.5ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+Started GET "/summoners/7/" for 127.0.0.1 at 2019-02-14 09:15:30 -0500
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnoncher/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mSummoner Load (3.1ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+Started GET "/summoners/7/" for 127.0.0.1 at 2019-02-14 09:15:31 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mSummoner Load (1.6ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (1647.2ms)
+  Rendered summoners/show.html.erb within layouts/application (1697.4ms)
+Completed 500 Internal Server Error in 8845ms (ActiveRecord: 41.7ms)
+
+
+Completed 500 Internal Server Error in 9055ms (ActiveRecord: 38.4ms)
+
+
+  
+  
+ActionView::Template::Error (undefined local variable or method `stats_arr' for #<#<Class:0x007fda7ef02020>:0x007fda7e73b760>
+Did you mean?  @stats_arr):
+ActionView::Template::Error (undefined local variable or method `stats_arr' for #<#<Class:0x007fda7ef02020>:0x007fda7e79d5a0>
+Did you mean?  @stats_arr):
+    30:     <% players_hash["assists"] = stats["assists"] %>
+    31:     <% players_hash["championID"] = ids[person]["championId"] %>
+    32:     <% players_hash["matchTime"] = @matches[num]["gameDuration"]/60 %> minutes
+    33:     <% stats_arr << players_hash %>
+    34:   <% end %><!--form_for-->
+    35: <% num = num + 1 %>
+    36: <% end %><!--times-->
+    30:     <% players_hash["assists"] = stats["assists"] %>
+    31:     <% players_hash["championID"] = ids[person]["championId"] %>
+    32:     <% players_hash["matchTime"] = @matches[num]["gameDuration"]/60 %> minutes
+    33:     <% stats_arr << players_hash %>
+    34:   <% end %><!--form_for-->
+    35: <% num = num + 1 %>
+    36: <% end %><!--times-->
+  
+app/views/summoners/show.html.erb:33:in `block (2 levels) in _app_views_summoners_show_html_erb__4067851051064127978_70288204633860'
+app/views/summoners/show.html.erb:12:in `block in _app_views_summoners_show_html_erb__4067851051064127978_70288204633860'
+app/views/summoners/show.html.erb:11:in `times'
+app/views/summoners/show.html.erb:11:in `_app_views_summoners_show_html_erb__4067851051064127978_70288204633860'
+  
+app/views/summoners/show.html.erb:33:in `block (2 levels) in _app_views_summoners_show_html_erb__4067851051064127978_70288204633860'
+app/views/summoners/show.html.erb:12:in `block in _app_views_summoners_show_html_erb__4067851051064127978_70288204633860'
+app/views/summoners/show.html.erb:11:in `times'
+app/views/summoners/show.html.erb:11:in `_app_views_summoners_show_html_erb__4067851051064127978_70288204633860'
+Started GET "/summoners/7/" for 127.0.0.1 at 2019-02-14 09:15:56 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mSummoner Load (1.9ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (94590.2ms)
+Completed 500 Internal Server Error in 100669ms (ActiveRecord: 1.9ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `_app_views_summoners_show_html_erb__4067851051064127978_70288204489660'
+app/views/summoners/show.html.erb:38:in `_app_views_summoners_show_html_erb__4067851051064127978_70288204489660'
+Started GET "/summoners/7/" for 127.0.0.1 at 2019-02-14 09:17:39 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mSummoner Load (108.5ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (215.2ms)
+Completed 500 Internal Server Error in 9118ms (ActiveRecord: 108.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    28:     <% players_hash["kills"] = stats["kills"] %>
+    29:     <% players_hash["deaths"] = stats["deaths"] %>
+    30:     <% players_hash["assists"] = stats["assists"] %>
+    31:     <% players_hash["championID"] = stats[person]["championId"] %>
+    32:     <% players_hash["matchTime"] = @matches[num]["gameDuration"]/60 %> minutes
+    33:     <% @stats_arr << players_hash %>
+    34:   <% end %><!--form_for-->
+  
+app/views/summoners/show.html.erb:31:in `block (2 levels) in _app_views_summoners_show_html_erb__4067851051064127978_70288263176580'
+app/views/summoners/show.html.erb:12:in `block in _app_views_summoners_show_html_erb__4067851051064127978_70288263176580'
+app/views/summoners/show.html.erb:11:in `times'
+app/views/summoners/show.html.erb:11:in `_app_views_summoners_show_html_erb__4067851051064127978_70288263176580'
+Started PUT "/__web_console/repl_sessions/0d8492903e06fc50488a5edf759f787e" for 127.0.0.1 at 2019-02-14 09:17:58 -0500
+Started PUT "/__web_console/repl_sessions/0d8492903e06fc50488a5edf759f787e" for 127.0.0.1 at 2019-02-14 09:17:59 -0500
+Started PUT "/__web_console/repl_sessions/0d8492903e06fc50488a5edf759f787e" for 127.0.0.1 at 2019-02-14 09:18:28 -0500
+Started PUT "/__web_console/repl_sessions/0d8492903e06fc50488a5edf759f787e" for 127.0.0.1 at 2019-02-14 09:18:42 -0500
+Started PUT "/__web_console/repl_sessions/0d8492903e06fc50488a5edf759f787e" for 127.0.0.1 at 2019-02-14 09:20:14 -0500
+Started PUT "/__web_console/repl_sessions/0d8492903e06fc50488a5edf759f787e" for 127.0.0.1 at 2019-02-14 09:20:21 -0500
+Started PUT "/__web_console/repl_sessions/0d8492903e06fc50488a5edf759f787e" for 127.0.0.1 at 2019-02-14 09:20:22 -0500
+Started PUT "/__web_console/repl_sessions/0d8492903e06fc50488a5edf759f787e" for 127.0.0.1 at 2019-02-14 09:20:46 -0500
+Started PUT "/__web_console/repl_sessions/0d8492903e06fc50488a5edf759f787e" for 127.0.0.1 at 2019-02-14 09:20:52 -0500
+Started PUT "/__web_console/repl_sessions/0d8492903e06fc50488a5edf759f787e" for 127.0.0.1 at 2019-02-14 09:21:01 -0500
+Started GET "/summoners/7/" for 127.0.0.1 at 2019-02-14 09:23:38 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mSummoner Load (2.3ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (32876.6ms)
+Completed 500 Internal Server Error in 39646ms (ActiveRecord: 29.1ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `_app_views_summoners_show_html_erb__4067851051064127978_70288264644880'
+app/views/summoners/show.html.erb:37:in `_app_views_summoners_show_html_erb__4067851051064127978_70288264644880'
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-14 09:24:24 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (73.6ms)
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-14 09:24:28 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (35.4ms)
+Completed 500 Internal Server Error in 7252ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (can't add a new key into hash during iteration):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___4243502408079782334_70288191375520'
+Completed 200 OK in 5427ms (Views: 5388.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-14 09:25:14 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+LHiCRMF91uTCuckejJkTfM8fqDkBOhUE6LzUKZdbbvwpUnrJlzdPsjNbaIZY7ASE5MJKgGxkkXCgvNrC0KofQ==", "summoner"=>{"summoner_name"=>"fatninja001"}, "commit"=>"Submit"}
+  [1m[35m (23.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[36mSummoner Create (104.5ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["summoner_name", "fatninja001"], ["created_at", "2019-02-14 14:25:14.953116"], ["updated_at", "2019-02-14 14:25:14.953116"]]
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[36mSummoner Load (4.3ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" ORDER BY "summoners"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:12
+Redirected to http://localhost:3000/summoners/22
+Completed 302 Found in 919ms (ActiveRecord: 137.9ms)
+
+
+Started GET "/summoners/22" for 127.0.0.1 at 2019-02-14 09:25:15 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mSummoner Load (1.8ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (459.9ms)
+Completed 200 OK in 9558ms (Views: 1810.3ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/summoners/22" for 127.0.0.1 at 2019-02-14 09:26:15 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mSummoner Load (2.2ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (296.8ms)
+Completed 200 OK in 7694ms (Views: 1248.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/summoners/22" for 127.0.0.1 at 2019-02-14 09:33:08 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mSummoner Load (3.8ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (209138.8ms)
+Completed 500 Internal Server Error in 216157ms (ActiveRecord: 39.2ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `block (3 levels) in _app_views_summoners_show_html_erb__4067851051064127978_70288191569740'
+app/views/summoners/show.html.erb:19:in `block (3 levels) in _app_views_summoners_show_html_erb__4067851051064127978_70288191569740'
+app/views/summoners/show.html.erb:16:in `select'
+app/views/summoners/show.html.erb:16:in `block (2 levels) in _app_views_summoners_show_html_erb__4067851051064127978_70288191569740'
+app/views/summoners/show.html.erb:12:in `block in _app_views_summoners_show_html_erb__4067851051064127978_70288191569740'
+app/views/summoners/show.html.erb:11:in `times'
+app/views/summoners/show.html.erb:11:in `_app_views_summoners_show_html_erb__4067851051064127978_70288191569740'
+Started GET "/summoners/22" for 127.0.0.1 at 2019-02-14 09:36:55 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mSummoner Load (3.1ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (275412.9ms)
+Completed 500 Internal Server Error in 282466ms (ActiveRecord: 3.1ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `block (2 levels) in _app_views_summoners_show_html_erb__4067851051064127978_70288255705640'
+app/views/summoners/show.html.erb:21:in `block (2 levels) in _app_views_summoners_show_html_erb__4067851051064127978_70288255705640'
+app/views/summoners/show.html.erb:12:in `block in _app_views_summoners_show_html_erb__4067851051064127978_70288255705640'
+app/views/summoners/show.html.erb:11:in `times'
+app/views/summoners/show.html.erb:11:in `_app_views_summoners_show_html_erb__4067851051064127978_70288255705640'
+Started GET "/summoners/22" for 127.0.0.1 at 2019-02-14 09:41:41 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mSummoner Load (54.2ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (490739.8ms)
+Completed 500 Internal Server Error in 501113ms (ActiveRecord: 175.4ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `block (2 levels) in _app_views_summoners_show_html_erb__4067851051064127978_70288224450060'
+app/views/summoners/show.html.erb:21:in `block (2 levels) in _app_views_summoners_show_html_erb__4067851051064127978_70288224450060'
+app/views/summoners/show.html.erb:12:in `block in _app_views_summoners_show_html_erb__4067851051064127978_70288224450060'
+app/views/summoners/show.html.erb:11:in `times'
+app/views/summoners/show.html.erb:11:in `_app_views_summoners_show_html_erb__4067851051064127978_70288224450060'
+Started GET "/summoners/22" for 127.0.0.1 at 2019-02-14 09:50:06 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mSummoner Load (158.8ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (147092.7ms)
+Completed 500 Internal Server Error in 155913ms (ActiveRecord: 462.5ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `block (3 levels) in _app_views_summoners_show_html_erb__4067851051064127978_70288286214960'
+app/views/summoners/show.html.erb:19:in `block (3 levels) in _app_views_summoners_show_html_erb__4067851051064127978_70288286214960'
+app/views/summoners/show.html.erb:16:in `each'
+app/views/summoners/show.html.erb:16:in `block (2 levels) in _app_views_summoners_show_html_erb__4067851051064127978_70288286214960'
+app/views/summoners/show.html.erb:12:in `block in _app_views_summoners_show_html_erb__4067851051064127978_70288286214960'
+app/views/summoners/show.html.erb:11:in `times'
+app/views/summoners/show.html.erb:11:in `_app_views_summoners_show_html_erb__4067851051064127978_70288286214960'
+Started GET "/summoners/22" for 127.0.0.1 at 2019-02-14 09:52:48 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mSummoner Load (7.1ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (653899.2ms)
+Completed 500 Internal Server Error in 662371ms (ActiveRecord: 7.1ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `block (2 levels) in _app_views_summoners_show_html_erb__4067851051064127978_70288289626740'
+app/views/summoners/show.html.erb:22:in `block (2 levels) in _app_views_summoners_show_html_erb__4067851051064127978_70288289626740'
+app/views/summoners/show.html.erb:12:in `block in _app_views_summoners_show_html_erb__4067851051064127978_70288289626740'
+app/views/summoners/show.html.erb:11:in `times'
+app/views/summoners/show.html.erb:11:in `_app_views_summoners_show_html_erb__4067851051064127978_70288289626740'
+Started GET "/summoners/22" for 127.0.0.1 at 2019-02-14 10:04:00 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mSummoner Load (100.0ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (12716.0ms)
+Completed 500 Internal Server Error in 21274ms (ActiveRecord: 204.5ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `block (2 levels) in _app_views_summoners_show_html_erb__4067851051064127978_70288299344020'
+app/views/summoners/show.html.erb:22:in `block (2 levels) in _app_views_summoners_show_html_erb__4067851051064127978_70288299344020'
+app/views/summoners/show.html.erb:12:in `block in _app_views_summoners_show_html_erb__4067851051064127978_70288299344020'
+app/views/summoners/show.html.erb:11:in `times'
+app/views/summoners/show.html.erb:11:in `_app_views_summoners_show_html_erb__4067851051064127978_70288299344020'
+Started GET "/summoners/22" for 127.0.0.1 at 2019-02-14 10:04:26 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mSummoner Load (47.5ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (9730.8ms)
+Completed 500 Internal Server Error in 18663ms (ActiveRecord: 47.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `person' for #<#<Class:0x007fda7ef02020>:0x007fda8950a940>
+Did you mean?  response):
+    18:         <% person = player["participantId"]-1%>
+    19:       <% end %>  <!--if-->
+    20:     <% end %><!--select-->
+    21:     <% my_team = @matches[num]["teams"].select{|team| person[0]["teamId"]==team["team"]} %>
+    22:       <% if @matches[num]["teams"][0]["win"] == "Win" && person <= 4 %>
+    23:         <% players_hash["W/L"] = "Won" %>
+    24:       <% else %>
+  
+app/views/summoners/show.html.erb:21:in `block (3 levels) in _app_views_summoners_show_html_erb__4067851051064127978_70288225766900'
+app/views/summoners/show.html.erb:21:in `select'
+app/views/summoners/show.html.erb:21:in `block (2 levels) in _app_views_summoners_show_html_erb__4067851051064127978_70288225766900'
+app/views/summoners/show.html.erb:12:in `block in _app_views_summoners_show_html_erb__4067851051064127978_70288225766900'
+app/views/summoners/show.html.erb:11:in `times'
+app/views/summoners/show.html.erb:11:in `_app_views_summoners_show_html_erb__4067851051064127978_70288225766900'
+Started GET "/summoners/22" for 127.0.0.1 at 2019-02-14 10:06:48 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mSummoner Load (84.2ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (76.9ms)
+Completed 500 Internal Server Error in 9644ms (ActiveRecord: 84.2ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of String into Integer):
+    19:         <% person = player["participantId"]-1%>
+    20:       <% end %>  <!--if-->
+    21:     <% end %><!--select-->
+    22:     <% my_team = @matches[num]["teams"].select{|team| person[0]["teamId"]==team["team"]} %>
+    23:       <% if @matches[num]["teams"][0]["win"] == "Win" && person <= 4 %>
+    24:         <% players_hash["W/L"] = "Won" %>
+    25:       <% else %>
+  
+app/views/summoners/show.html.erb:22:in `[]'
+app/views/summoners/show.html.erb:22:in `block (3 levels) in _app_views_summoners_show_html_erb__4067851051064127978_70288258247500'
+app/views/summoners/show.html.erb:22:in `select'
+app/views/summoners/show.html.erb:22:in `block (2 levels) in _app_views_summoners_show_html_erb__4067851051064127978_70288258247500'
+app/views/summoners/show.html.erb:13:in `block in _app_views_summoners_show_html_erb__4067851051064127978_70288258247500'
+app/views/summoners/show.html.erb:12:in `times'
+app/views/summoners/show.html.erb:12:in `_app_views_summoners_show_html_erb__4067851051064127978_70288258247500'
+Started GET "/summoners/22" for 127.0.0.1 at 2019-02-14 10:07:52 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mSummoner Load (49.1ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (290.5ms)
+Completed 200 OK in 8933ms (Views: 1272.3ms | ActiveRecord: 49.1ms)
+>>>>>>> 4fe8608e69b99372e6a0a1b38f9664cb85ff7d16
 
 

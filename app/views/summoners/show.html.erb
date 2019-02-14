@@ -7,27 +7,30 @@
     </div>
 </div>
 <% num = 0 %>
-
+<% person = 0 %>
+<% @stats_arr = []%>
 <% 10.times do |i| %>
   <%= form_for @game do |f| %>
     <%= f.hidden_field :game, value: "#{@matches[num]["gameId"]}" %>
     <%= f.submit "Check Game" %>
-    <% person = @matches[num]["participantIdentities"].select do |player|  %>
-      <% @summoner.summoner_name.downcase == player["player"]["summonerName"].downcase %>
+    <% players_hash = {} %>
+    <% @matches[num]["participantIdentities"].each do |player|  %>
+      <% if @summoner.summoner_name.downcase == player["player"]["summonerName"].downcase %>
+        <% person = player["participantId"]-1%>
+      <% end %>  <!--if-->
     <% end %><!--select-->
-    <% my_team = @matches[num]["teams"].select{|team| person[0]["teamId"]==team["team"]} %>
-    <%if my_team[0]["win"] == "Win" %>
-      W/L: <%= "Won" %>
-    <% else %>
-      W/L: <%= "Lost" %>
-    <% end %><!--if-->
-    <% person = person[0]["participantId"]-1 %>
+      <% if @matches[num]["teams"][0]["win"] == "Win" && person <= 4 %>
+        <% players_hash["W/L"] = "Won" %>
+      <% else %>
+        <% players_hash["W/L"] = "Lost" %>
+      <% end %><!--if-->
     <% stats = @matches[num]["participants"][person]["stats"] %>
-    Kills <%= stats["kills"] %>
-    Deaths <%= stats["deaths"] %>
-    Assists <%= stats["assists"] %>
-    Champion ID: <%= @matches[num]["participants"][person]["championId"] %>
-    <%= @matches[num]["gameDuration"]/60 %> minutes
+    <% players_hash["kills"] = stats["kills"] %>
+    <% players_hash["deaths"] = stats["deaths"] %>
+    <% players_hash["assists"] = stats["assists"] %>
+    <% players_hash["championID"] = @matches[num]["participants"][person]["championId"] %>
+    <% players_hash["matchTime"] = @matches[num]["gameDuration"]/60 %>
+    <% @stats_arr << players_hash %>
   <% end %><!--form_for-->
 <% num = num + 1 %>
 <% end %><!--times-->
