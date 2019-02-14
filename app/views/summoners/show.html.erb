@@ -10,11 +10,18 @@
 <% num = 0 %>
 <% person = 0 %>
 <% @stats_arr = []%>
+
 <% 10.times do |i| %>
-  <%= form_for @game do |f| %>
-    <%= f.hidden_field :game, value: "#{@matches[num]["gameId"]}" %>
-    <%= f.submit "Check Game" %>
-    <% players_hash = {} %>
+<%= form_for @game do |f| %>
+  <%= f.hidden_field :game, value: "#{@matches[num]["gameId"]}" %>
+  <%= f.submit "Game #{num + 1}" %>
+<% num += 1 %>
+<% end %><!--form_for-->
+
+<% end %>
+<% num = 0 %>
+<% 10.times do |i| %>
+      <% players_hash = {} %>
     <% @matches[num]["participantIdentities"].each do |player|  %>
       <% if @summoner.summoner_name.downcase == player["player"]["summonerName"].downcase %>
         <% person = player["participantId"]-1%>
@@ -35,7 +42,7 @@
     <% players_hash["matchTime"] = @matches[num]["gameDuration"]/60 %>
     <% @stats_arr << players_hash %>
     <%= players_hash %>
-  <% end %><!--form_for-->
+
 <% num = num + 1 %>
 
 <% end %><!--times-->
@@ -44,7 +51,7 @@
   <% character=[] %>
   <% @stats_arr.each do |champions|%>
     <% @summoner.champions.each do |keys|%>
-        <% if keys.include?(champions["championID"].to_s) %> 
+        <% if keys.include?(champions["championID"].to_s) %>
           <% character << keys[1] %>
         <% end%>
       <% end%>
