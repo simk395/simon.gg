@@ -40,10 +40,6 @@
  }
 
  /* summoner card */
- .container{     
-     
- }
-
  .inner{
     box-shadow: 1px 1px 2px black;
     border-radius: 1rem;
@@ -85,6 +81,7 @@
     width: 100vw;
     z-index: 100;
     margin-bottom: 2rem;
+    transition: .5s;
  }
 
  .bar-list{
@@ -212,8 +209,9 @@
     font-size: 5rem;
     margin: -10.5rem 0px 0 12.7rem;
     background: linear-gradient(to top right,rgb(218, 59, 59), rgb(161, 0, 0));
+    background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent
+    -webkit-text-fill-color: transparent;
 }
 
 .game-player-kda-avg{
@@ -225,57 +223,73 @@
     font-size: 5rem;
     margin: -10.5rem 0px 0 12.7rem;
     background: linear-gradient(to top right,rgb(251, 255, 0), rgb(177, 179, 65));
+    background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent
+    -webkit-text-fill-color: transparent;
 }
 
 .game-player-kda-gg{
     font-size: 5rem;
     margin: -10.5rem 0px 0 12.7rem;
     background: linear-gradient(to top right,rgb(62, 128, 190), rgb(0, 17, 255));
+    background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent
+    -webkit-text-fill-color: transparent;
 }
 
 .game-player-kda-perfect{
     font-size: 5rem;
     margin: -10.5rem 0px 0 12.7rem;
-    background: linear-gradient(to top right, rgb(0, 255, 64), rgb(47, 161, 62);
+    background: linear-gradient(to top right, rgb(0, 255, 64), rgb(47, 161, 62));
+    background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent
+    -webkit-text-fill-color: transparent;
 }
 
 
-/* The side navigation menu */
-.sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-  }
-  
-  /* The navigation menu links */
-  .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  /* Position and style the close button (top right corner) */
-  .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  
+.slide-nav{
+    transition: .4s;
+}
+
+.slide-nav:checked{
+    transform: scale(2);
+}
+
+nav { width: 100%; text-align: center; }
+nav a { 
+	display: block; 
+	padding: 15px 0;
+	border-bottom: 1px solid #C3AA6E;
+	color: #F0EADC;
+}
+nav a:hover { background: #E5DAC0; color: #FFF; }
+nav li:last-child a { border-bottom: none; }
+
+/*nav*/
+
+.menu {
+	width: 24rem;
+	height: 186rem;
+	position: fixed;
+	background: black;
+	left: -240px;
+	transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    z-index: 750;
+	
+}
+.menu-icon {
+    position: fixed;
+    top:0;
+    left:2.4rem;
+	font-size:4rem;
+	color: white;
+    cursor: pointer;
+    z-index:1000;    
+}
+#menuToggle { display: none; }
+
+#menuToggle:checked ~ .menu { position: absolute; left: 0; }

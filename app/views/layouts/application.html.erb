@@ -8,16 +8,21 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-  
-  <nav class="bar">
-  <input type="image" src="/menu.png" class="menu-icon" alt="">
-    <%#<ul class="bar-list">
-        <li class="bar-item"><%= link_to "Home", homepage_path, class: "link" %></li>
-       <%# <li class="bar-item"><% link_to "Create", new_summoner_path, class: "link"%></li>
-        <%# <li class="bar-item"><%= link_to "Edit", edit_summoner_path, class: "link"%></li> 
-   </ul>
+  <div class="bar"></div>
+  <input type="checkbox" id="menuToggle">
+  <label for="menuToggle" class="menu-icon">&#9776;</label>
+
+<nav class="menu">
+	<ul>
+    	<li><%= link_to "HOME", homepage_path %></li>
+      <li><<%= link_to "CREATE", new_summoner_path %><</li>
+      <% if request.env['PATH_INFO'] == homepage_path %>
+          <%= link_to "EDIT", homepage_path %>
+      <% else %>
+        <li><%= link_to "EDIT", edit_summoner_path %></li>
+        <% end%>
+    </ul>
 </nav>
 
     <%= yield %>

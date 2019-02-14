@@ -11360,3 +11360,504 @@ ActiveRecord::RecordNotFound (Couldn't find Summoner with 'id'=6):
   
 app/controllers/summoners_controller.rb:43:in `show'
 >>>>>>> 80558a64e9d305a6b74a0631ad81cde693231d62
+Started GET "/games/1" for 127.0.0.1 at 2019-02-14 10:04:24 -0500
+  [1m[35m (8.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1124.6ms)
+Completed 200 OK in 2117ms (Views: 1487.5ms | ActiveRecord: 17.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-14 10:04:29 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 44ms (Views: 25.9ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-14 10:04:31 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 34ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-14 10:05:04 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 63ms (Views: 53.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-14 10:05:09 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 126ms (Views: 116.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-14 10:05:14 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 69ms (Views: 63.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-14 10:06:25 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 32ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-14 10:06:27 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 42ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-14 10:08:29 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"summoners"}, missing required keys: [:id]):
+    17: 	<ul>
+    18:     	<li><%= link_to "HOME", homepage_path %></li>
+    19:       <li><<%= link_to "CREATE", new_summoner_path %></a></li>
+    20:       <li><%= link_to "EDIT", edit_summoner_path %></a></li>
+    21:     </ul>
+    22: </nav>
+    23: 
+  
+app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb__2512587383430871018_70166756432560'
+Started GET "/summoners/1" for 127.0.0.1 at 2019-02-14 10:08:53 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSummoner Load (0.5ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 7015ms (Views: 31.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/summoners/1/edit" for 127.0.0.1 at 2019-02-14 10:09:03 -0500
+Processing by SummonersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSummoner Load (0.4ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:25
+  Rendering summoners/edit.html.erb within layouts/application
+  Rendered summoners/edit.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 29ms (Views: 25.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/summoners/1/edit" for 127.0.0.1 at 2019-02-14 10:10:07 -0500
+Processing by SummonersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSummoner Load (1.2ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:25
+  Rendering summoners/edit.html.erb within layouts/application
+  Rendered summoners/edit.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 35ms (Views: 27.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-14 10:10:14 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"summoners"}, missing required keys: [:id]):
+    17: 	<ul>
+    18:     	<li><%= link_to "HOME", homepage_path %></li>
+    19:       <li><<%= link_to "CREATE", new_summoner_path %></a></li>
+    20:       <li><%= link_to "EDIT", edit_summoner_path %></a></li>
+    21:     </ul>
+    22: </nav>
+    23: 
+  
+app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb__2512587383430871018_70166834994500'
+Started GET "/" for 127.0.0.1 at 2019-02-14 10:10:25 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 26ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/summoners/1/edit" for 127.0.0.1 at 2019-02-14 10:10:27 -0500
+Processing by SummonersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSummoner Load (0.7ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:25
+  Rendering summoners/edit.html.erb within layouts/application
+  Rendered summoners/edit.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 32ms (Views: 25.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/summoners/1/edit" for 127.0.0.1 at 2019-02-14 10:10:30 -0500
+Processing by SummonersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSummoner Load (2.0ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:25
+  Rendering summoners/edit.html.erb within layouts/application
+  Rendered summoners/edit.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 33ms (Views: 26.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/summoners/3" for 127.0.0.1 at 2019-02-14 10:10:50 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSummoner Load (0.7ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 7650ms (Views: 30.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/summoners/3/edit" for 127.0.0.1 at 2019-02-14 10:11:01 -0500
+Processing by SummonersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSummoner Load (0.5ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:25
+  Rendering summoners/edit.html.erb within layouts/application
+  Rendered summoners/edit.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 32ms (Views: 24.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-14 10:11:08 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"summoners"}, missing required keys: [:id]):
+    17: 	<ul>
+    18:     	<li><%= link_to "HOME", homepage_path %></li>
+    19:       <li><<%= link_to "CREATE", new_summoner_path %></a></li>
+    20:       <li><%= link_to "EDIT", edit_summoner_path %></a></li>
+    21:     </ul>
+    22: </nav>
+    23: 
+  
+app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb__2512587383430871018_70166827419740'
+Started GET "/" for 127.0.0.1 at 2019-02-14 10:12:49 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 431ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `path' for #<#<Class:0x007fa1f54b8fe0>:0x007fa1fab9ae58>):
+    17: 	<ul>
+    18:     	<li><%= link_to "HOME", homepage_path %></li>
+    19:       <li><<%= link_to "CREATE", new_summoner_path %></a></li>
+    20:       <% if path == summoner_path %>
+    21:         <li><%= link_to "EDIT", edit_summoner_path %></a></li>
+    22:       <% else %>
+    23:         <a href="#">EDIT</a>
+  
+app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb__2512587383430871018_70166828128800'
+Started GET "/" for 127.0.0.1 at 2019-02-14 10:13:02 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 291ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `path' for #<#<Class:0x007fa1f54b8fe0>:0x007fa1f9418370>):
+    17: 	<ul>
+    18:     	<li><%= link_to "HOME", homepage_path %></li>
+    19:       <li><<%= link_to "CREATE", new_summoner_path %></a></li>
+    20:       <% if path == summoner_path(1) %>
+    21:         <li><%= link_to "EDIT", edit_summoner_path %></a></li>
+    22:       <% else %>
+    23:         <a href="#">EDIT</a>
+  
+app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb__2512587383430871018_70166830585040'
+Started GET "/" for 127.0.0.1 at 2019-02-14 10:13:43 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 34ms (Views: 30.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-14 10:13:46 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 40ms (Views: 35.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-14 10:13:48 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 51ms (Views: 45.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-14 10:14:07 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"summoners"}, missing required keys: [:id]):
+    18:     	<li><%= link_to "HOME", homepage_path %></li>
+    19:       <li><<%= link_to "CREATE", new_summoner_path %></a></li>
+    20:       <%# if path == summoner_path(1) %>
+    21:         <li><% link_to "EDIT", edit_summoner_path %></a></li>
+    22:       <%# else %>
+    23:         
+    24:         <%# end%>
+  
+app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb__2512587383430871018_70166758157640'
+Started GET "/" for 127.0.0.1 at 2019-02-14 10:14:16 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"summoners"}, missing required keys: [:id]):
+    18:     	<li><%= link_to "HOME", homepage_path %></li>
+    19:       <li><<%= link_to "CREATE", new_summoner_path %></a></li>
+    20:       <%# if path == summoner_path(1) %>
+    21:         <li><% link_to "EDIT", edit_summoner_path %></a></li>
+    22:       <%# else %>
+    23:         
+    24:         <%# end%>
+  
+app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb__2512587383430871018_70166833744080'
+Started GET "/summoners/1" for 127.0.0.1 at 2019-02-14 10:14:51 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSummoner Load (0.7ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 6003ms (Views: 31.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/summoners/1" for 127.0.0.1 at 2019-02-14 10:15:17 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSummoner Load (0.3ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 8503ms (Views: 32.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/summoners/1" for 127.0.0.1 at 2019-02-14 10:15:45 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSummoner Load (0.3ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 6954ms (Views: 28.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/summoners/1" for 127.0.0.1 at 2019-02-14 10:16:08 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSummoner Load (0.4ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 6521ms (Views: 51.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/summoners/1" for 127.0.0.1 at 2019-02-14 10:16:22 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSummoner Load (0.4ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 6645ms (Views: 25.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/summoners/1/edit" for 127.0.0.1 at 2019-02-14 10:16:35 -0500
+Processing by SummonersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSummoner Load (2.3ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:25
+  Rendering summoners/edit.html.erb within layouts/application
+  Rendered summoners/edit.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 27ms (Views: 18.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-14 10:16:45 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"summoners"}, missing required keys: [:id]):
+    17: 	<ul>
+    18:     	<li><%= link_to "HOME", homepage_path %></li>
+    19:       <li><<%= link_to "CREATE", new_summoner_path %></li>
+    20:         <li><%= link_to "EDIT", edit_summoner_path %></li>
+    21:     </ul>
+    22: </nav>
+    23: 
+  
+app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb__2512587383430871018_70166836367220'
+Started GET "/" for 127.0.0.1 at 2019-02-14 10:18:45 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"summoners"}, missing required keys: [:id]):
+    17: 	<ul>
+    18:     	<li><%= link_to "HOME", homepage_path %></li>
+    19:       <li><<%= link_to "CREATE", new_summoner_path %></a></li>
+    20:       <% if edit_summoner_path.exist? %>
+    21:         <li><%= link_to "EDIT", edit_summoner_path %></a></li>
+    22:       <% else %>
+    23:         <a href="#">EDIT</a>
+  
+app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb__2512587383430871018_70166830996200'
+Started GET "/" for 127.0.0.1 at 2019-02-14 10:24:44 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `uri' for #<ActionDispatch::Request:0x007fa1f528ab10>
+Did you mean?  url):
+    17: 	<ul>
+    18:     	<li><%= link_to "HOME", homepage_path %></li>
+    19:       <li><<%= link_to "CREATE", new_summoner_path %><</li>
+    20:       <% if request.uri['PATH_INFO'] == homepage_path %>
+    21:         <a href="#">EDIT</a>
+    22:       <% else %>
+    23:         <li><%= link_to "EDIT", edit_summoner_path %></li>
+  
+app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb__2512587383430871018_70166792246040'
+Started GET "/" for 127.0.0.1 at 2019-02-14 10:25:03 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 26ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-14 10:25:05 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 33ms (Views: 28.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-14 10:25:20 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 29ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-14 10:26:03 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 27ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-14 10:26:08 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 30ms (Views: 27.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-14 10:26:10 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 38ms (Views: 33.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-14 10:26:12 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 58ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-14 10:26:14 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 63ms (Views: 56.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/summoners/1" for 127.0.0.1 at 2019-02-14 10:26:16 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSummoner Load (5.0ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 6959ms (Views: 30.1ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/summoners/1/edit" for 127.0.0.1 at 2019-02-14 10:26:26 -0500
+Processing by SummonersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSummoner Load (3.0ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:25
+  Rendering summoners/edit.html.erb within layouts/application
+  Rendered summoners/edit.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 37ms (Views: 27.7ms | ActiveRecord: 3.0ms)
+
+
+Started PATCH "/summoners/1" for 127.0.0.1 at 2019-02-14 10:26:40 -0500
+Processing by SummonersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5+ViKlSR4IIyEs4k0dsoZAFLvBxi/XzWLNK3rgPBQAiXczqbOq9r/WYui2AkNNhMVCqu384jupD3qYDdEZse7Q==", "summoner"=>{"summoner_name"=>"Simonoski"}, "commit"=>"Submit", "id"=>"1"}
+  [1m[36mSummoner Load (0.6ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:29
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:32
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:32
+  [1m[36mCACHE Summoner Load (0.0ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:33
+Redirected to http://localhost:3000/summoners/1
+Completed 302 Found in 564ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/summoners/1" for 127.0.0.1 at 2019-02-14 10:26:40 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSummoner Load (1.3ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 6019ms (Views: 32.9ms | ActiveRecord: 1.3ms)
+
+
