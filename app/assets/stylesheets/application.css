@@ -123,7 +123,7 @@
      flex-direction: row;
      justify-content: space-evenly;
      align-items: flex-start;
-    padding: 10rem 10rem 0rem 10rem;
+    padding: 0rem 10rem 0rem 10rem;
  }
 
  .blue{
@@ -179,4 +179,20 @@
 
  .game-id{
      font-size: 5rem;
+ }
+
+ /* player stats */
+ 
+ .loading{
+    position:relative;
+ }
+
+ .game-name{
+    position: absolute;
+    font-size: 3rem;
+    margin: -4.5rem 0rem 0rem 2.4rem;
+    color: white;
+    justify-content: center;
+}
+     
  }

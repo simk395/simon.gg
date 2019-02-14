@@ -1,65 +1,104 @@
 <img src="/game-bg.jpg" class="game-bg">
 
+<% n = 0 %>
+<% players_names = [] %>
+<% @game.single_game["participantIdentities"].map do |player| %>
+<% players_names << player["player"]["summonerName"]  %>
+<% end %>
+<% stats_arr = [] %>
+<% @game.single_game["participants"].each do |player| %>
+ 
+  <%# "team id" player["teamId"] %>
+
+<% players_hash = {} %>
+<% players_hash["name"] = players_names[n]%>
+<% players_hash["rank"] = player['highestAchievedSeasonTier'] %></p>
+<% players_hash["team"] = player["teamId"] %></p>
+<% players_hash["damage"] = player["stats"]["totalDamageDealt"] %></p>
+<% players_hash["kills"] = player["stats"]["kills"] %></p>
+<% players_hash["deaths"] = player["stats"]["deaths"] %></p>
+<% players_hash["assists"] = player["stats"]["assists"] %></p>
+
+<br>
+<% stats_arr << players_hash %>
+<% n = n+1 %>
+
+<% end %>
+
 <div class="red">
   <div class="player1">
+  <div class="loading">
     <img src="/images/champion_loading_art/<%= @champions[0]%>_0.jpg" class="loading-art" alt="">
+    <p class="game-name"><%= stats_arr[0]["name"] %></p>
+    </div>
+      <div class="game-stats">
+        <p class="game-rank"><%= stats_arr[0]["rank"] %></p>
+        <p class="game-damage"><%= stats_arr[0]["damage"] %></p>
+        <p class="game-player-stat"><%= stats_arr[0]["kills"] %></p>
+        <p class="game-player-stat"><%= stats_arr[0]["deaths"] %></p>
+        <p class="game-player-stat"><%= stats_arr[0]["assists"] %></p>
+      </div>
   </div>
   <div class="player2">
+  <div class="loading">
     <img src="/images/champion_loading_art/<%= @champions[1]%>_0.jpg" alt="" class="loading-art">
+    <p class="game-name"><%= stats_arr[1]["name"] %></p>
+    </div>
+    <div class="game-stats">
+        <p class="game-rank"><%= stats_arr[1]["rank"] %></p>
+        <p class="game-damage"><%= stats_arr[1]["damage"] %></p>
+        <p class="game-player-stat"><%= stats_arr[1]["kills"] %></p>
+        <p class="game-player-stat"><%= stats_arr[1]["deaths"] %></p>
+        <p class="game-player-stat"><%= stats_arr[1]["assists"] %></p>
+      </div>
   </div>
 
   <div class="player3">
+  <div class="loading">
     <img src="/images/champion_loading_art/<%= @champions[2]%>_0.jpg" class="loading-art" alt="">
+    <p class="game-name"><%= stats_arr[2]["name"] %></p>
+    </div>
   </div>
 
   <div class="player4">
+  <div class="loading">
     <img src="/images/champion_loading_art/<%= @champions[3]%>_0.jpg" class="loading-art" alt="">
+    <p class="game-name"><%= stats_arr[3]["name"] %></p>
+    </div>
   </div>
 
   <div class="player5">
+  <div class="loading">
     <img src="/images/champion_loading_art/<%= @champions[4]%>_0.jpg" class="loading-art" alt="">
+    <p class="game-name"><%= stats_arr[4]["name"] %></p>
+    </div>
   </div>
 </div>
 
 <div class="blue">
   <div class="player1">
     <img src="/images/champion_loading_art/<%= @champions[5]%>_0.jpg" class="loading-art" alt="">
+    <p class="game-name"><%= stats_arr[5]["name"] %></p>
   </div>
 
   <div class="player2">
     <img src="/images/champion_loading_art/<%= @champions[6]%>_0.jpg" class="loading-art" alt="">
+    <p class="game-name"><%= stats_arr[6]["name"] %></p>
   </div>
 
 
   <div class="player3">
     <img src="/images/champion_loading_art/<%= @champions[7]%>_0.jpg" class="loading-art" alt="">
+    <p class="game-name"><%= stats_arr[7]["name"] %></p>
   </div>
 
   <div class="player4">
     <img src="/images/champion_loading_art/<%= @champions[8]%>_0.jpg" class="loading-art" alt="">
+    <p class="game-name"><%= stats_arr[8]["name"] %></p>
   </div>
 
   <div class="player5">
     <img src="/images/champion_loading_art/<%= @champions[9]%>_0.jpg" class="loading-art" alt="">
+    <p class="game-name"><%= stats_arr[9]["name"] %></p>
   </div>
 </div>
-
-
-
-<% n = 0 %>
-<% players_names = [] %>
-<% @game.single_game["participantIdentities"].map do |player| %>
-<% players_names << player["player"]["summonerName"]  %>
-<% end %>
-<% @game.single_game["participants"].each do |player| %>
- <p>Summoner Name - <%= players_names[n] %></p>
- <p>Highest Rank Achieved - <%= player['highestAchievedSeasonTier'] %></p>
- <p>Team ID - <%= player["teamId"] %></p>
- <p>Damage - <%= player["stats"]["totalDamageDealt"] %></p>
-<p>K - <%= player["stats"]["kills"] %></p>
-<p>D - <%= player["stats"]["deaths"] %></p>
-<p>A - <%= player["stats"]["assists"] %></p>
-<br>
-
-<% n = n+1 %>
-<% end %>
