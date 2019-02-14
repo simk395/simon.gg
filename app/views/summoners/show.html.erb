@@ -17,6 +17,7 @@
     <% players_hash = {} %>
     <% @matches[num]["participantIdentities"].each do |player|  %>
       <% if @summoner.summoner_name.downcase == player["player"]["summonerName"].downcase %>
+
         <% person = player["participantId"]-1%>
       <% end %>  <!--if-->
     <% end %><!--select-->
@@ -25,13 +26,16 @@
       <% else %>
         <% players_hash["W/L"] = "Lost" %>
       <% end %><!--if-->
-    <% stats = @matches[num]["participants"][person]["stats"] %>
+    <% player_info = @matches[num]["participants"][person] %>
+    <% stats = player_info["stats"] %>
     <% players_hash["kills"] = stats["kills"] %>
     <% players_hash["deaths"] = stats["deaths"] %>
     <% players_hash["assists"] = stats["assists"] %>
     <% players_hash["championID"] = @matches[num]["participants"][person]["championId"] %>
+    <% players_hash["rank"] = @matches[num]["participants"][person]["highestAchievedSeasonTier"] %>
     <% players_hash["matchTime"] = @matches[num]["gameDuration"]/60 %>
     <% @stats_arr << players_hash %>
+    <%= players_hash %>
   <% end %><!--form_for-->
 <% num = num + 1 %>
 <% end %><!--times-->
