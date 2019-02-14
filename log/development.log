@@ -15438,3 +15438,432 @@ Did you mean?  print):
     5: <% @stats_arr = [] %>
   
 app/views/games/show.html.erb:2:in `_app_views_games_show_html_erb___2252485582809857845_70194327510740'
+Started GET "/games/37" for 127.0.0.1 at 2019-02-14 15:43:43 -0500
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnoncher/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/application_record.rb:7: syntax error, unexpected <<
+<<<<<<< HEAD
+  ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/application_record.rb:9: syntax error, unexpected ===, expecting keyword_end
+=======
+   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/application_record.rb:12: syntax error, unexpected >>, expecting keyword_end
+>>>>>>> f74a81d7afadf5c7980bbb1f72d48a333714cb8c
+  ^):
+  
+app/models/application_record.rb:7: syntax error, unexpected <<
+app/models/application_record.rb:9: syntax error, unexpected ===, expecting keyword_end
+app/models/application_record.rb:12: syntax error, unexpected >>, expecting keyword_end
+app/models/game.rb:1:in `<main>'
+app/controllers/games_controller.rb:14:in `show'
+Started GET "/games/37" for 127.0.0.1 at 2019-02-14 15:44:22 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mGame Load (3.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (13.2ms)
+Completed 500 Internal Server Error in 1068ms (ActiveRecord: 152.2ms)
+
+
+  
+SyntaxError (/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:20: syntax error, unexpected '<'
+  <p class="game-player-stat">Damage:
+   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:20: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:23: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:26: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:29: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:32: syntax error, unexpected '(', expecting keyword_end
+  <% kda = ((@stats_arr[i]["kills"]+@stat...
+            ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:32: syntax error, unexpected ')', expecting keyword_end
+...).to_f/@stats_arr[i]["deaths"]).round(2) %>
+...                               ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:32: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:33: syntax error, unexpected tIVAR, expecting keyword_end
+  <% if @stats_arr[i]["kills"] > 1 && @stats_arr[i]["deaths"] == 0%>
+                  ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:33: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:34: syntax error, unexpected '<'
+    <p class="game-player-kda-perfect"><%= kda %></p>
+                                        ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:36: syntax error, unexpected '<'
+    <p class="game-player-kda-bad"><%= kda %>
+                                    ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:37: syntax error, unexpected tINTEGER, expecting keyword_end
+  <% elsif kda >= 1 && kda < 3%>
+                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:37: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:38: syntax error, unexpected '<'
+    <p class="game-player-kda-avg"><%= kda %>
+                                    ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:39: syntax error, unexpected tINTEGER, expecting keyword_end
+  <% elsif kda >= 3 && kda < 4%>
+                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:39: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:40: syntax error, unexpected '<'
+    <p class="game-player-kda-good"><%= kda %>
+                                     ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:41: syntax error, unexpected tINTEGER, expecting keyword_end
+  <% elsif kda >= 4%>
+                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:42: syntax error, unexpected '<'
+    <p class="game-player-kda-gg"><%= kda %>
+                                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:42: unterminated string meets end of file):
+  
+app/views/resource/methods.rb:20: syntax error, unexpected '<'
+app/views/resource/methods.rb:20: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:23: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:26: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:29: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:32: syntax error, unexpected '(', expecting keyword_end
+app/views/resource/methods.rb:32: syntax error, unexpected ')', expecting keyword_end
+app/views/resource/methods.rb:32: syntax error, unexpected '>'
+app/views/resource/methods.rb:33: syntax error, unexpected tIVAR, expecting keyword_end
+app/views/resource/methods.rb:33: syntax error, unexpected '>'
+app/views/resource/methods.rb:34: syntax error, unexpected '<'
+app/views/resource/methods.rb:36: syntax error, unexpected '<'
+app/views/resource/methods.rb:37: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/resource/methods.rb:37: syntax error, unexpected '>'
+app/views/resource/methods.rb:38: syntax error, unexpected '<'
+app/views/resource/methods.rb:39: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/resource/methods.rb:39: syntax error, unexpected '>'
+app/views/resource/methods.rb:40: syntax error, unexpected '<'
+app/views/resource/methods.rb:41: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/resource/methods.rb:42: syntax error, unexpected '<'
+app/views/resource/methods.rb:42: unterminated string meets end of file
+app/views/games/show.html.erb:1:in `_app_views_games_show_html_erb___2473530746584626723_70351570077320'
+Started GET "/games/37" for 127.0.0.1 at 2019-02-14 15:48:01 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mGame Load (43.5ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (89.8ms)
+Completed 500 Internal Server Error in 1598ms (ActiveRecord: 43.5ms)
+
+
+  
+SyntaxError (/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:20: syntax error, unexpected '<'
+  <p class="game-player-stat">Damage:
+   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:20: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:23: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:26: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:29: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:32: syntax error, unexpected '(', expecting keyword_end
+  <% kda = ((@stats_arr[i]["kills"]+@stat...
+            ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:32: syntax error, unexpected ')', expecting keyword_end
+...).to_f/@stats_arr[i]["deaths"]).round(2) %>
+...                               ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:32: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:33: syntax error, unexpected tIVAR, expecting keyword_end
+  <% if @stats_arr[i]["kills"] > 1 && @stats_arr[i]["deaths"] == 0%>
+                  ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:33: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:34: syntax error, unexpected '<'
+    <p class="game-player-kda-perfect"><%= kda %></p>
+                                        ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:36: syntax error, unexpected '<'
+    <p class="game-player-kda-bad"><%= kda %>
+                                    ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:37: syntax error, unexpected tINTEGER, expecting keyword_end
+  <% elsif kda >= 1 && kda < 3%>
+                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:37: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:38: syntax error, unexpected '<'
+    <p class="game-player-kda-avg"><%= kda %>
+                                    ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:39: syntax error, unexpected tINTEGER, expecting keyword_end
+  <% elsif kda >= 3 && kda < 4%>
+                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:39: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:40: syntax error, unexpected '<'
+    <p class="game-player-kda-good"><%= kda %>
+                                     ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:41: syntax error, unexpected tINTEGER, expecting keyword_end
+  <% elsif kda >= 4%>
+                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:42: syntax error, unexpected '<'
+    <p class="game-player-kda-gg"><%= kda %>
+                                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:42: unterminated string meets end of file):
+  
+app/views/resource/methods.rb:20: syntax error, unexpected '<'
+app/views/resource/methods.rb:20: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:23: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:26: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:29: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:32: syntax error, unexpected '(', expecting keyword_end
+app/views/resource/methods.rb:32: syntax error, unexpected ')', expecting keyword_end
+app/views/resource/methods.rb:32: syntax error, unexpected '>'
+app/views/resource/methods.rb:33: syntax error, unexpected tIVAR, expecting keyword_end
+app/views/resource/methods.rb:33: syntax error, unexpected '>'
+app/views/resource/methods.rb:34: syntax error, unexpected '<'
+app/views/resource/methods.rb:36: syntax error, unexpected '<'
+app/views/resource/methods.rb:37: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/resource/methods.rb:37: syntax error, unexpected '>'
+app/views/resource/methods.rb:38: syntax error, unexpected '<'
+app/views/resource/methods.rb:39: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/resource/methods.rb:39: syntax error, unexpected '>'
+app/views/resource/methods.rb:40: syntax error, unexpected '<'
+app/views/resource/methods.rb:41: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/resource/methods.rb:42: syntax error, unexpected '<'
+app/views/resource/methods.rb:42: unterminated string meets end of file
+app/views/games/show.html.erb:1:in `_app_views_games_show_html_erb___2473530746584626723_70351603246980'
+Started GET "/games/37" for 127.0.0.1 at 2019-02-14 15:51:00 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mGame Load (75.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (243.8ms)
+Completed 500 Internal Server Error in 1070ms (ActiveRecord: 75.3ms)
+
+
+  
+SyntaxError (/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:20: syntax error, unexpected '<'
+  <p class="game-player-stat">Damage:
+   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:20: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:23: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:26: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:29: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:32: syntax error, unexpected '(', expecting keyword_end
+  <% kda = ((@stats_arr[i]["kills"]+@stat...
+            ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:32: syntax error, unexpected ')', expecting keyword_end
+...).to_f/@stats_arr[i]["deaths"]).round(2) %>
+...                               ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:32: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:33: syntax error, unexpected tIVAR, expecting keyword_end
+  <% if @stats_arr[i]["kills"] > 1 && @stats_arr[i]["deaths"] == 0%>
+                  ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:33: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:34: syntax error, unexpected '<'
+    <p class="game-player-kda-perfect"><%= kda %></p>
+                                        ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:36: syntax error, unexpected '<'
+    <p class="game-player-kda-bad"><%= kda %>
+                                    ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:37: syntax error, unexpected tINTEGER, expecting keyword_end
+  <% elsif kda >= 1 && kda < 3%>
+                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:37: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:38: syntax error, unexpected '<'
+    <p class="game-player-kda-avg"><%= kda %>
+                                    ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:39: syntax error, unexpected tINTEGER, expecting keyword_end
+  <% elsif kda >= 3 && kda < 4%>
+                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:39: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:40: syntax error, unexpected '<'
+    <p class="game-player-kda-good"><%= kda %>
+                                     ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:41: syntax error, unexpected tINTEGER, expecting keyword_end
+  <% elsif kda >= 4%>
+                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:42: syntax error, unexpected '<'
+    <p class="game-player-kda-gg"><%= kda %>
+                                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:42: unterminated string meets end of file):
+  
+app/views/resource/methods.rb:20: syntax error, unexpected '<'
+app/views/resource/methods.rb:20: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:23: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:26: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:29: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:32: syntax error, unexpected '(', expecting keyword_end
+app/views/resource/methods.rb:32: syntax error, unexpected ')', expecting keyword_end
+app/views/resource/methods.rb:32: syntax error, unexpected '>'
+app/views/resource/methods.rb:33: syntax error, unexpected tIVAR, expecting keyword_end
+app/views/resource/methods.rb:33: syntax error, unexpected '>'
+app/views/resource/methods.rb:34: syntax error, unexpected '<'
+app/views/resource/methods.rb:36: syntax error, unexpected '<'
+app/views/resource/methods.rb:37: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/resource/methods.rb:37: syntax error, unexpected '>'
+app/views/resource/methods.rb:38: syntax error, unexpected '<'
+app/views/resource/methods.rb:39: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/resource/methods.rb:39: syntax error, unexpected '>'
+app/views/resource/methods.rb:40: syntax error, unexpected '<'
+app/views/resource/methods.rb:41: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/resource/methods.rb:42: syntax error, unexpected '<'
+app/views/resource/methods.rb:42: unterminated string meets end of file
+app/views/games/show.html.erb:1:in `_app_views_games_show_html_erb___2473530746584626723_70351554553960'
+Started GET "/games/37" for 127.0.0.1 at 2019-02-14 15:53:04 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mGame Load (5.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (34.4ms)
+Completed 500 Internal Server Error in 766ms (ActiveRecord: 5.1ms)
+
+
+  
+SyntaxError (/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:20: syntax error, unexpected '<'
+  <p class="game-player-stat">Damage:
+   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:20: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:23: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:26: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:29: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:32: syntax error, unexpected '(', expecting keyword_end
+  <% kda = ((@stats_arr[i]["kills"]+@stat...
+            ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:32: syntax error, unexpected ')', expecting keyword_end
+...).to_f/@stats_arr[i]["deaths"]).round(2) %>
+...                               ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:32: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:33: syntax error, unexpected tIVAR, expecting keyword_end
+  <% if @stats_arr[i]["kills"] > 1 && @stats_arr[i]["deaths"] == 0%>
+                  ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:33: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:34: syntax error, unexpected '<'
+    <p class="game-player-kda-perfect"><%= kda %></p>
+                                        ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:36: syntax error, unexpected '<'
+    <p class="game-player-kda-bad"><%= kda %>
+                                    ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:37: syntax error, unexpected tINTEGER, expecting keyword_end
+  <% elsif kda >= 1 && kda < 3%>
+                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:37: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:38: syntax error, unexpected '<'
+    <p class="game-player-kda-avg"><%= kda %>
+                                    ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:39: syntax error, unexpected tINTEGER, expecting keyword_end
+  <% elsif kda >= 3 && kda < 4%>
+                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:39: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:40: syntax error, unexpected '<'
+    <p class="game-player-kda-good"><%= kda %>
+                                     ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:41: syntax error, unexpected tINTEGER, expecting keyword_end
+  <% elsif kda >= 4%>
+                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:42: syntax error, unexpected '<'
+    <p class="game-player-kda-gg"><%= kda %>
+                                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:42: unterminated string meets end of file):
+  
+app/views/resource/methods.rb:20: syntax error, unexpected '<'
+app/views/resource/methods.rb:20: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:23: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:26: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:29: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:32: syntax error, unexpected '(', expecting keyword_end
+app/views/resource/methods.rb:32: syntax error, unexpected ')', expecting keyword_end
+app/views/resource/methods.rb:32: syntax error, unexpected '>'
+app/views/resource/methods.rb:33: syntax error, unexpected tIVAR, expecting keyword_end
+app/views/resource/methods.rb:33: syntax error, unexpected '>'
+app/views/resource/methods.rb:34: syntax error, unexpected '<'
+app/views/resource/methods.rb:36: syntax error, unexpected '<'
+app/views/resource/methods.rb:37: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/resource/methods.rb:37: syntax error, unexpected '>'
+app/views/resource/methods.rb:38: syntax error, unexpected '<'
+app/views/resource/methods.rb:39: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/resource/methods.rb:39: syntax error, unexpected '>'
+app/views/resource/methods.rb:40: syntax error, unexpected '<'
+app/views/resource/methods.rb:41: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/resource/methods.rb:42: syntax error, unexpected '<'
+app/views/resource/methods.rb:42: unterminated string meets end of file
+app/views/games/show.html.erb:1:in `_app_views_games_show_html_erb___2473530746584626723_70351554673020'
+Started GET "/games/37" for 127.0.0.1 at 2019-02-14 15:54:34 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mGame Load (1.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (33.9ms)
+Completed 500 Internal Server Error in 784ms (ActiveRecord: 1.1ms)
+
+
+  
+SyntaxError (/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:20: syntax error, unexpected '<'
+  <p class="game-player-stat">Damage:
+   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:20: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:23: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:26: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:29: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:32: syntax error, unexpected '(', expecting keyword_end
+  <% kda = ((@stats_arr[i]["kills"]+@stat...
+            ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:32: syntax error, unexpected ')', expecting keyword_end
+...).to_f/@stats_arr[i]["deaths"]).round(2) %>
+...                               ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:32: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:33: syntax error, unexpected tIVAR, expecting keyword_end
+  <% if @stats_arr[i]["kills"] > 1 && @stats_arr[i]["deaths"] == 0%>
+                  ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:33: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:34: syntax error, unexpected '<'
+    <p class="game-player-kda-perfect"><%= kda %></p>
+                                        ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:36: syntax error, unexpected '<'
+    <p class="game-player-kda-bad"><%= kda %>
+                                    ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:37: syntax error, unexpected tINTEGER, expecting keyword_end
+  <% elsif kda >= 1 && kda < 3%>
+                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:37: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:38: syntax error, unexpected '<'
+    <p class="game-player-kda-avg"><%= kda %>
+                                    ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:39: syntax error, unexpected tINTEGER, expecting keyword_end
+  <% elsif kda >= 3 && kda < 4%>
+                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:39: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:40: syntax error, unexpected '<'
+    <p class="game-player-kda-good"><%= kda %>
+                                     ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:41: syntax error, unexpected tINTEGER, expecting keyword_end
+  <% elsif kda >= 4%>
+                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:42: syntax error, unexpected '<'
+    <p class="game-player-kda-gg"><%= kda %>
+                                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:42: unterminated string meets end of file):
+  
+app/views/resource/methods.rb:20: syntax error, unexpected '<'
+app/views/resource/methods.rb:20: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:23: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:26: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:29: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:32: syntax error, unexpected '(', expecting keyword_end
+app/views/resource/methods.rb:32: syntax error, unexpected ')', expecting keyword_end
+app/views/resource/methods.rb:32: syntax error, unexpected '>'
+app/views/resource/methods.rb:33: syntax error, unexpected tIVAR, expecting keyword_end
+app/views/resource/methods.rb:33: syntax error, unexpected '>'
+app/views/resource/methods.rb:34: syntax error, unexpected '<'
+app/views/resource/methods.rb:36: syntax error, unexpected '<'
+app/views/resource/methods.rb:37: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/resource/methods.rb:37: syntax error, unexpected '>'
+app/views/resource/methods.rb:38: syntax error, unexpected '<'
+app/views/resource/methods.rb:39: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/resource/methods.rb:39: syntax error, unexpected '>'
+app/views/resource/methods.rb:40: syntax error, unexpected '<'
+app/views/resource/methods.rb:41: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/resource/methods.rb:42: syntax error, unexpected '<'
+app/views/resource/methods.rb:42: unterminated string meets end of file
+app/views/games/show.html.erb:1:in `_app_views_games_show_html_erb___2473530746584626723_70351558498840'
+Started GET "/games/37" for 127.0.0.1 at 2019-02-14 15:54:49 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mGame Load (129.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1280.7ms)
+Completed 200 OK in 2683ms (Views: 1953.2ms | ActiveRecord: 129.2ms)
+
+

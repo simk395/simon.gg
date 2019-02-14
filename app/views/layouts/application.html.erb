@@ -17,14 +17,13 @@
 	<ul>
     	<li><%= link_to "HOME", homepage_path %></li>
       <li><<%= link_to "CREATE", new_summoner_path %><</li>
-      <% if request.env['PATH_INFO'] == homepage_path %>
-          <%= link_to "EDIT", homepage_path %>
+      <% if request.env['PATH_INFO'] == homepage_path || request.env['PATH_INFO'] == new_summoner_path  %>
+          <%= link_to "CHANGE SUMMONER", homepage_path %>
       <% else %>
-        <li><%= link_to "EDIT", edit_summoner_path %></li>
+        <li><%= link_to "CHANGE SUMMONER", edit_summoner_path %></li>
         <% end%>
     </ul>
 </nav>
-
     <%= yield %>
   </body>
 </html>

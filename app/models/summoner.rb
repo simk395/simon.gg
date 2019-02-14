@@ -42,25 +42,11 @@ class Summoner < ApplicationRecord
          end
     end
 
-    def find_champ(game_id)
-        game = self.single_game
-        players = {}
-        game["participants"].map do |hash|
-            players[hash["participantId"]] = hash["championId"].to_s
-        end
-    end
-
-    def champ_name
-        champ_names = []
-        keys = self.find_champ(self.game)
-        keys.each do |number|
-            self.champions.each do |names|
-                if names.include?(number)
-                    champ_names << names[1]
-                end
-            end
-        end
-        champ_names
+    def single_game
+        #remember to add param for method
+        game_id = 2975777720
+        game = RestClient.get("https://na1.api.riotgames.com/lol/match/v4/matches/#{game_id}?api_key=#{self.key}")
+        game = JSON.parse(game)
     end
 
     #gives account id
@@ -95,7 +81,7 @@ participantId"=>1
             Game.create(game: game)
         end
     end
-     
+
 end
 
 #click on game

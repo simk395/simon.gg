@@ -1,7 +1,7 @@
 <img src="/summoners-rift.jpg" class="summoner-bg"/>
 
 <div class="container">
-    <div class="inner">
+    <div class="profile-inner">
     <p class="summoner-name"><%= @summoner.summoner_name %></p>
     <img src="http://avatar.leagueoflegends.com/na/<%= @summoner.summoner_name %>.png" class="summoner-icon" alt="">
     </div>
@@ -59,59 +59,61 @@
     <% character %>
 <% end%>
 
-<div class="container">
-    <div class="inner">
-      <img class="champ-icon" src="/images/champion_icons/<%= champs[1] %>.png" alt="">
-    </div>
-</div>
+<% def victory_or_loss(num) %>
+<% if @stats_arr[num]["W/L"] == "Won"%>
+  <p class="condition-win"><%= "Victory" %>
+<% else %>
+  <p class="condition-lose"><%= "Defeat" %>
+  <% end%>
+  <% end %>
 
-<div class="container">
-    <div class="inner">
-    <img class="champ-icon" src="/images/champion_icons/<%= champs[2] %>.png" alt="">
-    </div>
-</div>
+  <% def details(num)%>
+    <img class="champ-icon" src="/images/champion_icons/<%= champs[num] %>.png" alt="">
+    <p class="condition"><%=victory_or_loss(0)%></p>
+    <p class="time"><%= @stats_arr[0]["matchTime"] %> mins</p>
+    <p class="champ-name"><%= champs[0] %>
+  <% end%>
 
-<div class="container">
-    <div class="inner">
-    <img class="champ-icon" src="/images/champion_icons/<%= champs[3] %>.png" alt="">
+<div class="container-2">
+    <div class="game-inner">
+      <%= details(0) %>
     </div>
-</div>
 
-<div class="container">
-    <div class="inner">
-    <img class="champ-icon" src="/images/champion_icons/<%= champs[4] %>.png" alt="">
+    <div class="game-inner">
+    <%= details(1) %>
     </div>
-</div>
 
-<div class="container">
-    <div class="inner">
-    <img class="champ-icon" src="/images/champion_icons/<%= champs[5] %>.png" alt="">
+    <div class="game-inner">
+    <%= details(2) %>
     </div>
-</div>
 
-<div class="container">
-    <div class="inner">
-    <img class="champ-icon" src="/images/champion_icons/<%= champs[6] %>.png" alt="">
+    <div class="game-inner">
+    <%= details(3) %>
     </div>
-</div>
 
-<div class="container">
-    <div class="inner">
-    <img class="champ-icon" src="/images/champion_icons/<%= champs[7] %>.png" alt="">
+    <div class="game-inner">
+    <%= details(4) %>
     </div>
-</div>
 
-<div class="container">
-    <div class="inner">
-    <img class="champ-icon" src="/images/champion_icons/<%= champs[8] %>.png" alt="">
+    <div class="game-inner">
+    <%= details(5) %>
     </div>
-</div>
 
-<div class="container">
-    <div class="inner">
-    <img class="champ-icon" src="/images/champion_icons/<%= champs[9] %>.png" alt="">
+    <div class="game-inner">
+    <%= details(6) %>
     </div>
-</div>
+
+    <div class="game-inner">
+    <%= details(7) %>
+    </div>
+
+    <div class="game-inner">
+    <%= details(8) %>
+    </div>
+
+    <div class="game-inner">
+    <%= details(9) %>
+    </div>
 
 
 <!-- delete-->
