@@ -51,7 +51,20 @@
 </p>
 <p class="game-player-stat">Assists:
   <%= @stats_arr[n]["assists"] %>
-  <% end%>
+</p>
+<% kda = ((@stats_arr[n]["kills"]+@stats_arr[n]["assists"]).to_f/@stats_arr[n]["deaths"]).round(2) %>
+<% if @stats_arr[n]["kills"] > 1 && @stats_arr[n]["deaths"] == 0%>
+<p class="game-player-kda-perfect"><%= kda %></p>
+<% elsif kda < 1 %>
+<p class="game-player-kda-bad"><%= kda %>
+<% elsif kda >= 1 && kda < 3%>
+<p class="game-player-kda-avg"><%= kda %>
+<% elsif kda >= 3 && kda < 4%>
+<p class="game-player-kda-good"><%= kda %>
+<% elsif kda >= 4%>
+<p class="game-player-kda-gg"><%= kda %>
+<% end%>
+<% end%>
 
   <div class="red">
     <div class="player1">

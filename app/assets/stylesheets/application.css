@@ -207,3 +207,40 @@
 .game-player-stat{
     font-size: 2rem;
 }
+
+.game-player-kda-bad{
+    font-size: 5rem;
+    margin: -10.5rem 0px 0 12.7rem;
+    background: linear-gradient(to top right,rgb(218, 59, 59), rgb(161, 0, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+.game-player-kda-avg{
+    font-size: 5rem;
+    margin: -10.5rem 0px 0 12.7rem;
+}
+
+.game-player-kda-good{
+    font-size: 5rem;
+    margin: -10.5rem 0px 0 12.7rem;
+    background: linear-gradient(to top right,rgb(251, 255, 0), rgb(177, 179, 65));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+.game-player-kda-gg{
+    font-size: 5rem;
+    margin: -10.5rem 0px 0 12.7rem;
+    background: linear-gradient(to top right,rgb(62, 128, 190), rgb(0, 17, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+.game-player-kda-perfect{
+    font-size: 5rem;
+    margin: -10.5rem 0px 0 12.7rem;
+    background: linear-gradient(to top right, rgb(0, 255, 64), rgb(47, 161, 62);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+}
