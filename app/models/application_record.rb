@@ -4,7 +4,7 @@ class ApplicationRecord < ActiveRecord::Base
   self.abstract_class = true
 
 def key
-  "RGAPI-54824042-2ed9-4595-87d4-80d403358b7b"
+  "RGAPI-402efc5f-fe6a-4e68-b3df-2e3c7067ca15"
 
 end
 

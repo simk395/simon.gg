@@ -1,7 +1,6 @@
 class Game < ApplicationRecord
   has_many :match_histories
   has_many :summoners, through: :match_histories
-
   #GIVES ARRAY OF HASHES
   def recent_10_games(account_id, api_key_master)
       client = RestClient.get("https://na1.api.riotgames.com/lol/match/v4/matchlists/by-account/#{account_id}?endIndex=10&beginIndex=0&api_key=#{api_key_master}")
@@ -60,23 +59,7 @@ class Game < ApplicationRecord
     stats_arr
   end
 
-  def rank(i)
-   if @stats_arr[i]["rank"] == "BRONZE"
-     image_tag("/ranks/BRONZE.png", class: "game-rank")
-   elsif @stats_arr[i]["rank"] == "SILVER"
-     image_tag("/ranks/SILVER.png",class: "game-rank")
-   elsif @stats_arr[i]["rank"] == "GOLD"
-     image_tag("/ranks/GOLD.png",class: "game-rank")
-   elsif @stats_arr[i]["rank"] == "PLATINUM"
-     image_tag("/ranks/PLATINUM.png",class: "game-rank")
-   elsif @stats_arr[i]["rank"] == "DIAMOND"
-     image_tag("/ranks/DIAMOND.png",class: "game-rank")
-   elsif @stats_arr[i]["rank"] == "MASTER"
-     image_tag("/ranks/MASTER.png",class: "game-rank")
-   elsif @stats_arr[i]["rank"] == "CHALLENGER"
-     image_tag("/ranks/CHALLENGER.png",class: "game-rank")
-   end
-  end
+
 
   # def stats(i)
   #   content_tag(:p, class: "game-player-stat"),"Damage:", @stats_arr[i]["damage"]

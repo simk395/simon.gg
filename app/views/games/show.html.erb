@@ -1,10 +1,10 @@
+<% require_relative "../resource/methods.rb" %>
 <% i = 0 %>
 <% players_names = [] %>
 <% @stats_arr = [] %>
 <img src="/game-bg.jpg" class="game-bg">
 <% players_names = @game.get_summoners %>
 <% @stats_arr = @game.get_players_stats(players_names, i) %>
-
 <% def stats(i) %>
   <p class="game-player-stat">Damage:
     <%= @stats_arr[i]["damage"] %>
@@ -30,7 +30,7 @@
   <% elsif kda >= 4%>
     <p class="game-player-kda-gg"><%= kda %>
   <% end%>
-<% end%>
+<% end %>
 
   <div class="red">
     <div class="player1">

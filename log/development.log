@@ -14815,6 +14815,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/summoners/1" for 127.0.0.1 at 2019-02-14 15:21:32 -0500
   [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
@@ -14928,6 +14929,340 @@ Completed 500 Internal Server Error in 1883ms (ActiveRecord: 2.9ms)
 
   
 ActionView::Template::Error (undefined method `rank' for #<#<Class:0x007fdb1909ee20>:0x007fdb190ab3f0>
+=======
+Started GET "/summoners/22" for 127.0.0.1 at 2019-02-14 14:53:52 -0500
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnoncher/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mSummoner Load (1.3ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (20.4ms)
+Completed 500 Internal Server Error in 7954ms (ActiveRecord: 68.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `+' for nil:NilClass):
+    15:   <%= form_for @game do |f| %>
+    16:     <%= f.hidden_field :game, value: "#{@matches[index]["gameId"]}" %>
+    17:     <%= f.submit "Game #{index + 1}" %>
+    18:   <% num += 1 %>
+    19:   <% end %><!--form_for-->
+    20: <% end %><!-- times-->
+    21: 
+  
+app/views/summoners/show.html.erb:18:in `block (2 levels) in _app_views_summoners_show_html_erb__1182429069258700113_70194271311120'
+app/views/summoners/show.html.erb:15:in `block in _app_views_summoners_show_html_erb__1182429069258700113_70194271311120'
+app/views/summoners/show.html.erb:14:in `times'
+app/views/summoners/show.html.erb:14:in `_app_views_summoners_show_html_erb__1182429069258700113_70194271311120'
+Started GET "/summoners/22" for 127.0.0.1 at 2019-02-14 14:54:22 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mSummoner Load (1.9ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (135.8ms)
+Completed 500 Internal Server Error in 8898ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `finds_player_id_for_game' for #<Array:0x007faec79b0780>):
+    23: 
+    24: <% 10.times do |i| %>
+    25:       <% players_hash = {} %>
+    26:       <% person = @matches.finds_player_id_for_game(index) %>
+    27:       <% if @matches[num]["teams"][0]["win"] == "Win" && person <= 4 %>
+    28:         <% players_hash["W/L"] = "Won" %>
+    29:       <% else %>
+  
+app/views/summoners/show.html.erb:26:in `block in _app_views_summoners_show_html_erb__1182429069258700113_70194267771340'
+app/views/summoners/show.html.erb:24:in `times'
+app/views/summoners/show.html.erb:24:in `_app_views_summoners_show_html_erb__1182429069258700113_70194267771340'
+Started GET "/summoners/22" for 127.0.0.1 at 2019-02-14 14:55:27 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mSummoner Load (2.6ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (68.9ms)
+Completed 500 Internal Server Error in 7848ms (ActiveRecord: 33.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `finds_player_id_for_game' for #<Array:0x007faec306af58>):
+    23: 
+    24: <% 10.times do |i| %>
+    25:       <% players_hash = {} %>
+    26:       <% person = @matches.finds_player_id_for_game(index) %>
+    27:       <% if @matches[num]["teams"][0]["win"] == "Win" && person <= 4 %>
+    28:         <% players_hash["W/L"] = "Won" %>
+    29:       <% else %>
+  
+app/views/summoners/show.html.erb:26:in `block in _app_views_summoners_show_html_erb__1182429069258700113_70194304753680'
+app/views/summoners/show.html.erb:24:in `times'
+app/views/summoners/show.html.erb:24:in `_app_views_summoners_show_html_erb__1182429069258700113_70194304753680'
+Started GET "/summoners/22" for 127.0.0.1 at 2019-02-14 14:58:35 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mSummoner Load (4.2ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (80.1ms)
+Completed 500 Internal Server Error in 6532ms (ActiveRecord: 115.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `finds_player_id_for_game' for #<Array:0x007faec36cd328>):
+    23: 
+    24: <% 10.times do |i| %>
+    25:       <% players_hash = {} %>
+    26:       <% person = @matches.finds_player_id_for_game(index) %>
+    27:       <% if @matches[num]["teams"][0]["win"] == "Win" && person <= 4 %>
+    28:         <% players_hash["W/L"] = "Won" %>
+    29:       <% else %>
+  
+app/views/summoners/show.html.erb:26:in `block in _app_views_summoners_show_html_erb__1182429069258700113_70194303361740'
+app/views/summoners/show.html.erb:24:in `times'
+app/views/summoners/show.html.erb:24:in `_app_views_summoners_show_html_erb__1182429069258700113_70194303361740'
+Started GET "/summoners/22" for 127.0.0.1 at 2019-02-14 15:00:17 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mSummoner Load (0.9ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (15.3ms)
+Completed 500 Internal Server Error in 7969ms (ActiveRecord: 185.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `+' for nil:NilClass):
+    15:   <%= form_for @game do |f| %>
+    16:     <%= f.hidden_field :game, value: "#{@matches[index]["gameId"]}" %>
+    17:     <%= f.submit "Game #{index + 1}" %>
+    18:   <% num += 1 %>
+    19:   <% end %><!--form_for-->
+    20: <% end %><!-- times-->
+    21: 
+  
+app/views/summoners/show.html.erb:18:in `block (2 levels) in _app_views_summoners_show_html_erb__1182429069258700113_70194270520760'
+app/views/summoners/show.html.erb:15:in `block in _app_views_summoners_show_html_erb__1182429069258700113_70194270520760'
+app/views/summoners/show.html.erb:14:in `times'
+app/views/summoners/show.html.erb:14:in `_app_views_summoners_show_html_erb__1182429069258700113_70194270520760'
+Started GET "/summoners/22" for 127.0.0.1 at 2019-02-14 15:01:24 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mSummoner Load (1.6ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (987.0ms)
+Completed 500 Internal Server Error in 6989ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `num' for #<#<Class:0x007faec11e82d8>:0x007faec89ad0e8>):
+    28:         <% person = player["participantId"]-1%>
+    29:       <% end %>  <!--if-->
+    30:     <% end %><!--each-->
+    31:       <% if @matches[num]["teams"][0]["win"] == "Win" && person <= 4 %>
+    32:         <% players_hash["W/L"] = "Won" %>
+    33:       <% else %>
+    34:         <% players_hash["W/L"] = "Lost" %>
+  
+app/views/summoners/show.html.erb:31:in `block in _app_views_summoners_show_html_erb__1182429069258700113_70194333314540'
+app/views/summoners/show.html.erb:24:in `times'
+app/views/summoners/show.html.erb:24:in `_app_views_summoners_show_html_erb__1182429069258700113_70194333314540'
+Started GET "/summoners/22" for 127.0.0.1 at 2019-02-14 15:02:21 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mSummoner Load (1.3ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 8060ms (Views: 402.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/images/champion_icons/Kayn.png" for 127.0.0.1 at 2019-02-14 15:02:30 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/champion_icons/Kayn.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/images/champion_icons/Master%20Yi.png" for 127.0.0.1 at 2019-02-14 15:02:30 -0500
+Started GET "/images/champion_icons/Kai'Sa.png" for 127.0.0.1 at 2019-02-14 15:02:30 -0500
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/champion_icons/Master%20Yi.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+ActionController::RoutingError (No route matches [GET] "/images/champion_icons/Kai'Sa.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/images/champion_icons/Master%20Yi.png" for 127.0.0.1 at 2019-02-14 15:02:36 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/champion_icons/Master%20Yi.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/images/champion_icons/Kai'Sa.png" for 127.0.0.1 at 2019-02-14 15:02:37 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/champion_icons/Kai'Sa.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/games" for 127.0.0.1 at 2019-02-14 15:19:58 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5+XP4rbLgrV5nDhqdMU7M3ZqhQ6r8YUbna8hC+QqNRbv8WQAg5Ko0CJbsuwXlO9slsXyhE5E/wpMjyEwSTXw0A==", "game"=>{"game"=>"2974746963"}, "commit"=>"Game 5"}
+  [1m[35m (19.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (49.2ms)[0m  [1m[32mINSERT INTO "games" ("game", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["game", 2974746963], ["created_at", "2019-02-14 20:19:58.772279"], ["updated_at", "2019-02-14 20:19:58.772279"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:9
+Redirected to http://localhost:3000/games/36
+Completed 302 Found in 108ms (ActiveRecord: 72.8ms)
+
+
+Started GET "/games/36" for 127.0.0.1 at 2019-02-14 15:19:58 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mGame Load (43.9ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1723.9ms)
+Completed 500 Internal Server Error in 3274ms (ActiveRecord: 202.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `rank' for #<#<Class:0x007faec55822c8>:0x007faec55806f8>
+>>>>>>> 0c18d8c2a66679ecb1f45a102c9675755132d293
 Did you mean?  rand):
     39:           <%= @stats_arr[0]["name"] %>
     40:         </p>
@@ -14937,6 +15272,7 @@ Did you mean?  rand):
     44:       <div class="game-stats">
     45:         <%= stats(0) %>
   
+<<<<<<< HEAD
 app/views/games/show.html.erb:42:in `_app_views_games_show_html_erb___1326961451297147699_70289497325060'
 Started POST "/games" for 127.0.0.1 at 2019-02-14 15:31:45 -0500
 Processing by GamesController#create as HTML
@@ -14963,6 +15299,65 @@ Completed 500 Internal Server Error in 1517ms (ActiveRecord: 0.8ms)
 
   
 ActionView::Template::Error (undefined method `rank' for #<#<Class:0x007fdb1909ee20>:0x007fdb189a4480>
+=======
+app/views/games/show.html.erb:42:in `_app_views_games_show_html_erb___2252485582809857845_70194305963500'
+Started GET "/images/champion_icons/Kai'Sa.png" for 127.0.0.1 at 2019-02-14 15:20:21 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/champion_icons/Kai'Sa.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/games" for 127.0.0.1 at 2019-02-14 15:20:25 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5+XP4rbLgrV5nDhqdMU7M3ZqhQ6r8YUbna8hC+QqNRbv8WQAg5Ko0CJbsuwXlO9slsXyhE5E/wpMjyEwSTXw0A==", "game"=>{"game"=>"2974389009"}, "commit"=>"Game 9"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (1.4ms)[0m  [1m[32mINSERT INTO "games" ("game", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["game", 2974389009], ["created_at", "2019-02-14 20:20:25.059259"], ["updated_at", "2019-02-14 20:20:25.059259"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:9
+Redirected to http://localhost:3000/games/37
+Completed 302 Found in 27ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/games/37" for 127.0.0.1 at 2019-02-14 15:20:25 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mGame Load (1.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1753.4ms)
+Completed 500 Internal Server Error in 2470ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `rank' for #<#<Class:0x007faec55822c8>:0x007faec7bc6790>
+>>>>>>> 0c18d8c2a66679ecb1f45a102c9675755132d293
 Did you mean?  rand):
     39:           <%= @stats_arr[0]["name"] %>
     40:         </p>
@@ -14972,6 +15367,7 @@ Did you mean?  rand):
     44:       <div class="game-stats">
     45:         <%= stats(0) %>
   
+<<<<<<< HEAD
 app/views/games/show.html.erb:42:in `_app_views_games_show_html_erb___1326961451297147699_70289493665640'
 Started POST "/games" for 127.0.0.1 at 2019-02-14 15:32:10 -0500
 Processing by GamesController#create as HTML
@@ -14998,6 +15394,39 @@ Completed 500 Internal Server Error in 1595ms (ActiveRecord: 0.4ms)
 
   
 ActionView::Template::Error (undefined method `rank' for #<#<Class:0x007fdb1909ee20>:0x007fdb14d6ead8>
+=======
+app/views/games/show.html.erb:42:in `_app_views_games_show_html_erb___2252485582809857845_70194326026480'
+Started PUT "/__web_console/repl_sessions/ef359080b9d77adcd42ab92d56a1bf87" for 127.0.0.1 at 2019-02-14 15:21:49 -0500
+Started PUT "/__web_console/repl_sessions/ef359080b9d77adcd42ab92d56a1bf87" for 127.0.0.1 at 2019-02-14 15:21:50 -0500
+Started PUT "/__web_console/repl_sessions/ef359080b9d77adcd42ab92d56a1bf87" for 127.0.0.1 at 2019-02-14 15:23:18 -0500
+Started GET "/games/37" for 127.0.0.1 at 2019-02-14 15:24:46 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:63: syntax error, unexpected '.'
+  def .rank(i)
+       ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:88: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/models/game.rb:63: syntax error, unexpected '.'
+app/models/game.rb:88: syntax error, unexpected keyword_end, expecting end-of-input
+app/controllers/games_controller.rb:14:in `show'
+Started GET "/games/37" for 127.0.0.1 at 2019-02-14 15:25:01 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mGame Load (1.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1406.4ms)
+Completed 500 Internal Server Error in 2840ms (ActiveRecord: 515.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `rank' for #<#<Class:0x007faec8a90bb8>:0x007faec7e5f150>
+>>>>>>> 0c18d8c2a66679ecb1f45a102c9675755132d293
 Did you mean?  rand):
     39:           <%= @stats_arr[0]["name"] %>
     40:         </p>
@@ -15007,6 +15436,7 @@ Did you mean?  rand):
     44:       <div class="game-stats">
     45:         <%= stats(0) %>
   
+<<<<<<< HEAD
 app/views/games/show.html.erb:42:in `_app_views_games_show_html_erb___1326961451297147699_70289493737720'
 Started GET "/summoners/1" for 127.0.0.1 at 2019-02-14 15:32:36 -0500
 Processing by SummonersController#show as HTML
@@ -15314,3 +15744,1864 @@ ActionController::ParameterMissing (param is missing or the value is empty: game
   
 app/controllers/games_controller.rb:19:in `game_params'
 app/controllers/games_controller.rb:9:in `create'
+=======
+app/views/games/show.html.erb:42:in `_app_views_games_show_html_erb___2252485582809857845_70194333780540'
+Started GET "/games/37" for 127.0.0.1 at 2019-02-14 15:27:53 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mGame Load (2.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (2001.0ms)
+Completed 500 Internal Server Error in 2830ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `rank' for #<#<Class:0x007faec8a90bb8>:0x007faec1cde4d0>
+Did you mean?  rand):
+    41:           <%= @stats_arr[0]["name"] %>
+    42:         </p>
+    43:         <img src="/images/champion_loading_art/<%= @champions[0]%>_0.jpg" class="loading-art" alt="">
+    44:         <%= rank(0) %>
+    45:       </div>
+    46:       <div class="game-stats">
+    47:         <%= stats(0) %>
+  
+app/views/games/show.html.erb:44:in `_app_views_games_show_html_erb___2252485582809857845_70194355003720'
+Started GET "/games/37" for 127.0.0.1 at 2019-02-14 15:28:09 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/game.rb:4: syntax error, unexpected ':', expecting keyword_end
+  helper_method: :rank(i)
+                ^):
+  
+app/models/game.rb:4: syntax error, unexpected ':', expecting keyword_end
+app/controllers/games_controller.rb:14:in `show'
+Started GET "/games/37" for 127.0.0.1 at 2019-02-14 15:30:05 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mGame Load (4.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1234.2ms)
+Completed 500 Internal Server Error in 2184ms (ActiveRecord: 133.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    41:           <%= @stats_arr[0]["name"] %>
+    42:         </p>
+    43:         <img src="/images/champion_loading_art/<%= @champions[0]%>_0.jpg" class="loading-art" alt="">
+    44:         <%= @game.rank(0) %>
+    45:       </div>
+    46:       <div class="game-stats">
+    47:         <%= stats(0) %>
+  
+app/models/game.rb:63:in `rank'
+app/views/games/show.html.erb:44:in `_app_views_games_show_html_erb___2252485582809857845_70194349935500'
+Started GET "/games/37" for 127.0.0.1 at 2019-02-14 15:30:55 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mGame Load (1.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1330.6ms)
+Completed 500 Internal Server Error in 2001ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `rank' for nil:NilClass
+Did you mean?  rand):
+    41:           <%= @stats_arr[0]["name"] %>
+    42:         </p>
+    43:         <img src="/images/champion_loading_art/<%= @champions[0]%>_0.jpg" class="loading-art" alt="">
+    44:         <%= @stat_arr.rank(0) %>
+    45:       </div>
+    46:       <div class="game-stats">
+    47:         <%= stats(0) %>
+  
+app/views/games/show.html.erb:44:in `_app_views_games_show_html_erb___2252485582809857845_70194306687460'
+Started GET "/games/37" for 127.0.0.1 at 2019-02-14 15:31:31 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mGame Load (1.7ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (952.4ms)
+Completed 500 Internal Server Error in 1815ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `rank' for #<Array:0x007faec8a0fe00>
+Did you mean?  rand):
+    41:           <%= @stats_arr[0]["name"] %>
+    42:         </p>
+    43:         <img src="/images/champion_loading_art/<%= @champions[0]%>_0.jpg" class="loading-art" alt="">
+    44:         <%= @stats_arr.rank(0) %>
+    45:       </div>
+    46:       <div class="game-stats">
+    47:         <%= stats(0) %>
+  
+app/views/games/show.html.erb:44:in `_app_views_games_show_html_erb___2252485582809857845_70194332787740'
+Started GET "/games/37" for 127.0.0.1 at 2019-02-14 15:34:59 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mGame Load (1.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (64.4ms)
+Completed 500 Internal Server Error in 729ms (ActiveRecord: 1.1ms)
+
+
+  
+LoadError (cannot load such file -- ../resource/methods.rb):
+  
+app/views/games/show.html.erb:1:in `_app_views_games_show_html_erb___2252485582809857845_70194268333220'
+Started GET "/games/37" for 127.0.0.1 at 2019-02-14 15:35:27 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mGame Load (1.7ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1262.9ms)
+Completed 200 OK in 2009ms (Views: 1461.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/games/37" for 127.0.0.1 at 2019-02-14 15:37:57 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mGame Load (0.7ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1303.2ms)
+Completed 200 OK in 2405ms (Views: 1403.2ms | ActiveRecord: 108.2ms)
+
+
+Started GET "/games/37" for 127.0.0.1 at 2019-02-14 15:39:38 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mGame Load (17.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (913.8ms)
+Completed 500 Internal Server Error in 1609ms (ActiveRecord: 17.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `private' for #<#<Class:0x007faeca83f628>:0x007faec190b268>
+Did you mean?  print):
+    1: <% require '/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb' %>
+    2: <% private %>
+    3: <% i = 0 %>
+    4: <% players_names = [] %>
+    5: <% @stats_arr = [] %>
+  
+app/views/games/show.html.erb:2:in `_app_views_games_show_html_erb___2252485582809857845_70194274262680'
+Started GET "/games/37" for 127.0.0.1 at 2019-02-14 15:39:51 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mGame Load (0.7ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (460.6ms)
+Completed 500 Internal Server Error in 1140ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `private' for #<#<Class:0x007faeca83f628>:0x007faec7e9ab38>
+Did you mean?  print):
+    1: <% require '/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb' %>
+    2: <%= private %>
+    3: <% i = 0 %>
+    4: <% players_names = [] %>
+    5: <% @stats_arr = [] %>
+  
+app/views/games/show.html.erb:2:in `_app_views_games_show_html_erb___2252485582809857845_70194327510740'
+Started GET "/games/37" for 127.0.0.1 at 2019-02-14 15:43:43 -0500
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnoncher/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/application_record.rb:7: syntax error, unexpected <<
+<<<<<<< HEAD
+  ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/application_record.rb:9: syntax error, unexpected ===, expecting keyword_end
+=======
+   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/models/application_record.rb:12: syntax error, unexpected >>, expecting keyword_end
+>>>>>>> f74a81d7afadf5c7980bbb1f72d48a333714cb8c
+  ^):
+  
+app/models/application_record.rb:7: syntax error, unexpected <<
+app/models/application_record.rb:9: syntax error, unexpected ===, expecting keyword_end
+app/models/application_record.rb:12: syntax error, unexpected >>, expecting keyword_end
+app/models/game.rb:1:in `<main>'
+app/controllers/games_controller.rb:14:in `show'
+Started GET "/games/37" for 127.0.0.1 at 2019-02-14 15:44:22 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mGame Load (3.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (13.2ms)
+Completed 500 Internal Server Error in 1068ms (ActiveRecord: 152.2ms)
+
+
+  
+SyntaxError (/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:20: syntax error, unexpected '<'
+  <p class="game-player-stat">Damage:
+   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:20: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:23: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:26: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:29: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:32: syntax error, unexpected '(', expecting keyword_end
+  <% kda = ((@stats_arr[i]["kills"]+@stat...
+            ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:32: syntax error, unexpected ')', expecting keyword_end
+...).to_f/@stats_arr[i]["deaths"]).round(2) %>
+...                               ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:32: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:33: syntax error, unexpected tIVAR, expecting keyword_end
+  <% if @stats_arr[i]["kills"] > 1 && @stats_arr[i]["deaths"] == 0%>
+                  ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:33: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:34: syntax error, unexpected '<'
+    <p class="game-player-kda-perfect"><%= kda %></p>
+                                        ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:36: syntax error, unexpected '<'
+    <p class="game-player-kda-bad"><%= kda %>
+                                    ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:37: syntax error, unexpected tINTEGER, expecting keyword_end
+  <% elsif kda >= 1 && kda < 3%>
+                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:37: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:38: syntax error, unexpected '<'
+    <p class="game-player-kda-avg"><%= kda %>
+                                    ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:39: syntax error, unexpected tINTEGER, expecting keyword_end
+  <% elsif kda >= 3 && kda < 4%>
+                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:39: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:40: syntax error, unexpected '<'
+    <p class="game-player-kda-good"><%= kda %>
+                                     ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:41: syntax error, unexpected tINTEGER, expecting keyword_end
+  <% elsif kda >= 4%>
+                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:42: syntax error, unexpected '<'
+    <p class="game-player-kda-gg"><%= kda %>
+                                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:42: unterminated string meets end of file):
+  
+app/views/resource/methods.rb:20: syntax error, unexpected '<'
+app/views/resource/methods.rb:20: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:23: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:26: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:29: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:32: syntax error, unexpected '(', expecting keyword_end
+app/views/resource/methods.rb:32: syntax error, unexpected ')', expecting keyword_end
+app/views/resource/methods.rb:32: syntax error, unexpected '>'
+app/views/resource/methods.rb:33: syntax error, unexpected tIVAR, expecting keyword_end
+app/views/resource/methods.rb:33: syntax error, unexpected '>'
+app/views/resource/methods.rb:34: syntax error, unexpected '<'
+app/views/resource/methods.rb:36: syntax error, unexpected '<'
+app/views/resource/methods.rb:37: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/resource/methods.rb:37: syntax error, unexpected '>'
+app/views/resource/methods.rb:38: syntax error, unexpected '<'
+app/views/resource/methods.rb:39: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/resource/methods.rb:39: syntax error, unexpected '>'
+app/views/resource/methods.rb:40: syntax error, unexpected '<'
+app/views/resource/methods.rb:41: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/resource/methods.rb:42: syntax error, unexpected '<'
+app/views/resource/methods.rb:42: unterminated string meets end of file
+app/views/games/show.html.erb:1:in `_app_views_games_show_html_erb___2473530746584626723_70351570077320'
+Started GET "/games/37" for 127.0.0.1 at 2019-02-14 15:48:01 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mGame Load (43.5ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (89.8ms)
+Completed 500 Internal Server Error in 1598ms (ActiveRecord: 43.5ms)
+
+
+  
+SyntaxError (/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:20: syntax error, unexpected '<'
+  <p class="game-player-stat">Damage:
+   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:20: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:23: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:26: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:29: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:32: syntax error, unexpected '(', expecting keyword_end
+  <% kda = ((@stats_arr[i]["kills"]+@stat...
+            ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:32: syntax error, unexpected ')', expecting keyword_end
+...).to_f/@stats_arr[i]["deaths"]).round(2) %>
+...                               ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:32: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:33: syntax error, unexpected tIVAR, expecting keyword_end
+  <% if @stats_arr[i]["kills"] > 1 && @stats_arr[i]["deaths"] == 0%>
+                  ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:33: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:34: syntax error, unexpected '<'
+    <p class="game-player-kda-perfect"><%= kda %></p>
+                                        ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:36: syntax error, unexpected '<'
+    <p class="game-player-kda-bad"><%= kda %>
+                                    ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:37: syntax error, unexpected tINTEGER, expecting keyword_end
+  <% elsif kda >= 1 && kda < 3%>
+                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:37: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:38: syntax error, unexpected '<'
+    <p class="game-player-kda-avg"><%= kda %>
+                                    ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:39: syntax error, unexpected tINTEGER, expecting keyword_end
+  <% elsif kda >= 3 && kda < 4%>
+                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:39: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:40: syntax error, unexpected '<'
+    <p class="game-player-kda-good"><%= kda %>
+                                     ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:41: syntax error, unexpected tINTEGER, expecting keyword_end
+  <% elsif kda >= 4%>
+                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:42: syntax error, unexpected '<'
+    <p class="game-player-kda-gg"><%= kda %>
+                                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:42: unterminated string meets end of file):
+  
+app/views/resource/methods.rb:20: syntax error, unexpected '<'
+app/views/resource/methods.rb:20: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:23: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:26: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:29: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:32: syntax error, unexpected '(', expecting keyword_end
+app/views/resource/methods.rb:32: syntax error, unexpected ')', expecting keyword_end
+app/views/resource/methods.rb:32: syntax error, unexpected '>'
+app/views/resource/methods.rb:33: syntax error, unexpected tIVAR, expecting keyword_end
+app/views/resource/methods.rb:33: syntax error, unexpected '>'
+app/views/resource/methods.rb:34: syntax error, unexpected '<'
+app/views/resource/methods.rb:36: syntax error, unexpected '<'
+app/views/resource/methods.rb:37: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/resource/methods.rb:37: syntax error, unexpected '>'
+app/views/resource/methods.rb:38: syntax error, unexpected '<'
+app/views/resource/methods.rb:39: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/resource/methods.rb:39: syntax error, unexpected '>'
+app/views/resource/methods.rb:40: syntax error, unexpected '<'
+app/views/resource/methods.rb:41: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/resource/methods.rb:42: syntax error, unexpected '<'
+app/views/resource/methods.rb:42: unterminated string meets end of file
+app/views/games/show.html.erb:1:in `_app_views_games_show_html_erb___2473530746584626723_70351603246980'
+Started GET "/games/37" for 127.0.0.1 at 2019-02-14 15:51:00 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mGame Load (75.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (243.8ms)
+Completed 500 Internal Server Error in 1070ms (ActiveRecord: 75.3ms)
+
+
+  
+SyntaxError (/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:20: syntax error, unexpected '<'
+  <p class="game-player-stat">Damage:
+   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:20: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:23: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:26: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:29: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:32: syntax error, unexpected '(', expecting keyword_end
+  <% kda = ((@stats_arr[i]["kills"]+@stat...
+            ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:32: syntax error, unexpected ')', expecting keyword_end
+...).to_f/@stats_arr[i]["deaths"]).round(2) %>
+...                               ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:32: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:33: syntax error, unexpected tIVAR, expecting keyword_end
+  <% if @stats_arr[i]["kills"] > 1 && @stats_arr[i]["deaths"] == 0%>
+                  ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:33: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:34: syntax error, unexpected '<'
+    <p class="game-player-kda-perfect"><%= kda %></p>
+                                        ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:36: syntax error, unexpected '<'
+    <p class="game-player-kda-bad"><%= kda %>
+                                    ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:37: syntax error, unexpected tINTEGER, expecting keyword_end
+  <% elsif kda >= 1 && kda < 3%>
+                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:37: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:38: syntax error, unexpected '<'
+    <p class="game-player-kda-avg"><%= kda %>
+                                    ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:39: syntax error, unexpected tINTEGER, expecting keyword_end
+  <% elsif kda >= 3 && kda < 4%>
+                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:39: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:40: syntax error, unexpected '<'
+    <p class="game-player-kda-good"><%= kda %>
+                                     ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:41: syntax error, unexpected tINTEGER, expecting keyword_end
+  <% elsif kda >= 4%>
+                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:42: syntax error, unexpected '<'
+    <p class="game-player-kda-gg"><%= kda %>
+                                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:42: unterminated string meets end of file):
+  
+app/views/resource/methods.rb:20: syntax error, unexpected '<'
+app/views/resource/methods.rb:20: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:23: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:26: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:29: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:32: syntax error, unexpected '(', expecting keyword_end
+app/views/resource/methods.rb:32: syntax error, unexpected ')', expecting keyword_end
+app/views/resource/methods.rb:32: syntax error, unexpected '>'
+app/views/resource/methods.rb:33: syntax error, unexpected tIVAR, expecting keyword_end
+app/views/resource/methods.rb:33: syntax error, unexpected '>'
+app/views/resource/methods.rb:34: syntax error, unexpected '<'
+app/views/resource/methods.rb:36: syntax error, unexpected '<'
+app/views/resource/methods.rb:37: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/resource/methods.rb:37: syntax error, unexpected '>'
+app/views/resource/methods.rb:38: syntax error, unexpected '<'
+app/views/resource/methods.rb:39: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/resource/methods.rb:39: syntax error, unexpected '>'
+app/views/resource/methods.rb:40: syntax error, unexpected '<'
+app/views/resource/methods.rb:41: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/resource/methods.rb:42: syntax error, unexpected '<'
+app/views/resource/methods.rb:42: unterminated string meets end of file
+app/views/games/show.html.erb:1:in `_app_views_games_show_html_erb___2473530746584626723_70351554553960'
+Started GET "/games/37" for 127.0.0.1 at 2019-02-14 15:53:04 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mGame Load (5.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (34.4ms)
+Completed 500 Internal Server Error in 766ms (ActiveRecord: 5.1ms)
+
+
+  
+SyntaxError (/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:20: syntax error, unexpected '<'
+  <p class="game-player-stat">Damage:
+   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:20: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:23: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:26: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:29: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:32: syntax error, unexpected '(', expecting keyword_end
+  <% kda = ((@stats_arr[i]["kills"]+@stat...
+            ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:32: syntax error, unexpected ')', expecting keyword_end
+...).to_f/@stats_arr[i]["deaths"]).round(2) %>
+...                               ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:32: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:33: syntax error, unexpected tIVAR, expecting keyword_end
+  <% if @stats_arr[i]["kills"] > 1 && @stats_arr[i]["deaths"] == 0%>
+                  ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:33: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:34: syntax error, unexpected '<'
+    <p class="game-player-kda-perfect"><%= kda %></p>
+                                        ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:36: syntax error, unexpected '<'
+    <p class="game-player-kda-bad"><%= kda %>
+                                    ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:37: syntax error, unexpected tINTEGER, expecting keyword_end
+  <% elsif kda >= 1 && kda < 3%>
+                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:37: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:38: syntax error, unexpected '<'
+    <p class="game-player-kda-avg"><%= kda %>
+                                    ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:39: syntax error, unexpected tINTEGER, expecting keyword_end
+  <% elsif kda >= 3 && kda < 4%>
+                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:39: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:40: syntax error, unexpected '<'
+    <p class="game-player-kda-good"><%= kda %>
+                                     ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:41: syntax error, unexpected tINTEGER, expecting keyword_end
+  <% elsif kda >= 4%>
+                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:42: syntax error, unexpected '<'
+    <p class="game-player-kda-gg"><%= kda %>
+                                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:42: unterminated string meets end of file):
+  
+app/views/resource/methods.rb:20: syntax error, unexpected '<'
+app/views/resource/methods.rb:20: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:23: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:26: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:29: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:32: syntax error, unexpected '(', expecting keyword_end
+app/views/resource/methods.rb:32: syntax error, unexpected ')', expecting keyword_end
+app/views/resource/methods.rb:32: syntax error, unexpected '>'
+app/views/resource/methods.rb:33: syntax error, unexpected tIVAR, expecting keyword_end
+app/views/resource/methods.rb:33: syntax error, unexpected '>'
+app/views/resource/methods.rb:34: syntax error, unexpected '<'
+app/views/resource/methods.rb:36: syntax error, unexpected '<'
+app/views/resource/methods.rb:37: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/resource/methods.rb:37: syntax error, unexpected '>'
+app/views/resource/methods.rb:38: syntax error, unexpected '<'
+app/views/resource/methods.rb:39: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/resource/methods.rb:39: syntax error, unexpected '>'
+app/views/resource/methods.rb:40: syntax error, unexpected '<'
+app/views/resource/methods.rb:41: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/resource/methods.rb:42: syntax error, unexpected '<'
+app/views/resource/methods.rb:42: unterminated string meets end of file
+app/views/games/show.html.erb:1:in `_app_views_games_show_html_erb___2473530746584626723_70351554673020'
+Started GET "/games/37" for 127.0.0.1 at 2019-02-14 15:54:34 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mGame Load (1.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (33.9ms)
+Completed 500 Internal Server Error in 784ms (ActiveRecord: 1.1ms)
+
+
+  
+SyntaxError (/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:20: syntax error, unexpected '<'
+  <p class="game-player-stat">Damage:
+   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:20: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:23: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:26: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:29: syntax error, unexpected ':', expecting keyword_end
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:32: syntax error, unexpected '(', expecting keyword_end
+  <% kda = ((@stats_arr[i]["kills"]+@stat...
+            ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:32: syntax error, unexpected ')', expecting keyword_end
+...).to_f/@stats_arr[i]["deaths"]).round(2) %>
+...                               ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:32: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:33: syntax error, unexpected tIVAR, expecting keyword_end
+  <% if @stats_arr[i]["kills"] > 1 && @stats_arr[i]["deaths"] == 0%>
+                  ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:33: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:34: syntax error, unexpected '<'
+    <p class="game-player-kda-perfect"><%= kda %></p>
+                                        ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:36: syntax error, unexpected '<'
+    <p class="game-player-kda-bad"><%= kda %>
+                                    ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:37: syntax error, unexpected tINTEGER, expecting keyword_end
+  <% elsif kda >= 1 && kda < 3%>
+                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:37: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:38: syntax error, unexpected '<'
+    <p class="game-player-kda-avg"><%= kda %>
+                                    ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:39: syntax error, unexpected tINTEGER, expecting keyword_end
+  <% elsif kda >= 3 && kda < 4%>
+                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:39: syntax error, unexpected '>'
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:40: syntax error, unexpected '<'
+    <p class="game-player-kda-good"><%= kda %>
+                                     ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:41: syntax error, unexpected tINTEGER, expecting keyword_end
+  <% elsif kda >= 4%>
+                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:42: syntax error, unexpected '<'
+    <p class="game-player-kda-gg"><%= kda %>
+                                   ^
+/Users/johnoncher/dev/mod_2/Project/simon.gg/app/views/resource/methods.rb:42: unterminated string meets end of file):
+  
+app/views/resource/methods.rb:20: syntax error, unexpected '<'
+app/views/resource/methods.rb:20: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:23: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:26: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:29: syntax error, unexpected ':', expecting keyword_end
+app/views/resource/methods.rb:32: syntax error, unexpected '(', expecting keyword_end
+app/views/resource/methods.rb:32: syntax error, unexpected ')', expecting keyword_end
+app/views/resource/methods.rb:32: syntax error, unexpected '>'
+app/views/resource/methods.rb:33: syntax error, unexpected tIVAR, expecting keyword_end
+app/views/resource/methods.rb:33: syntax error, unexpected '>'
+app/views/resource/methods.rb:34: syntax error, unexpected '<'
+app/views/resource/methods.rb:36: syntax error, unexpected '<'
+app/views/resource/methods.rb:37: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/resource/methods.rb:37: syntax error, unexpected '>'
+app/views/resource/methods.rb:38: syntax error, unexpected '<'
+app/views/resource/methods.rb:39: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/resource/methods.rb:39: syntax error, unexpected '>'
+app/views/resource/methods.rb:40: syntax error, unexpected '<'
+app/views/resource/methods.rb:41: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/resource/methods.rb:42: syntax error, unexpected '<'
+app/views/resource/methods.rb:42: unterminated string meets end of file
+app/views/games/show.html.erb:1:in `_app_views_games_show_html_erb___2473530746584626723_70351558498840'
+Started GET "/games/37" for 127.0.0.1 at 2019-02-14 15:54:49 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mGame Load (129.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1280.7ms)
+Completed 200 OK in 2683ms (Views: 1953.2ms | ActiveRecord: 129.2ms)
+
+
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-14 15:56:08 -0500
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnoncher/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 521ms (Views: 409.3ms | ActiveRecord: 61.3ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-14 15:56:25 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dRKUxDUd0fi3XewH1QrYhgE9H6V/Oj+K4g/1Vx82q/99Bj8mAET7neyaZoG2WwzZ4ZJoL5qPRZszL/VssiluOQ==", "summoner"=>{"summoner_name"=>"Riot Phreak"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `response' for #<URI::InvalidURIError:0x007f7f85f218e8>
+Did you mean?  respond_to?):
+  
+app/models/summoner.rb:23:in `rescue in league_profile'
+app/models/summoner.rb:20:in `league_profile'
+app/controllers/summoners_controller.rb:9:in `create'
+Started POST "/summoners" for 127.0.0.1 at 2019-02-14 15:56:40 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dRKUxDUd0fi3XewH1QrYhgE9H6V/Oj+K4g/1Vx82q/99Bj8mAET7neyaZoG2WwzZ4ZJoL5qPRZszL/VssiluOQ==", "summoner"=>{"summoner_name"=>"RiotPhreak"}, "commit"=>"Submit"}
+Redirected to http://localhost:3000/summoners/new
+Completed 302 Found in 732ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-14 15:56:41 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 46ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-14 15:56:58 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s9+w9GCSoKX/u3xq8cTMacgcvRw0RUeb4RbbtWOf+1W7yxsWVcuKwKR89uySlRg2KLPKltHwPYowNtuOzoA+kw==", "summoner"=>{"summoner_name"=>"john o"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 146ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `response' for #<URI::InvalidURIError:0x007f7f8975ee18>
+Did you mean?  respond_to?):
+  
+app/models/summoner.rb:23:in `rescue in league_profile'
+app/models/summoner.rb:20:in `league_profile'
+app/controllers/summoners_controller.rb:9:in `create'
+Started POST "/summoners" for 127.0.0.1 at 2019-02-14 15:57:18 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s9+w9GCSoKX/u3xq8cTMacgcvRw0RUeb4RbbtWOf+1W7yxsWVcuKwKR89uySlRg2KLPKltHwPYowNtuOzoA+kw==", "summoner"=>{"summoner_name"=>"john"}, "commit"=>"Submit"}
+  [1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[36mSummoner Create (24.7ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["summoner_name", "john"], ["created_at", "2019-02-14 20:57:19.318658"], ["updated_at", "2019-02-14 20:57:19.318658"]]
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[36mSummoner Load (2.4ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" ORDER BY "summoners"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:12
+Redirected to http://localhost:3000/summoners/23
+Completed 302 Found in 689ms (ActiveRecord: 34.7ms)
+
+
+Started GET "/summoners/23" for 127.0.0.1 at 2019-02-14 15:57:19 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mSummoner Load (0.6ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (16.3ms)
+Completed 500 Internal Server Error in 1909ms (ActiveRecord: 12.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    13: 
+    14: <% 10.times do |i| %>
+    15:   <%= form_for @game do |f| %>
+    16:     <%= f.hidden_field :game, value: "#{@matches[index]["gameId"]}" %>
+    17:     <%= f.submit "Game #{index + 1}" %>
+    18:   <% index += 1 %>
+    19:   <% end %><!--form_for-->
+  
+app/views/summoners/show.html.erb:16:in `block (2 levels) in _app_views_summoners_show_html_erb__2220633306225911062_70092841459320'
+app/views/summoners/show.html.erb:15:in `block in _app_views_summoners_show_html_erb__2220633306225911062_70092841459320'
+app/views/summoners/show.html.erb:14:in `times'
+app/views/summoners/show.html.erb:14:in `_app_views_summoners_show_html_erb__2220633306225911062_70092841459320'
+Started POST "/summoners" for 127.0.0.1 at 2019-02-14 15:57:40 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s9+w9GCSoKX/u3xq8cTMacgcvRw0RUeb4RbbtWOf+1W7yxsWVcuKwKR89uySlRg2KLPKltHwPYowNtuOzoA+kw==", "summoner"=>{"summoner_name"=>"joncher"}, "commit"=>"Submit"}
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[36mSummoner Create (2.4ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["summoner_name", "joncher"], ["created_at", "2019-02-14 20:57:41.062461"], ["updated_at", "2019-02-14 20:57:41.062461"]]
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[36mSummoner Load (0.8ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" ORDER BY "summoners"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:12
+Redirected to http://localhost:3000/summoners/24
+Completed 302 Found in 1024ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/summoners/24" for 127.0.0.1 at 2019-02-14 15:57:41 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mSummoner Load (0.8ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (44.4ms)
+Completed 200 OK in 8819ms (Views: 104.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2019-02-14 15:58:29 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bjjjXXkc3VnFGjk1OsQmM55RiuBHzuW+q0PvF4OGQltmLEi/TEX3PJ7ds7NZlfJsfv79aqJ7n696Y+8sLpmHnQ==", "game"=>{"game"=>"2927497396"}, "commit"=>"Game 5"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (7.9ms)[0m  [1m[32mINSERT INTO "games" ("game", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["game", 2927497396], ["created_at", "2019-02-14 20:58:29.488709"], ["updated_at", "2019-02-14 20:58:29.488709"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:9
+Redirected to http://localhost:3000/games/38
+Completed 302 Found in 38ms (ActiveRecord: 10.7ms)
+
+
+Started GET "/games/38" for 127.0.0.1 at 2019-02-14 15:58:29 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"38"}
+  [1m[36mGame Load (1.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (2393.3ms)
+Completed 200 OK in 3210ms (Views: 2463.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-14 15:59:22 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 138ms (Views: 103.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-14 15:59:31 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A7cjONv2FdE+894SPwyVrUv5ZDlW160B6arJDxqFmhsLo4ja7q8/tGU0VJRcXUHyq1YTs7Ni1xA4isk0t5pf3Q==", "summoner"=>{"summoner_name"=>"john "}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `response' for #<URI::InvalidURIError:0x007f7f8cbc4180>
+Did you mean?  respond_to?):
+  
+app/models/summoner.rb:23:in `rescue in league_profile'
+app/models/summoner.rb:20:in `league_profile'
+app/controllers/summoners_controller.rb:9:in `create'
+Started POST "/summoners" for 127.0.0.1 at 2019-02-14 15:59:59 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A7cjONv2FdE+894SPwyVrUv5ZDlW160B6arJDxqFmhsLo4ja7q8/tGU0VJRcXUHyq1YTs7Ni1xA4isk0t5pf3Q==", "summoner"=>{"summoner_name"=>"john"}, "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[36mSummoner Create (9.8ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["summoner_name", "john"], ["created_at", "2019-02-14 21:00:01.004378"], ["updated_at", "2019-02-14 21:00:01.004378"]]
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[36mSummoner Load (1.0ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" ORDER BY "summoners"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:12
+Redirected to http://localhost:3000/summoners/25
+Completed 302 Found in 1361ms (ActiveRecord: 13.2ms)
+
+
+Started GET "/summoners/25" for 127.0.0.1 at 2019-02-14 16:00:01 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mSummoner Load (0.8ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (14.4ms)
+Completed 500 Internal Server Error in 1755ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    13: 
+    14: <% 10.times do |i| %>
+    15:   <%= form_for @game do |f| %>
+    16:     <%= f.hidden_field :game, value: "#{@matches[index]["gameId"]}" %>
+    17:     <%= f.submit "Game #{index + 1}" %>
+    18:   <% index += 1 %>
+    19:   <% end %><!--form_for-->
+  
+app/views/summoners/show.html.erb:16:in `block (2 levels) in _app_views_summoners_show_html_erb__2220633306225911062_70092911516620'
+app/views/summoners/show.html.erb:15:in `block in _app_views_summoners_show_html_erb__2220633306225911062_70092911516620'
+app/views/summoners/show.html.erb:14:in `times'
+app/views/summoners/show.html.erb:14:in `_app_views_summoners_show_html_erb__2220633306225911062_70092911516620'
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-14 16:00:36 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 359ms (Views: 278.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-14 16:00:46 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iTguVEtQPoKqnGesi30BPI4xyYHcNCiyJCov0RyxplKBLIW2fgkU5/Fb7SroLNVjbp6+CzmBUqP1Ci/qsa5jlA==", "summoner"=>{"summoner_name"=>"j111oncher"}, "commit"=>"Submit"}
+Redirected to http://localhost:3000/summoners/new
+Completed 302 Found in 953ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-14 16:00:47 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 52ms (Views: 46.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-14 16:00:52 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XcPJ2Uty9mMVk8Of45XDsoqX0Y4cxSAg+oTZKAdZXUhV12I7fivcBk5USRmAxBftajimBPlwWjErpNkTqkaYjg==", "summoner"=>{"summoner_name"=>"j11oncher11"}, "commit"=>"Submit"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[36mSummoner Create (1.9ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["summoner_name", "j11oncher11"], ["created_at", "2019-02-14 21:00:52.717077"], ["updated_at", "2019-02-14 21:00:52.717077"]]
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[36mSummoner Load (2.3ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" ORDER BY "summoners"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:12
+Redirected to http://localhost:3000/summoners/26
+Completed 302 Found in 505ms (ActiveRecord: 6.1ms)
+
+
+Started GET "/summoners/26" for 127.0.0.1 at 2019-02-14 16:00:52 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mSummoner Load (0.7ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+Completed 500 Internal Server Error in 1022ms (ActiveRecord: 0.7ms)
+
+
+  
+RestClient::NotFound (404 Not Found):
+  
+app/models/summoner.rb:30:in `find_game_ids'
+app/models/summoner.rb:38:in `recent_10_games'
+app/controllers/summoners_controller.rb:45:in `show'
+Started POST "/summoners" for 127.0.0.1 at 2019-02-14 16:01:32 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XcPJ2Uty9mMVk8Of45XDsoqX0Y4cxSAg+oTZKAdZXUhV12I7fivcBk5USRmAxBftajimBPlwWjErpNkTqkaYjg==", "summoner"=>{"summoner_name"=>"pantylicker"}, "commit"=>"Submit"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[36mSummoner Create (2.8ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["summoner_name", "pantylicker"], ["created_at", "2019-02-14 21:01:32.680797"], ["updated_at", "2019-02-14 21:01:32.680797"]]
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[36mSummoner Load (1.0ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" ORDER BY "summoners"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:12
+Redirected to http://localhost:3000/summoners/27
+Completed 302 Found in 601ms (ActiveRecord: 12.1ms)
+
+
+Started GET "/summoners/27" for 127.0.0.1 at 2019-02-14 16:01:32 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mSummoner Load (2.2ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (398.4ms)
+Completed 200 OK in 8231ms (Views: 476.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-14 16:03:43 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 271ms (Views: 242.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-14 16:03:47 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3IzEnM9iyNmC8cccMGFhFNSa5sK2ojNxUMrtEbVOHcgLJyGlpz2wsrC4XlSUei+6C0HPopvODgM4bAwhbnRF6Q==", "summoner"=>{"summoner_name"=>"Karl"}, "commit"=>"Submit"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[36mSummoner Create (3.3ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["summoner_name", "Karl"], ["created_at", "2019-02-14 21:03:48.154729"], ["updated_at", "2019-02-14 21:03:48.154729"]]
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[36mSummoner Load (1.1ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" ORDER BY "summoners"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:12
+Redirected to http://localhost:3000/summoners/28
+Completed 302 Found in 804ms (ActiveRecord: 7.9ms)
+
+
+Started GET "/summoners/28" for 127.0.0.1 at 2019-02-14 16:03:48 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mSummoner Load (2.2ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (160.7ms)
+Completed 200 OK in 7718ms (Views: 197.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-14 16:05:34 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 285ms (Views: 265.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-14 16:05:37 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"52RhU1yu36NKlWy+X3z2eWsvfixEZYOEQrtm0qNBx+Ewz4RqNPGnyHjc9fb7Z7jXtPRXTGkJvvYqHYfieHufwA==", "summoner"=>{"summoner_name"=>"JoNathans"}, "commit"=>"Submit"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[36mSummoner Create (44.8ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["summoner_name", "JoNathans"], ["created_at", "2019-02-14 21:05:37.964510"], ["updated_at", "2019-02-14 21:05:37.964510"]]
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[35m (27.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:11
+  [1m[36mSummoner Load (2.2ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" ORDER BY "summoners"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:12
+Redirected to http://localhost:3000/summoners/29
+Completed 302 Found in 653ms (ActiveRecord: 74.8ms)
+
+
+Started GET "/summoners/29" for 127.0.0.1 at 2019-02-14 16:05:38 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mSummoner Load (0.5ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+Completed 500 Internal Server Error in 1240ms (ActiveRecord: 0.5ms)
+
+
+  
+RestClient::NotFound (404 Not Found):
+  
+app/models/summoner.rb:30:in `find_game_ids'
+app/models/summoner.rb:38:in `recent_10_games'
+app/controllers/summoners_controller.rb:45:in `show'
+Started GET "/summoners/29" for 127.0.0.1 at 2019-02-14 16:06:10 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mSummoner Load (1.0ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+Completed 500 Internal Server Error in 1190ms (ActiveRecord: 1.0ms)
+
+
+  
+RestClient::NotFound (404 Not Found):
+  
+app/models/summoner.rb:30:in `find_game_ids'
+app/models/summoner.rb:38:in `recent_10_games'
+app/controllers/summoners_controller.rb:45:in `show'
+Started PUT "/__web_console/repl_sessions/be5a22ab5194155665533a56a88878c9" for 127.0.0.1 at 2019-02-14 16:06:20 -0500
+Started PUT "/__web_console/repl_sessions/be5a22ab5194155665533a56a88878c9" for 127.0.0.1 at 2019-02-14 16:06:23 -0500
+Started PUT "/__web_console/repl_sessions/be5a22ab5194155665533a56a88878c9" for 127.0.0.1 at 2019-02-14 16:06:36 -0500
+Started PUT "/__web_console/repl_sessions/be5a22ab5194155665533a56a88878c9" for 127.0.0.1 at 2019-02-14 16:06:44 -0500
+Started PUT "/__web_console/repl_sessions/be5a22ab5194155665533a56a88878c9" for 127.0.0.1 at 2019-02-14 16:06:44 -0500
+  [1m[36mSummoner Load (0.9ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" ORDER BY "summoners"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ /Users/johnoncher/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Started PUT "/__web_console/repl_sessions/be5a22ab5194155665533a56a88878c9" for 127.0.0.1 at 2019-02-14 16:06:51 -0500
+Started PUT "/__web_console/repl_sessions/be5a22ab5194155665533a56a88878c9" for 127.0.0.1 at 2019-02-14 16:06:52 -0500
+Started PUT "/__web_console/repl_sessions/be5a22ab5194155665533a56a88878c9" for 127.0.0.1 at 2019-02-14 16:06:59 -0500
+Started PUT "/__web_console/repl_sessions/be5a22ab5194155665533a56a88878c9" for 127.0.0.1 at 2019-02-14 16:07:08 -0500
+Started PUT "/__web_console/repl_sessions/be5a22ab5194155665533a56a88878c9" for 127.0.0.1 at 2019-02-14 16:07:08 -0500
+Started PUT "/__web_console/repl_sessions/be5a22ab5194155665533a56a88878c9" for 127.0.0.1 at 2019-02-14 16:07:23 -0500
+Started PUT "/__web_console/repl_sessions/be5a22ab5194155665533a56a88878c9" for 127.0.0.1 at 2019-02-14 16:07:27 -0500
+Started PUT "/__web_console/repl_sessions/be5a22ab5194155665533a56a88878c9" for 127.0.0.1 at 2019-02-14 16:07:32 -0500
+Started PUT "/__web_console/repl_sessions/be5a22ab5194155665533a56a88878c9" for 127.0.0.1 at 2019-02-14 16:07:38 -0500
+Started PUT "/__web_console/repl_sessions/be5a22ab5194155665533a56a88878c9" for 127.0.0.1 at 2019-02-14 16:09:22 -0500
+Started PUT "/__web_console/repl_sessions/be5a22ab5194155665533a56a88878c9" for 127.0.0.1 at 2019-02-14 16:09:27 -0500
+Started PUT "/__web_console/repl_sessions/be5a22ab5194155665533a56a88878c9" for 127.0.0.1 at 2019-02-14 16:09:34 -0500
+Started PUT "/__web_console/repl_sessions/be5a22ab5194155665533a56a88878c9" for 127.0.0.1 at 2019-02-14 16:09:35 -0500
+  [1m[35m (50.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6874411228622918085)[0m
+  ↳ bin/rails:9
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddAccIdToSummoner (20190214211324)
+  [1m[35m (41.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (183.5ms)[0m  [1m[35mALTER TABLE "summoners" ADD "acc_id" character varying[0m
+  ↳ db/migrate/20190214211324_add_acc_id_to_summoner.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (83.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190214211324"]]
+  ↳ bin/rails:9
+  [1m[35m (18.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (3.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6874411228622918085)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-14 16:19:14 -0500
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnoncher/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 622ms (Views: 372.8ms | ActiveRecord: 143.6ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-14 16:19:22 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"muBgP2YKfnsT32MZalL7EgneW81PZhCBbg7X2ApwnyGS9MvdU1NUHkgY6Z8JAy9N6XEsR6rTapC/Ltfjp29a5w==", "summoner"=>{"summoner_name"=>"joncher"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 277176ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/summoners_controller.rb:11:in `create'
+Started POST "/summoners" for 127.0.0.1 at 2019-02-14 16:24:45 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"muBgP2YKfnsT32MZalL7EgneW81PZhCBbg7X2ApwnyGS9MvdU1NUHkgY6Z8JAy9N6XEsR6rTapC/Ltfjp29a5w==", "summoner"=>{"summoner_name"=>"joncher"}, "commit"=>"Submit"}
+  [1m[35m (84.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[36mSummoner Create (42.3ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at", "acc_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["summoner_name", "joncher"], ["created_at", "2019-02-14 21:24:48.359040"], ["updated_at", "2019-02-14 21:24:48.359040"], ["acc_id", "Kj32dgxaR1LHFN6owRFbn10kiZNbDCE-3HP7QW2Sg2Y8Bw"]]
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[36mSummoner Load (5.8ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" ORDER BY "summoners"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:13
+Redirected to http://localhost:3000/summoners/30
+Completed 302 Found in 1252ms (ActiveRecord: 245.6ms)
+
+
+Started GET "/summoners/30" for 127.0.0.1 at 2019-02-14 16:24:48 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mSummoner Load (2.9ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+Completed 500 Internal Server Error in 391ms (ActiveRecord: 7.7ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/models/summoner.rb:54:in `acc_id'
+app/controllers/summoners_controller.rb:44:in `show'
+Started GET "/summoners/22" for 127.0.0.1 at 2019-02-14 16:24:54 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mSummoner Load (7.6ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+Completed 500 Internal Server Error in 197ms (ActiveRecord: 7.6ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/models/summoner.rb:54:in `acc_id'
+app/controllers/summoners_controller.rb:44:in `show'
+Started GET "/summoners/22" for 127.0.0.1 at 2019-02-14 16:25:33 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mSummoner Load (3.0ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+Completed 500 Internal Server Error in 1087ms (ActiveRecord: 145.3ms)
+
+
+  
+RestClient::Forbidden (403 Forbidden):
+  
+app/models/summoner.rb:30:in `find_game_ids'
+app/models/summoner.rb:38:in `recent_10_games'
+app/controllers/summoners_controller.rb:45:in `show'
+Started GET "/summoners/22" for 127.0.0.1 at 2019-02-14 16:29:41 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mSummoner Load (4.7ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+Completed 500 Internal Server Error in 128774ms (ActiveRecord: 191.9ms)
+
+
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-14 16:31:52 -0500
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `recent_10_games'
+app/models/summoner.rb:39:in `recent_10_games'
+app/controllers/summoners_controller.rb:45:in `show'
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-14 16:31:52 -0500
+Processing by SummonersController#new as HTML
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (83.6ms)
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 1720ms (Views: 1658.9ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 1848ms (Views: 1813.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-14 16:32:01 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CLn6f4F9oaIhfBJsFvACXXGE2umbN9ohKm6SH5Kjil4ArVGdtCSLx3q7mOp1odYCkSutY36CoDD7TpIkP7xPmA==", "summoner"=>{"summoner_name"=>"joncher"}, "commit"=>"Submit"}
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[36mSummoner Create (16.5ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at", "acc_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["summoner_name", "joncher"], ["created_at", "2019-02-14 21:32:02.663751"], ["updated_at", "2019-02-14 21:32:02.663751"], ["acc_id", "Kj32dgxaR1LHFN6owRFbn10kiZNbDCE-3HP7QW2Sg2Y8Bw"]]
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[36mSummoner Load (2.1ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" ORDER BY "summoners"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:13
+Redirected to http://localhost:3000/summoners/31
+Completed 302 Found in 879ms (ActiveRecord: 27.1ms)
+
+
+Started GET "/summoners/31" for 127.0.0.1 at 2019-02-14 16:32:02 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mSummoner Load (3.2ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (72.3ms)
+Completed 200 OK in 41666ms (Views: 127.4ms | ActiveRecord: 67.7ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2019-02-14 16:33:45 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IqeC/rYS3NoNNWut7rXboAJknbjiIT8kFf1O+O3CHJwqsykcg0v2v1by4SuN5A//4svqMgeURTXE3U7DQN3ZWg==", "game"=>{"game"=>"2929066038"}, "commit"=>"Game 2"}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (5.7ms)[0m  [1m[32mINSERT INTO "games" ("game", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["game", 2929066038], ["created_at", "2019-02-14 21:33:45.623474"], ["updated_at", "2019-02-14 21:33:45.623474"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:9
+Redirected to http://localhost:3000/games/39
+Completed 302 Found in 136ms (ActiveRecord: 82.5ms)
+
+
+Started GET "/games/39" for 127.0.0.1 at 2019-02-14 16:33:45 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"39"}
+  [1m[36mGame Load (1.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1179.3ms)
+Completed 200 OK in 1987ms (Views: 1241.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-14 16:35:01 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 273ms (Views: 61.4ms | ActiveRecord: 15.6ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-14 16:35:04 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VyPnCJnKisgdoG8x8WVZogI7d6c6LkYjTdhjQUMox4uAiAIx8ZXyoy/p9nlVfhcM3eBexxdCe1ElfoJxmBKfqg==", "summoner"=>{"summoner_name"=>"BeNice2EachOther"}, "commit"=>"Submit"}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[36mSummoner Create (11.5ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at", "acc_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["summoner_name", "BeNice2EachOther"], ["created_at", "2019-02-14 21:35:05.297666"], ["updated_at", "2019-02-14 21:35:05.297666"], ["acc_id", "l3XHB8LEhghaDVaWOeeYPd3A9CWvii775qkT7EB2HkUDpQ"]]
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[36mSummoner Load (1.8ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" ORDER BY "summoners"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:13
+Redirected to http://localhost:3000/summoners/32
+Completed 302 Found in 882ms (ActiveRecord: 16.3ms)
+
+
+Started GET "/summoners/32" for 127.0.0.1 at 2019-02-14 16:35:05 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mSummoner Load (0.5ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (186.6ms)
+Completed 200 OK in 6896ms (Views: 234.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2019-02-14 16:35:19 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s/AJBdd4RrnvUvDU0Kxdva2xk9UYaozwhr5z2RQCf6+75KLn4iFs3LSVelKz/YniTR7kX/3f9uFXnnPiuR26aQ==", "game"=>{"game"=>"2977407174"}, "commit"=>"Game 9"}
+  [1m[35m (3.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (57.5ms)[0m  [1m[32mINSERT INTO "games" ("game", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["game", 2977407174], ["created_at", "2019-02-14 21:35:19.332958"], ["updated_at", "2019-02-14 21:35:19.332958"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (66.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:9
+Redirected to http://localhost:3000/games/40
+Completed 302 Found in 151ms (ActiveRecord: 126.7ms)
+
+
+Started GET "/games/40" for 127.0.0.1 at 2019-02-14 16:35:19 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mGame Load (15.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (993.8ms)
+Completed 200 OK in 1762ms (Views: 1100.6ms | ActiveRecord: 15.2ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2019-02-14 16:35:59 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s/AJBdd4RrnvUvDU0Kxdva2xk9UYaozwhr5z2RQCf6+75KLn4iFs3LSVelKz/YniTR7kX/3f9uFXnnPiuR26aQ==", "game"=>{"game"=>"2977601091"}, "commit"=>"Game 1"}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (42.6ms)[0m  [1m[32mINSERT INTO "games" ("game", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["game", 2977601091], ["created_at", "2019-02-14 21:35:59.572560"], ["updated_at", "2019-02-14 21:35:59.572560"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:9
+Redirected to http://localhost:3000/games/41
+Completed 302 Found in 86ms (ActiveRecord: 45.0ms)
+
+
+Started GET "/games/41" for 127.0.0.1 at 2019-02-14 16:35:59 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mGame Load (1.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1387.0ms)
+Completed 200 OK in 2096ms (Views: 1478.9ms | ActiveRecord: 1.4ms)
+
+
+>>>>>>> 0c18d8c2a66679ecb1f45a102c9675755132d293
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6874411228622918085)[0m
+  ↳ bin/rails:9
+  [1m[35m (8.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddAccIdToSummoner (20190214211324)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (14.0ms)[0m  [1m[35mALTER TABLE "summoners" ADD "acc_id" character varying[0m
+  ↳ db/migrate/20190214211324_add_acc_id_to_summoner.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (6.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190214211324"]]
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6874411228622918085)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6874411228622918085)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6874411228622918085)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2019-02-14 17:01:30 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 368ms (Views: 330.1ms | ActiveRecord: 6.5ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-14 17:01:38 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gnE++mZyABdxMb0cHk8vm9n9tTsRpukO39iDl9WGroTq/+tKBOd4rJ4fvws6bOyp6Hcb9eOYIyuGcxy61iDlJg==", "summoner"=>{"summoner_name"=>"simonoski"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[36mSummoner Create (0.9ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at", "acc_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["summoner_name", "simonoski"], ["created_at", "2019-02-14 22:01:39.366864"], ["updated_at", "2019-02-14 22:01:39.366864"], ["acc_id", "1cCK7viihBXuCkBV_EiXEY8pnqdFWD9MlKZM9XN7D-DLgNI"]]
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[36mSummoner Load (0.8ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" ORDER BY "summoners"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:13
+Redirected to http://localhost:3000/summoners/9
+Completed 302 Found in 612ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/summoners/9" for 127.0.0.1 at 2019-02-14 17:01:39 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mSummoner Load (0.5ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (100.7ms)
+Completed 200 OK in 6205ms (Views: 138.9ms | ActiveRecord: 5.8ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2019-02-14 17:01:47 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8QZcPfb8uiozifGFlELFMQjZm0d0S8Z8Ur100A1XVauZiImNlGnCkdyn85KwYQYDOVM1iYZ1DFkLFuv9DvEeCQ==", "game"=>{"game"=>"2975777720"}, "commit"=>"Game 1"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (0.6ms)[0m  [1m[32mINSERT INTO "games" ("game", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["game", 2975777720], ["created_at", "2019-02-14 22:01:47.771687"], ["updated_at", "2019-02-14 22:01:47.771687"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:9
+Redirected to http://localhost:3000/games/22
+Completed 302 Found in 8ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/games/22" for 127.0.0.1 at 2019-02-14 17:01:47 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (900.5ms)
+Completed 200 OK in 1520ms (Views: 929.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-14 17:02:03 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 31ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-14 17:02:07 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SksK7f0Mrl4AbVf3B0BAW+vB4enDilnyJxpU8caq25Eixd9dn5nW5e9DVeAjY4Np2ktPJzG0k9d+scvcxQyQMw==", "summoner"=>{"summoner_name"=>"jfkhadnowindwall"}, "commit"=>"Submit"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[36mSummoner Create (0.5ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at", "acc_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["summoner_name", "jfkhadnowindwall"], ["created_at", "2019-02-14 22:02:08.090745"], ["updated_at", "2019-02-14 22:02:08.090745"], ["acc_id", "rkNLkQBQMOcvRsWXq73MY9pA4L4DlmTZezSnNHtVDOxERug"]]
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[36mSummoner Load (0.4ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" ORDER BY "summoners"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:13
+Redirected to http://localhost:3000/summoners/10
+Completed 302 Found in 460ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/summoners/10" for 127.0.0.1 at 2019-02-14 17:02:08 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mSummoner Load (0.4ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 5567ms (Views: 56.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2019-02-14 17:02:17 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"by+qEfQTT2+CnMjXa3MaEefGj0TOXLxaGFruMynbJSYHoX+hloY31G2yysBPUNkj1kwhijxidn9B8XEeKn1uhA==", "game"=>{"game"=>"2977260842"}, "commit"=>"Game 4"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (1.4ms)[0m  [1m[32mINSERT INTO "games" ("game", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["game", 2977260842], ["created_at", "2019-02-14 22:02:17.130193"], ["updated_at", "2019-02-14 22:02:17.130193"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:9
+Redirected to http://localhost:3000/games/23
+Completed 302 Found in 12ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/games/23" for 127.0.0.1 at 2019-02-14 17:02:17 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1207.5ms)
+Completed 200 OK in 1697ms (Views: 1234.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/games/23" for 127.0.0.1 at 2019-02-14 17:14:29 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mGame Load (1.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1066.8ms)
+Completed 200 OK in 1656ms (Views: 1099.6ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2019-02-14 17:14:50 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"by+qEfQTT2+CnMjXa3MaEefGj0TOXLxaGFruMynbJSYHoX+hloY31G2yysBPUNkj1kwhijxidn9B8XEeKn1uhA==", "game"=>{"game"=>"2977152700"}, "commit"=>"Game 7"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (0.7ms)[0m  [1m[32mINSERT INTO "games" ("game", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["game", 2977152700], ["created_at", "2019-02-14 22:14:50.803142"], ["updated_at", "2019-02-14 22:14:50.803142"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:9
+Redirected to http://localhost:3000/games/24
+Completed 302 Found in 13ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/games/24" for 127.0.0.1 at 2019-02-14 17:14:50 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (986.6ms)
+Completed 200 OK in 1453ms (Views: 1019.5ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2019-02-14 17:14:58 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"by+qEfQTT2+CnMjXa3MaEefGj0TOXLxaGFruMynbJSYHoX+hloY31G2yysBPUNkj1kwhijxidn9B8XEeKn1uhA==", "game"=>{"game"=>"2977195116"}, "commit"=>"Game 6"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (0.5ms)[0m  [1m[32mINSERT INTO "games" ("game", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["game", 2977195116], ["created_at", "2019-02-14 22:14:58.120773"], ["updated_at", "2019-02-14 22:14:58.120773"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:9
+Redirected to http://localhost:3000/games/25
+Completed 302 Found in 7ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/games/25" for 127.0.0.1 at 2019-02-14 17:14:58 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1160.3ms)
+Completed 200 OK in 1634ms (Views: 1190.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2019-02-14 17:15:05 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"by+qEfQTT2+CnMjXa3MaEefGj0TOXLxaGFruMynbJSYHoX+hloY31G2yysBPUNkj1kwhijxidn9B8XEeKn1uhA==", "game"=>{"game"=>"2977223778"}, "commit"=>"Game 5"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (0.7ms)[0m  [1m[32mINSERT INTO "games" ("game", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["game", 2977223778], ["created_at", "2019-02-14 22:15:05.147152"], ["updated_at", "2019-02-14 22:15:05.147152"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:9
+Redirected to http://localhost:3000/games/26
+Completed 302 Found in 8ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/games/26" for 127.0.0.1 at 2019-02-14 17:15:05 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (986.6ms)
+Completed 200 OK in 1526ms (Views: 1013.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2019-02-14 17:15:12 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"by+qEfQTT2+CnMjXa3MaEefGj0TOXLxaGFruMynbJSYHoX+hloY31G2yysBPUNkj1kwhijxidn9B8XEeKn1uhA==", "game"=>{"game"=>"2977275712"}, "commit"=>"Game 3"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("game", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["game", 2977275712], ["created_at", "2019-02-14 22:15:12.100616"], ["updated_at", "2019-02-14 22:15:12.100616"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:9
+Redirected to http://localhost:3000/games/27
+Completed 302 Found in 11ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/games/27" for 127.0.0.1 at 2019-02-14 17:15:12 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (918.1ms)
+Completed 200 OK in 1590ms (Views: 949.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-14 17:16:36 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 28ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-14 17:16:43 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z16oBxrOwpqrAi7LDCmzqRckOSdoUVBJQHA4YQ35JwOn0H23eFu6IUQsLNwoCnCbJq6X6ZpvmmwZ26dMDl9soQ==", "summoner"=>{"summoner_name"=>"simonoski"}, "commit"=>"Submit"}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[36mSummoner Create (0.8ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at", "acc_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["summoner_name", "simonoski"], ["created_at", "2019-02-14 22:16:44.503718"], ["updated_at", "2019-02-14 22:16:44.503718"], ["acc_id", "1cCK7viihBXuCkBV_EiXEY8pnqdFWD9MlKZM9XN7D-DLgNI"]]
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[36mSummoner Load (0.8ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" ORDER BY "summoners"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:13
+Redirected to http://localhost:3000/summoners/11
+Completed 302 Found in 691ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/summoners/11" for 127.0.0.1 at 2019-02-14 17:16:44 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mSummoner Load (0.3ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 5777ms (Views: 49.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2019-02-14 17:16:53 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nnRBYGRKrraDUGYssA7xPpJPMLhLqWuLELwmoJDu0VP2+pTQBt/WDWx+ZDuULTIMo8WedrmXoa5JF7mNk0ia8Q==", "game"=>{"game"=>"2974956399"}, "commit"=>"Game 3"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (1.0ms)[0m  [1m[32mINSERT INTO "games" ("game", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["game", 2974956399], ["created_at", "2019-02-14 22:16:53.400780"], ["updated_at", "2019-02-14 22:16:53.400780"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:9
+Redirected to http://localhost:3000/games/28
+Completed 302 Found in 10ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/games/28" for 127.0.0.1 at 2019-02-14 17:16:53 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mGame Load (2.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1150.2ms)
+Completed 200 OK in 1695ms (Views: 1175.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/summoners/28/edit" for 127.0.0.1 at 2019-02-14 17:17:05 -0500
+Processing by SummonersController#edit as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mSummoner Load (3.4ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:25
+Completed 404 Not Found in 6ms (ActiveRecord: 3.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Summoner with 'id'=28):
+  
+app/controllers/summoners_controller.rb:25:in `edit'
+Started GET "/games/28" for 127.0.0.1 at 2019-02-14 17:17:07 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mGame Load (1.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (964.1ms)
+Completed 200 OK in 1496ms (Views: 989.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-14 17:17:10 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 33ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-14 17:17:18 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dskQwBh1zo0y7AG82ozLep0iJ5irIHQfjzFe7Hkv04dV/TR7jZyDFlRtRjkp6UF9WcDmMs+h3i0Ps5IgXQRfbA==", "summoner"=>{"summoner_name"=>"fieryblitz24"}, "commit"=>"Submit"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[36mSummoner Create (0.7ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at", "acc_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["summoner_name", "fieryblitz24"], ["created_at", "2019-02-14 22:17:18.722433"], ["updated_at", "2019-02-14 22:17:18.722433"], ["acc_id", "bZ2YxtUxEj3yO2Z27bci_0D6enuEwKazVNbEGu79t9KKAFE"]]
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[36mSummoner Load (0.8ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" ORDER BY "summoners"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:13
+Redirected to http://localhost:3000/summoners/12
+Completed 302 Found in 433ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/summoners/12" for 127.0.0.1 at 2019-02-14 17:17:18 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSummoner Load (0.4ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (80.9ms)
+Completed 200 OK in 6106ms (Views: 108.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2019-02-14 17:17:52 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xupoDYoaC0j4APHceGb60VVjrueeKXlw8kEo252KoF2uZL296I9z8xcu88tcRTnjZOkAKWwXs1Wr6rf2nizr/w==", "game"=>{"game"=>"2976599772"}, "commit"=>"Game 2"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("game", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["game", 2976599772], ["created_at", "2019-02-14 22:17:52.785345"], ["updated_at", "2019-02-14 22:17:52.785345"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:9
+Redirected to http://localhost:3000/games/29
+Completed 302 Found in 10ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/games/29" for 127.0.0.1 at 2019-02-14 17:17:52 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1091.4ms)
+Completed 200 OK in 1632ms (Views: 1130.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-14 17:20:36 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 30ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-14 17:20:42 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"acvm5E9PyPj1GcEQAZ/14A+CV9iRXIUKteNfnCt06p9K/8Jf2qaFY5OYhpXy+n/ny2CWcvXdLzg1YZNQD19mdA==", "summoner"=>{"summoner_name"=>"norbert"}, "commit"=>"Submit"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[36mSummoner Create (0.7ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at", "acc_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["summoner_name", "norbert"], ["created_at", "2019-02-14 22:20:43.587241"], ["updated_at", "2019-02-14 22:20:43.587241"], ["acc_id", "dpKzgqCJ24lxUE-ogrdQ1yPnEH0REZ3-N2YBNosdSNl7KA"]]
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[36mSummoner Load (1.1ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" ORDER BY "summoners"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:13
+Redirected to http://localhost:3000/summoners/13
+Completed 302 Found in 796ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/summoners/13" for 127.0.0.1 at 2019-02-14 17:20:43 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mSummoner Load (0.4ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (52.2ms)
+Completed 200 OK in 6072ms (Views: 73.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2019-02-14 17:20:54 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MRcuRpQQLOU5UiJDfsZTpyzeK6ppDkJ7hZd2JqrZDNBZmfv29oVUXtZ8IFRa5ZCVHVSFZJswiF7cPOkLqX9Hcg==", "game"=>{"game"=>"2977313470"}, "commit"=>"Game 1"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (0.7ms)[0m  [1m[32mINSERT INTO "games" ("game", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["game", 2977313470], ["created_at", "2019-02-14 22:20:54.272586"], ["updated_at", "2019-02-14 22:20:54.272586"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:9
+Redirected to http://localhost:3000/games/30
+Completed 302 Found in 8ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/games/30" for 127.0.0.1 at 2019-02-14 17:20:54 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (933.0ms)
+Completed 200 OK in 1565ms (Views: 954.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2019-02-14 17:21:25 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MRcuRpQQLOU5UiJDfsZTpyzeK6ppDkJ7hZd2JqrZDNBZmfv29oVUXtZ8IFRa5ZCVHVSFZJswiF7cPOkLqX9Hcg==", "game"=>{"game"=>"2974197042"}, "commit"=>"Game 10"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (1.2ms)[0m  [1m[32mINSERT INTO "games" ("game", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["game", 2974197042], ["created_at", "2019-02-14 22:21:25.420019"], ["updated_at", "2019-02-14 22:21:25.420019"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:9
+Redirected to http://localhost:3000/games/31
+Completed 302 Found in 9ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/games/31" for 127.0.0.1 at 2019-02-14 17:21:25 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (927.3ms)
+Completed 200 OK in 1487ms (Views: 959.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2019-02-14 17:21:36 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MRcuRpQQLOU5UiJDfsZTpyzeK6ppDkJ7hZd2JqrZDNBZmfv29oVUXtZ8IFRa5ZCVHVSFZJswiF7cPOkLqX9Hcg==", "commit"=>"Details"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: game):
+  
+app/controllers/games_controller.rb:19:in `game_params'
+app/controllers/games_controller.rb:9:in `create'
+Started POST "/games" for 127.0.0.1 at 2019-02-14 17:21:40 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MRcuRpQQLOU5UiJDfsZTpyzeK6ppDkJ7hZd2JqrZDNBZmfv29oVUXtZ8IFRa5ZCVHVSFZJswiF7cPOkLqX9Hcg==", "game"=>{"game"=>"2974420517"}, "commit"=>"Game 7"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (0.5ms)[0m  [1m[32mINSERT INTO "games" ("game", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["game", 2974420517], ["created_at", "2019-02-14 22:21:40.493618"], ["updated_at", "2019-02-14 22:21:40.493618"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:9
+Redirected to http://localhost:3000/games/32
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/games/32" for 127.0.0.1 at 2019-02-14 17:21:40 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (997.2ms)
+Completed 200 OK in 1520ms (Views: 1029.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2019-02-14 17:22:23 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MRcuRpQQLOU5UiJDfsZTpyzeK6ppDkJ7hZd2JqrZDNBZmfv29oVUXtZ8IFRa5ZCVHVSFZJswiF7cPOkLqX9Hcg==", "game"=>{"game"=>"2974384609"}, "commit"=>"Game 8"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("game", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["game", 2974384609], ["created_at", "2019-02-14 22:22:23.432322"], ["updated_at", "2019-02-14 22:22:23.432322"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:9
+Redirected to http://localhost:3000/games/33
+Completed 302 Found in 8ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/games/33" for 127.0.0.1 at 2019-02-14 17:22:23 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:14
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (969.0ms)
+Completed 200 OK in 1753ms (Views: 998.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-14 17:27:41 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Di1EnGVYJ7VW+9nK5gwdE+jqqf7Zc3RbJH9hNEcjfP1mo5EsB81fDrnV293CL94h2WAHMCtNvn591P4ZRIU3Xw==", "summoner"=>{"summoner_name"=>"Simonoski"}, "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[36mSummoner Create (1.4ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at", "acc_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["summoner_name", "Simonoski"], ["created_at", "2019-02-14 22:27:41.844264"], ["updated_at", "2019-02-14 22:27:41.844264"], ["acc_id", "1cCK7viihBXuCkBV_EiXEY8pnqdFWD9MlKZM9XN7D-DLgNI"]]
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[36mSummoner Load (0.7ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" ORDER BY "summoners"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:13
+Redirected to http://localhost:3000/summoners/14
+Completed 302 Found in 550ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/summoners/14" for 127.0.0.1 at 2019-02-14 17:27:41 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mSummoner Load (0.4ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 5852ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/Users/flatironschool/Desktop/simon.gg/app/views/summoners/show.html.erb:74: syntax error, unexpected ','
+'.freeze;     form_for @game do |f|,class: "check-game" 
+                                    ^):
+  
+app/views/summoners/show.html.erb:74: syntax error, unexpected ','
+Started GET "/" for 127.0.0.1 at 2019-02-14 17:28:15 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 29ms (Views: 25.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-14 17:28:18 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Uw/R5X6Udyw+BKqdYPTaARrraLGsEw95Y+VTmTpPVMo7gQRVHAEPl9EqqIpE1xkzK2HGf14txVw6Tsy0OekfaA==", "summoner"=>{"summoner_name"=>"simonoski"}, "commit"=>"Submit"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[36mSummoner Create (0.6ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at", "acc_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["summoner_name", "simonoski"], ["created_at", "2019-02-14 22:28:19.209984"], ["updated_at", "2019-02-14 22:28:19.209984"], ["acc_id", "1cCK7viihBXuCkBV_EiXEY8pnqdFWD9MlKZM9XN7D-DLgNI"]]
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[36mSummoner Load (0.6ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" ORDER BY "summoners"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:13
+Redirected to http://localhost:3000/summoners/15
+Completed 302 Found in 463ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/summoners/15" for 127.0.0.1 at 2019-02-14 17:28:19 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mSummoner Load (0.6ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 5736ms (ActiveRecord: 0.6ms)
+
+
+  
+SyntaxError (/Users/flatironschool/Desktop/simon.gg/app/views/summoners/show.html.erb:74: syntax error, unexpected ','
+'.freeze;     form_for @game do |f|, 
+                                    ^):
+  
+app/views/summoners/show.html.erb:74: syntax error, unexpected ','
+Started GET "/summoners/15" for 127.0.0.1 at 2019-02-14 17:28:38 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mSummoner Load (0.4ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (37.5ms)
+Completed 200 OK in 5636ms (Views: 69.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2019-02-14 17:28:48 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y1kfDbSIJ9cY0nn7bIuIrmnwftCu3fXGSkrPAOP5v/QL18q91h1fbPf8e+xIqEucWHrQHlzjP+MT4VAt4F/0Vg==", "commit"=>"Details"}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: game):
+  
+app/controllers/games_controller.rb:19:in `game_params'
+app/controllers/games_controller.rb:9:in `create'
+Started GET "/summoners/15" for 127.0.0.1 at 2019-02-14 17:30:23 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mSummoner Load (0.3ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 5452ms (Views: 61.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/summoners/15" for 127.0.0.1 at 2019-02-14 17:30:40 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mSummoner Load (0.6ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:43
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (43.0ms)
+Completed 200 OK in 5977ms (Views: 67.2ms | ActiveRecord: 0.6ms)
+
+
