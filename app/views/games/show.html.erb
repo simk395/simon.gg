@@ -9,7 +9,6 @@
 <% @game.single_game["participants"].each do |player| %>
 <%# "team id" player["teamId"] %>
 <% players_hash = {} %>
-<% byebug %>
 <% players_hash["name"] = players_names[n]%>
 <% players_hash["rank"] = player['highestAchievedSeasonTier'] %>
 <% players_hash["team"] = player["teamId"] %>

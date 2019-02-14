@@ -40,7 +40,12 @@
  }
 
  /* summoner card */
- .inner{
+ .container-2{
+    display:inline-flex;
+    flex-wrap: wrap
+ }
+
+ .profile-inner{
     box-shadow: 1px 1px 2px black;
     border-radius: 1rem;
     margin: 6rem 11rem 10rem 11rem; 
@@ -49,8 +54,17 @@
     position: relative; 
     background: white;
     opacity: 0.8;
-    
+}
 
+.game-inner{
+    box-shadow: 1px 1px 2px black;
+    border-radius: 1rem;
+    margin: 0 9rem 7rem 10rem;
+    width: 28rem;
+    height: 20rem;  
+    position: relative; 
+    background: white;
+    opacity: 0.8;
 }
 
 .summoner-icon{
@@ -70,6 +84,47 @@
     font-size: 4rem;
     top: -4rem;
     left: 50rem;
+}
+
+.champ-icon{
+    position: absolute;
+    top: 2rem;
+    border-radius: 50%;
+    left: 12rem;
+}
+
+.champ-name{
+    font-size: 4rem;
+    position: absolute;
+    top: 11rem;
+    left: 12rem;
+
+}
+
+.condition-win{
+    font-size: 3rem;
+    color: blue;
+    position: absolute;
+    top: 3rem;
+    left: 1rem;
+    display: inline-block;
+}
+
+.condition-lose{
+    font-size: 3rem;
+    color: red;
+    position: absolute;
+    top: 3rem;
+    left: 1rem;
+    display: inline-block;
+}
+
+.time{
+    font-size: 2rem;
+    position: absolute;
+    top: 8rem;
+    left: 2rem;
+    display: inline-block;
 }
 /* nav-bar */
  .bar{
@@ -266,7 +321,6 @@ nav a:hover { background: #E5DAC0; color: #FFF; }
 nav li:last-child a { border-bottom: none; }
 
 /*nav*/
-
 .menu {
 	width: 24rem;
 	height: 186rem;
