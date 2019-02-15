@@ -443,3 +443,11 @@ nav a:hover {
     transform: scale(2);
     opacity: 0;
 }
+
+.summ-name{
+    position: absolute;
+    top: -3.3rem;
+    left: 6rem;
+    color: white;
+    font-size: 4rem;
+}
