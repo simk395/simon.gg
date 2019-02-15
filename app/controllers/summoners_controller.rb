@@ -11,6 +11,7 @@ class SummonersController < ApplicationController
             @summoner.acc_id = profile["accountId"]
             @summoner.save
             session[:summoner_id] = Summoner.last.id
+            
             redirect_to summoner_path(session[:summoner_id])
         else
             redirect_to new_summoner_path
@@ -18,7 +19,11 @@ class SummonersController < ApplicationController
     end
 
     def new
-      @summoner = Summoner.new
+      #  if session[:summoner_id].nil?
+         @summoner = Summoner.new
+      #  else
+        #  redirect_to new_summoner_path
+      #  end
     end
 
     def edit
@@ -41,6 +46,7 @@ class SummonersController < ApplicationController
     def show
       session[:summoner_id] = params['id']
       @summoner = Summoner.find(params['id'])
+      @account = @summoner.league_profile
       @profile = @summoner.acc_id
       @matches = @summoner.recent_10_games
       @game = Game.new
@@ -51,6 +57,7 @@ class SummonersController < ApplicationController
     end
 
     def destroy
+      session.delete [:summoner_id]
       @summoner = Summoner.find(params['id'])
       @summoner.delete
       redirect_to new_summoner_path

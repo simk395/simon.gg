@@ -9,7 +9,13 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-  <div class="bar"></div>
+  <div class="bar">
+   <%# if session[:summoner_id].nil?%>
+    <%# link_to "LOG IN", new_summoner_path %>
+    <%# else%>
+    <%# link_to "LOG OUT", log_out_path%>
+    <%# end%>
+  </div>
   <input type="checkbox" id="menuToggle">
   <label for="menuToggle" class="menu-icon">&#9776;</label>
 
@@ -17,10 +23,11 @@
 	<ul>
     	<li><%= link_to "HOME", homepage_path %></li>
       <li><<%= link_to "CREATE", new_summoner_path %><</li>
-      <% if request.env['PATH_INFO'] == homepage_path || request.env['PATH_INFO'] == new_summoner_path  %>
-          <%= link_to "CHANGE SUMMONER", homepage_path %>
+      <% if request.env['PATH_INFO'] == homepage_path || request.env['PATH_INFO'] == new_summoner_path || request.env['PATH_INFO'] == game_path %>
       <% else %>
-        <li><%= link_to "CHANGE SUMMONER", edit_summoner_path %></li>
+        <% if request.env['PATH_INFO'] == summoner_path %>
+          <li><%= link_to "EDIT NAME", edit_summoner_path %></li>
+        <%end%>
         <% end%>
     </ul>
 </nav>

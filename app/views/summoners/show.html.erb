@@ -1,38 +1,24 @@
-<img src="/summoners-rift.jpg" class="summoner-bg"/>
+<% require_relative "../resource/methods.rb" %>
 
-<div class="container">
-    <div class="profile-inner">
-    <p class="summoner-name"><%= @summoner.summoner_name %></p>
-    <img src="http://avatar.leagueoflegends.com/na/<%= @summoner.summoner_name %>.png" class="summoner-icon" alt="">
-    </div>
-</div>
+<img src="/summoners-rift.jpg" class="summoner-bg"/>
 
 <% index = 0 %>
 <% person = 0 %>
 <% @stats_arr = []%>
 
-<% 10.times do |i| %>
-  <%= form_for @game do |f| %>
-    <%= f.hidden_field :game, value: "#{@matches[index]["gameId"]}" %>
-    <%= f.submit "Game #{index + 1}" %>
-  <% index += 1 %>
-  <% end %><!--form_for-->
-<% end %><!-- times-->
-
-<% index = 0 %><!-- resets counter -->
 
 <% 10.times do |i| %>
       <% players_hash = {} %>
     <% @matches[index]["participantIdentities"].each do |player|  %>
       <% if @summoner.summoner_name.downcase == player["player"]["summonerName"].downcase %>
         <% person = player["participantId"]-1%>
-      <% end %>  <!--if-->
-    <% end %><!--each-->
+      <% end %> 
+    <% end %>
       <% if @matches[index]["teams"][0]["win"] == "Win" && person <= 4 %>
         <% players_hash["W/L"] = "Won" %>
       <% else %>
         <% players_hash["W/L"] = "Lost" %>
-      <% end %><!--if-->
+      <% end %>
     <% player_info = @matches[index]["participants"][person] %>
     <% stats = player_info["stats"] %>
     <% players_hash["kills"] = stats["kills"] %>
@@ -42,10 +28,18 @@
     <% players_hash["rank"] = @matches[index]["participants"][person]["highestAchievedSeasonTier"] %>
     <% players_hash["matchTime"] = @matches[index]["gameDuration"]/60 %>
     <% @stats_arr << players_hash %>
-    <%= players_hash %>
-
 <% index += 1 %>
-<% end %><!--times-->
+<% end %>
+
+<!--spaces cause wrong champ icons-->
+
+<div class="container">
+    <div class="profile-inner">
+    <p class="level"><%= "Level: #{@account["summonerLevel"]}" %></p>
+    <%= summ_rank(0) %>
+    <img src="http://avatar.leagueoflegends.com/na/<%= @summoner.summoner_name %>.png" class="summoner-icon" alt="">
+    </div>
+</div>
 
 <% def champs %>
   <% character=[] %>
@@ -67,15 +61,23 @@
   <% end%>
 <% end %>
 
-<% def details(num)%>
-    <img class="champ-icon" src="/images/champion_icons/<%= champs[num] %>.png" alt="">
-    <p class="condition"><%=victory_or_loss(num)%></p>
-    <p class="time"><%= @stats_arr[num]["matchTime"] %> mins</p>
-    <% form_for @game do |f| %>
-      <% f.hidden_field :game, value: "#{@matches[num]["gameId"]}" %>
-      <% f.submit "Details", class: "check-game" %>
-    <% end %>
+<% def info(n)%>
+    <p class="condition"><%=victory_or_loss(n)%></p>
+    <p class="time"><%= "#{@stats_arr[n]["matchTime"]} mins" %>
   <% end%>
+
+<% def form(n) %>
+  <%= form_for @game do |f| %>
+    <%= f.hidden_field :game, value: "#{@matches[n]["gameId"]}" %>
+    <%= f.submit "Details", class: "check-game" %>
+  <% end %>
+<% end %>
+
+<% def details(n) %>
+<% form(n)%>
+<img class="champ-icon" src="/images/champion_icons/<%= champs[n] %>.png" alt="">
+<% info(n)%>
+<% end%>
 
 <div class="container-2">
     <div class="game-inner">
@@ -113,11 +115,6 @@
     <div class="game-inner">
     <%= details(8) %>
     </div>
-
-    <div class="game-inner">
-    <%= details(9) %>
-    </div>
-
 
 <!-- delete-->
 <%= form_tag(summoner_path(@summoner), method: :delete) do %>

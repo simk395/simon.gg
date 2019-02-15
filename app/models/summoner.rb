@@ -1,6 +1,7 @@
 class Summoner < ApplicationRecord
     has_many :match_histories
     has_many :games, through: :match_histories
+    has_secure_password
     # has_secure_password
     #grabs player profile
     # def league_profile
@@ -82,6 +83,6 @@ participantId"=>1
 
 end
 
-#click on game
-#game create
-#show game
+#put name on nav bar
+#fix logout
+#champ profile icons
