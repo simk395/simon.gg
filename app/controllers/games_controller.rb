@@ -12,6 +12,7 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find(params['id'])
+    @summoner = Summoner.find(session[:summoner_id])
     @champions = @game.champ_name
   end
 

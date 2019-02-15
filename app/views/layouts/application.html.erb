@@ -1,10 +1,10 @@
+<% require "/Users/flatironschool/Desktop/Flatiron/simon.gg/app/controllers/summoners_controller.rb"%>
 <!DOCTYPE html>
 <html>
   <head>
     <title>Simon.gg</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -12,23 +12,34 @@
   <div class="bar">
    <%# if session[:summoner_id].nil?%>
     <%# link_to "LOG IN", new_summoner_path %>
-    <%# else%>
-    <%# link_to "LOG OUT", log_out_path%>
-    <%# end%>
+   <%# else%>
+    <%# link_to "LOG OUT", log_out_path %>
+   <%# end%>
+   <% if !session[:summoner_id].nil? %>
+        <%= form_tag(summoner_path(session[:summoner_id]), method: :delete) do %>
+          <%= submit_tag "LOG OUT" %>
+        <% end %>
+      <% else %>
+        <%= link_to "LOG IN", new_summoner_path %>
+  <% end%>
   </div>
+  
   <input type="checkbox" id="menuToggle">
   <label for="menuToggle" class="menu-icon">&#9776;</label>
 
-<nav class="menu">
+<nav class="menu"> 
 	<ul>
     	<li><%= link_to "HOME", homepage_path %></li>
-      <li><<%= link_to "CREATE", new_summoner_path %><</li>
+      <% if !session[:summoner_id].nil?%>
+      <li><%=  link_to "PROFILE", summoner_path(session[:summoner_id]) %></li>
+      <% end%>
       <% if request.env['PATH_INFO'] == homepage_path || request.env['PATH_INFO'] == new_summoner_path || request.env['PATH_INFO'] == game_path %>
       <% else %>
         <% if request.env['PATH_INFO'] == summoner_path %>
           <li><%= link_to "EDIT NAME", edit_summoner_path %></li>
         <%end%>
         <% end%>
+        
     </ul>
 </nav>
     <%= yield %>

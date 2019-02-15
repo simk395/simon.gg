@@ -35,14 +35,14 @@
 
 <div class="container">
     <div class="profile-inner">
-    <p class="level"><%= "Level: #{@account["summonerLevel"]}" %></p>
-    <%= summ_rank(0) %>
-    <img src="http://avatar.leagueoflegends.com/na/<%= @summoner.summoner_name %>.png" class="summoner-icon" alt="">
+      <p class="level"><%= "Level: #{@account["summonerLevel"]}" %></p>
+      <%= summ_rank(0) %>
+      <img src="http://avatar.leagueoflegends.com/na/<%= @summoner.summoner_name %>.png" class="summoner-icon" alt="">
     </div>
 </div>
 
 <% def champs %>
-  <% character=[] %>
+<% character=[] %>
   <% @stats_arr.each do |champions|%>
     <% @summoner.champions.each do |keys|%>
         <% if keys.include?(champions["championID"].to_s) %>
@@ -50,21 +50,21 @@
         <% end%>
       <% end%>
     <%end %>
-    <% character %>
+<% character %>
 <% end%>
 
 <% def victory_or_loss(num) %>
-<% if @stats_arr[num]["W/L"] == "Won"%>
-  <p class="condition-win"><%= "Victory" %>
-<% else %>
-  <p class="condition-lose"><%= "Defeat" %>
+  <% if @stats_arr[num]["W/L"] == "Won"%>
+    <p class="condition-win"><%= "Victory" %>
+  <% else %>
+    <p class="condition-lose"><%= "Defeat" %>
   <% end%>
 <% end %>
 
 <% def info(n)%>
-    <p class="condition"><%=victory_or_loss(n)%></p>
-    <p class="time"><%= "#{@stats_arr[n]["matchTime"]} mins" %>
-  <% end%>
+  <p class="condition"><%=victory_or_loss(n)%></p>
+  <p class="time"><%= "#{@stats_arr[n]["matchTime"]} mins" %>
+<% end%>
 
 <% def form(n) %>
   <%= form_for @game do |f| %>
@@ -74,46 +74,38 @@
 <% end %>
 
 <% def details(n) %>
-<% form(n)%>
-<img class="champ-icon" src="/images/champion_icons/<%= champs[n] %>.png" alt="">
-<% info(n)%>
+  <% form(n)%>
+  <img class="champ-icon" src="/images/champion_icons/<%= champs[n] %>.png" alt="">
+  <% info(n)%>
 <% end%>
 
 <div class="container-2">
     <div class="game-inner">
       <%= details(0) %>
     </div>
-
     <div class="game-inner">
-    <%= details(1) %>
+      <%= details(1) %>
     </div>
-
     <div class="game-inner">
-    <%= details(2) %>
+      <%= details(2) %>
     </div>
-
     <div class="game-inner">
-    <%= details(3) %>
+      <%= details(3) %>
     </div>
-
     <div class="game-inner">
-    <%= details(4) %>
+      <%= details(4) %>
     </div>
-
     <div class="game-inner">
-    <%= details(5) %>
+      <%= details(5) %>
     </div>
-
     <div class="game-inner">
-    <%= details(6) %>
+      <%= details(6) %>
     </div>
-
     <div class="game-inner">
-    <%= details(7) %>
+      <%= details(7) %>
     </div>
-
     <div class="game-inner">
-    <%= details(8) %>
+      <%= details(8) %>
     </div>
 
 <!-- delete-->
