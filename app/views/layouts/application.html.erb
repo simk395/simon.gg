@@ -1,4 +1,4 @@
-<% require "/Users/flatironschool/Desktop/Flatiron/simon.gg/app/controllers/summoners_controller.rb"%>
+<% require_relative "../../controllers/summoners_controller.rb"%>
 <!DOCTYPE html>
 <html>
   <head>
@@ -23,11 +23,11 @@
         <%= link_to "LOG IN", new_summoner_path %>
   <% end%>
   </div>
-  
+
   <input type="checkbox" id="menuToggle">
   <label for="menuToggle" class="menu-icon">&#9776;</label>
 
-<nav class="menu"> 
+<nav class="menu">
 	<ul>
     	<li><%= link_to "HOME", homepage_path %></li>
       <% if !session[:summoner_id].nil?%>
@@ -39,7 +39,7 @@
           <li><%= link_to "EDIT NAME", edit_summoner_path %></li>
         <%end%>
         <% end%>
-        
+
     </ul>
 </nav>
     <%= yield %>
