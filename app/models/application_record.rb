@@ -2,7 +2,7 @@ require 'rest-client'
 
 class ApplicationRecord < ActiveRecord::Base
   self.abstract_class = true
-
+  
 def key
   "RGAPI-402efc5f-fe6a-4e68-b3df-2e3c7067ca15"
 

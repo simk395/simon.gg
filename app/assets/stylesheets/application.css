@@ -48,12 +48,28 @@
  .profile-inner{
     box-shadow: 1px 1px 2px black;
     border-radius: 1rem;
-    margin: 6rem 11rem 10rem 11rem; 
-    width: 120rem;
+    margin: 6rem 11rem 10rem 55rem; 
+    width: 32rem;
     height: 20rem;  
     position: relative; 
     background: white;
     opacity: 0.8;
+    position:relative;
+}
+
+.summoner-rank{
+    position: absolute;
+    top: 10rem;
+    left: 11rem;
+    transform: scale(0.5);
+    z-index: 3;
+}
+
+.level{
+    font-size: 3rem;
+    position: absolute;
+    top: 13rem;
+    left: 10rem;
 }
 
 .game-inner{
@@ -67,6 +83,12 @@
     opacity: 0.8;
 }
 
+.check-game{
+    position: absolute;
+    top: 14rem;
+    left: 2rem;
+    font-size: 2rem;
+ }
 .summoner-icon{
     position: absolute;
     top:3.3rem;
@@ -80,15 +102,21 @@
 }
 
 .summoner-name{
+    position: absolute !important;
+    font-size: 3rem !important;
+    top: -3.3rem !important;
+    left: 6rem !important;
+}
+
+.rank{
     position: absolute;
-    font-size: 4rem;
-    top: -4rem;
-    left: 50rem;
+    top: 0;
+    right: 0;
 }
 
 .champ-icon{
     position: absolute;
-    top: 2rem;
+    top: 5rem;
     border-radius: 50%;
     left: 12rem;
 }
@@ -105,7 +133,7 @@
     font-size: 3rem;
     color: blue;
     position: absolute;
-    top: 3rem;
+    top: 2rem;
     left: 1rem;
     display: inline-block;
 }
@@ -114,7 +142,7 @@
     font-size: 3rem;
     color: red;
     position: absolute;
-    top: 3rem;
+    top: 2rem;
     left: 1rem;
     display: inline-block;
 }
@@ -122,7 +150,7 @@
 .time{
     font-size: 2rem;
     position: absolute;
-    top: 8rem;
+    top: 7rem;
     left: 2rem;
     display: inline-block;
 }
@@ -310,20 +338,38 @@
     transform: scale(2);
 }
 
-nav { width: 100%; text-align: center; }
-nav a { 
-	display: block; 
-	padding: 15px 0;
-	border-bottom: 1px solid #C3AA6E;
-	color: #F0EADC;
+nav { 
+    width: 100%; 
+    text-align: center; 
 }
-nav a:hover { background: #E5DAC0; color: #FFF; }
-nav li:last-child a { border-bottom: none; }
+
+nav ul{
+    position: fixed;
+    top: 8rem;
+    padding-left: 1rem;
+
+}
+
+nav li{
+    padding-bottom: 4rem;
+}
+
+nav a { 
+    position: fixed;
+    color: #F0EADC;
+    text-decoration: none;
+    font-size: 2rem;
+}
+nav a:hover { 
+    color: #FFF;
+    opacity: 2;
+ }
+
 
 /*nav*/
 .menu {
 	width: 24rem;
-	height: 186rem;
+	height: 111rem;
 	position: fixed;
 	background: black;
 	left: -240px;
@@ -338,12 +384,36 @@ nav li:last-child a { border-bottom: none; }
 .menu-icon {
     position: fixed;
     top:0;
-    left:2.4rem;
+    left:1.4rem;
 	font-size:4rem;
 	color: white;
     cursor: pointer;
-    z-index:1000;    
+    z-index:1000;
+    opacity: .5;   
+    transition: all .3s ;
+}
+
+.menu-icon:hover{
+    opacity:2;
 }
 #menuToggle { display: none; }
 
 #menuToggle:checked ~ .menu { position: absolute; left: 0; }
+
+.home-bg{
+    height:100vh;
+    width: 100vw;
+    z-index: -1;
+    opacity: 0.8;
+    position:fixed;
+}
+
+.sim{
+    position:absolute;
+    font-size:14rem;
+    font-family: helvetica, sans-serif;
+}
+
+.enter{
+    transform: scale(0.2);
+}

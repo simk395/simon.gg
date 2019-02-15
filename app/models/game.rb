@@ -42,6 +42,8 @@ class Game < ApplicationRecord
     players_names
   end
 
+ 
+
   def get_players_stats(players_name, index)
     stats_arr = []
     self.single_game["participants"].each do |player|
