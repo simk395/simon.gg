@@ -9,18 +9,22 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
+
+  
   <div class="bar">
    <%# if session[:summoner_id].nil?%>
     <%# link_to "LOG IN", new_summoner_path %>
    <%# else%>
     <%# link_to "LOG OUT", log_out_path %>
    <%# end%>
+   
    <% if !session[:summoner_id].nil? %>
+      <p class="logout">LOG OUT</p>
         <%= form_tag(summoner_path(session[:summoner_id]), method: :delete) do %>
-          <%= submit_tag "LOG OUT" %>
+          <%= submit_tag "LOG OUT", class: "logout-btn" %>
         <% end %>
       <% else %>
-        <%= link_to "LOG IN", new_summoner_path %>
+        <%= link_to "LOG IN", new_summoner_path, class: "login" %>
   <% end%>
   </div>
 

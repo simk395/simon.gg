@@ -29465,6 +29465,298 @@ Processing by SummonersController#edit as HTML
 Completed 200 OK in 33ms (Views: 25.9ms | ActiveRecord: 0.3ms)
 
 
+<<<<<<< HEAD
+Started PATCH "/summoners/53" for 127.0.0.1 at 2019-02-15 09:21:46 -0500
+Processing by SummonersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P5/l8fSE7LqlW8NuXbPeCEIqFOPcYFWTvZtjVVWrzcxr3a9GagtadJ16YAbZxcY2JzssZv3juhExajyZEOWXPw==", "summoner"=>{"summoner_name"=>"simonoski"}, "commit"=>"Submit", "id"=>"53"}
+  [1m[36mSummoner Load (1.4ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:34
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:37
+  [1m[36mCACHE Summoner Load (0.0ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:38
+Redirected to http://localhost:3000/summoners/53
+Completed 302 Found in 690ms (ActiveRecord: 10.7ms)
+
+
+Started GET "/summoners/53" for 127.0.0.1 at 2019-02-15 09:21:47 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"53"}
+  [1m[36mSummoner Load (0.5ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:48
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 6011ms (Views: 44.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/summoners/53" for 127.0.0.1 at 2019-02-15 09:26:45 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"53"}
+  [1m[36mSummoner Load (0.5ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:48
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (25.8ms)
+Completed 500 Internal Server Error in 6562ms (ActiveRecord: 0.5ms)
+
+
+  
+SyntaxError (/Users/flatironschool/Desktop/Flatiron/simon.gg/app/views/layouts/application.html.erb:13: `@' without identifiers is not allowed as an instance variable name
+/Users/flatironschool/Desktop/Flatiron/simon.gg/app/views/layouts/application.html.erb:13: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/layouts/application.html.erb:13: `@' without identifiers is not allowed as an instance variable name
+app/views/layouts/application.html.erb:13: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/summoners/53" for 127.0.0.1 at 2019-02-15 09:27:03 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"53"}
+  [1m[36mSummoner Load (0.6ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:48
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (53.3ms)
+Completed 200 OK in 6155ms (Views: 83.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/summoners/53" for 127.0.0.1 at 2019-02-15 09:32:49 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"53"}
+  [1m[36mSummoner Load (1.2ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:48
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 6319ms (Views: 61.4ms | ActiveRecord: 7.5ms)
+
+
+Started DELETE "/summoners/53" for 127.0.0.1 at 2019-02-15 09:32:57 -0500
+Processing by SummonersController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oomlSSS8ERwOU9AwgBMdcxb/UdY2/2WnJ7unbBna39tC5HFG+A+8iabBVK1LrykFU2/oOwYz1JNsvIo9vLEpWw==", "commit"=>"LOG OUT", "id"=>"53"}
+  [1m[36mSummoner Load (1.2ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:61
+  [1m[36mSummoner Destroy (1.8ms)[0m  [1m[31mDELETE FROM "summoners" WHERE "summoners"."id" = $1[0m  [["id", 53]]
+  ↳ app/controllers/summoners_controller.rb:62
+Redirected to http://localhost:3000/summoners/new
+Completed 302 Found in 7ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-15 09:32:57 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 26ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-15 09:33:10 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BvtjCgHc/tVT60zV8nWOyHDedWqNyLWinHtmfmP6LnbmlrcF3W9TQPt5yEg5ybq+NU7Mh70EBJbXfEsvxpHY9g==", "summoner"=>{"summoner_name"=>"simonoski"}, "commit"=>"Submit"}
+  [1m[36mSummoner Load (1.2ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."summoner_name" = $1 LIMIT $2[0m  [["summoner_name", "simonoski"], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[36mSummoner Create (0.7ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at", "acc_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["summoner_name", "simonoski"], ["created_at", "2019-02-15 14:33:11.261670"], ["updated_at", "2019-02-15 14:33:11.261670"], ["acc_id", "1cCK7viihBXuCkBV_EiXEY8pnqdFWD9MlKZM9XN7D-DLgNI"]]
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:12
+Redirected to http://localhost:3000/summoners/54
+Completed 302 Found in 534ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/summoners/54" for 127.0.0.1 at 2019-02-15 09:33:11 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"54"}
+  [1m[36mSummoner Load (0.5ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:48
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (61.1ms)
+Completed 200 OK in 6237ms (Views: 99.4ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/summoners/54" for 127.0.0.1 at 2019-02-15 09:33:18 -0500
+Processing by SummonersController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZgbCcFNDbatBfdusqej6/SkMmPKqnNsaOh7hHyiJde6GaxZ/j/DAPunvXzFiVM6LbJwhH5pQai5xGcxOjeKDbg==", "commit"=>"LOG OUT", "id"=>"54"}
+  [1m[36mSummoner Load (1.0ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:61
+  [1m[36mSummoner Destroy (1.4ms)[0m  [1m[31mDELETE FROM "summoners" WHERE "summoners"."id" = $1[0m  [["id", 54]]
+  ↳ app/controllers/summoners_controller.rb:62
+Redirected to http://localhost:3000/summoners/new
+Completed 302 Found in 6ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-15 09:33:18 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-15 09:33:47 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 53ms (Views: 48.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-15 09:34:46 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 58ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/summoners/54" for 127.0.0.1 at 2019-02-15 09:35:00 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"54"}
+  [1m[36mSummoner Load (0.6ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:48
+Completed 404 Not Found in 4ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Summoner with 'id'=54):
+  
+app/controllers/summoners_controller.rb:48:in `show'
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-15 09:36:13 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 44ms (Views: 38.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-15 09:36:15 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 38ms (Views: 31.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-15 09:36:20 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aDPIrS30WO0QzZUioFg0UU/FXEPqCYLRzIy7HRi/Be9JWO4SDCDN6Wg2QCVYr98ZwLnHy9NJgvqCXJvds3lIxw==", "summoner"=>{"summoner_name"=>"simonoski"}, "commit"=>"Submit"}
+  [1m[36mSummoner Load (1.1ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."summoner_name" = $1 LIMIT $2[0m  [["summoner_name", "simonoski"], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:8
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[36mSummoner Create (7.0ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at", "acc_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["summoner_name", "simonoski"], ["created_at", "2019-02-15 14:36:21.781164"], ["updated_at", "2019-02-15 14:36:21.781164"], ["acc_id", "1cCK7viihBXuCkBV_EiXEY8pnqdFWD9MlKZM9XN7D-DLgNI"]]
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:12
+Redirected to http://localhost:3000/summoners/55
+Completed 302 Found in 860ms (ActiveRecord: 10.1ms)
+
+
+Started GET "/summoners/55" for 127.0.0.1 at 2019-02-15 09:36:21 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"55"}
+  [1m[36mSummoner Load (1.0ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:48
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 6410ms (Views: 79.3ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/summoners/55" for 127.0.0.1 at 2019-02-15 09:36:34 -0500
+Processing by SummonersController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1AriJG2qk8+qrGpaSBSzORvzFFYHEMgnZqhqHTFings0ZzYrsRk+WgI+7seDqIdPXmOtuzfceRMtr0dMlAloiw==", "commit"=>"LOG OUT", "id"=>"55"}
+  [1m[36mSummoner Load (1.1ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:61
+  [1m[36mSummoner Destroy (1.8ms)[0m  [1m[31mDELETE FROM "summoners" WHERE "summoners"."id" = $1[0m  [["id", 55]]
+  ↳ app/controllers/summoners_controller.rb:62
+Redirected to http://localhost:3000/summoners/new
+Completed 302 Found in 7ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-15 09:36:34 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 26ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-15 09:36:46 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 29ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-15 09:36:47 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 72ms (Views: 66.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-15 09:36:48 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 61ms (Views: 53.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-15 09:37:20 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 112ms (Views: 106.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-15 09:37:28 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FuOfBpRozAXpwnJ9lLYEoF6hTOBDEqNsqjRGvQNpJM83iLm5tbxZAZE5p3psQe/o0d3XaHpSo0fk5GZ9qK9p5w==", "summoner"=>{"summoner_name"=>"sionoski"}, "commit"=>"Submit"}
+  [1m[36mSummoner Load (0.8ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."summoner_name" = $1 LIMIT $2[0m  [["summoner_name", "sionoski"], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:8
+Redirected to http://localhost:3000/summoners/new
+Completed 302 Found in 651ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-15 09:37:28 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 30ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/summoners" for 127.0.0.1 at 2019-02-15 09:37:32 -0500
+Processing by SummonersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RK2Lst3Ggu6lMTNnk2SrLaPjCpp7AsPn3lUQjPq1ho2kwF+9AXUvew2jt/pY2J9b5nOzd0vOctOVUj3dX95wDQ==", "summoner"=>{"summoner_name"=>"simonoski"}, "commit"=>"Submit"}
+  [1m[36mSummoner Load (0.5ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."summoner_name" = $1 LIMIT $2[0m  [["summoner_name", "simonoski"], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[36mSummoner Create (1.0ms)[0m  [1m[32mINSERT INTO "summoners" ("summoner_name", "created_at", "updated_at", "acc_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["summoner_name", "simonoski"], ["created_at", "2019-02-15 14:37:32.621905"], ["updated_at", "2019-02-15 14:37:32.621905"], ["acc_id", "1cCK7viihBXuCkBV_EiXEY8pnqdFWD9MlKZM9XN7D-DLgNI"]]
+  ↳ app/controllers/summoners_controller.rb:12
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summoners_controller.rb:12
+Redirected to http://localhost:3000/summoners/56
+Completed 302 Found in 432ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/summoners/56" for 127.0.0.1 at 2019-02-15 09:37:32 -0500
+Processing by SummonersController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mSummoner Load (0.5ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:48
+  Rendering summoners/show.html.erb within layouts/application
+  Rendered summoners/show.html.erb within layouts/application (43.6ms)
+Completed 200 OK in 5909ms (Views: 90.4ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/summoners/56" for 127.0.0.1 at 2019-02-15 09:37:46 -0500
+Processing by SummonersController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KvS/rA1nKUe9gE268G/HHgymX0iSOnEchUkhE29tjJXKmWuj0dSE0hUSySc70/NoSTbmpaL2wCjOTgxCygZ6FQ==", "commit"=>"LOG OUT", "id"=>"56"}
+  [1m[36mSummoner Load (0.3ms)[0m  [1m[34mSELECT  "summoners".* FROM "summoners" WHERE "summoners"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/summoners_controller.rb:61
+  [1m[36mSummoner Destroy (1.7ms)[0m  [1m[31mDELETE FROM "summoners" WHERE "summoners"."id" = $1[0m  [["id", 56]]
+  ↳ app/controllers/summoners_controller.rb:62
+Redirected to http://localhost:3000/summoners/new
+Completed 302 Found in 6ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/summoners/new" for 127.0.0.1 at 2019-02-15 09:37:46 -0500
+Processing by SummonersController#new as HTML
+  Rendering summoners/new.html.erb within layouts/application
+  Rendered summoners/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 32ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+=======
 Started GET "/summoners/35" for 127.0.0.1 at 2019-02-14 17:32:15 -0500
   [1m[35m (5.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/johnoncher/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
@@ -29627,6 +29919,7 @@ Processing by GamesController#show as HTML
   Rendering games/show.html.erb within layouts/application
   Rendered games/show.html.erb within layouts/application (1005.8ms)
 Completed 200 OK in 1848ms (Views: 1199.0ms | ActiveRecord: 1.4ms)
+>>>>>>> f33cdb1624d7bba8db268526265f83ede12a662a
 
 
 Started GET "/summoners/new" for 127.0.0.1 at 2019-02-15 09:29:14 -0500
