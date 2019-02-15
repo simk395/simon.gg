@@ -32,13 +32,14 @@ class SummonersController < ApplicationController
 
     def update
       @summoner = Summoner.find(params[:id])
+      @summoner[:summoner_name] = summoner_params
       profile = @summoner.league_profile
-      @summoner.acc_id = profile["accountId"]
       if profile != 404
-          @summoner.update(summoner_name: summoner_params)
+          @summoner[:acc_id] = profile["accountId"]
+          @summoner.save
           session[:summoner_id] = Summoner.find(params[:id])
-          session[:acc_id] = profile["accountId"]
-
+          # session[:acc_id] = profile["accountId"]
+        
           redirect_to summoner_path(session[:summoner_id])
       else
           redirect_to edit_summoner_path(@summoner)
@@ -51,7 +52,6 @@ class SummonersController < ApplicationController
       @account = @summoner.league_profile
       @profile = @summoner.acc_id
       @matches = @summoner.recent_10_games
-      byebug
       @game = Game.new
     end
 
@@ -61,8 +61,8 @@ class SummonersController < ApplicationController
 
     def destroy
       session.delete :summoner_id
-      @summoner = Summoner.find(params['id'])
-      @summoner.delete
+      # @summoner = Summoner.find(params['id'])
+      # @summoner.delete
       redirect_to new_summoner_path
     end
 

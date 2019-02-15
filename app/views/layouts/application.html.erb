@@ -19,7 +19,7 @@
     <%# link_to "LOG OUT", log_out_path %>
    <%# end%>
    <p class="summ-name"><%= @summoner.summoner_name %></p>
-   <% if !session[:summoner_id].nil? %>
+   <% if !session[:summoner_id].nil?%>
       <p class="logout">LOG OUT</p>
         <%= form_tag(summoner_path(session[:summoner_id]), method: :delete) do %>
           <%= submit_tag "LOG OUT", class: "logout-btn" %>
@@ -40,8 +40,8 @@
       <% end%>
       <% if request.env['PATH_INFO'] == homepage_path || request.env['PATH_INFO'] == new_summoner_path || request.env['PATH_INFO'] == game_path %>
       <% else %>
-        <% if request.env['PATH_INFO'] == summoner_path %>
-          <li><%= link_to "EDIT NAME", edit_summoner_path %></li>
+        <% if !session[:summoner_id].nil? %>
+          <li><%= link_to "CHANGE USER", edit_summoner_path %></li>
         <%end%>
         <% end%>
         <li><a href="#">RUN</a></li>
