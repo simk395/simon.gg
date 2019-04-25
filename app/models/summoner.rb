@@ -71,7 +71,6 @@ participantId"=>1
             Game.create(game: game)
         end
     end
-
 end
 
 #put name on nav bar

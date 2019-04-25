@@ -1,16 +1,21 @@
 require 'rest-client'
 
 class ApplicationRecord < ActiveRecord::Base
-  self.abstract_class = true
-  
-def key
-  "RGAPI-402efc5f-fe6a-4e68-b3df-2e3c7067ca15"
+self.abstract_class = true
+config_files = ['secrets.yml']
 
+    config_files.each do |file_name|
+      file_path = File.join(Rails.root, 'config', file_name)
+      config_keys = HashWithIndifferentAccess.new(YAML::load(IO.read(file_path)))[Rails.env]
+      config_keys.each do |k,v|
+        ENV[k.upcase] ||= v
+      end
+    end
+
+def key
+  ENV["API_KEY"]
 end
 
-# def get_profile
-#   RestClient.get("https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/#{self.summoner_name}?api_key=#{self.key}")
-# end
 
 def champions
     {"266" => "Aatrox", "103" => "Ahri","84"=>"Akali","12"=>"Alistar","32"=>"Amumu",

@@ -8,30 +8,37 @@
 
 
 <% 10.times do |i| %>
-      <% players_hash = {} %>
+  byebug
+  <% players_hash = {} %>
     <% @matches[index]["participantIdentities"].each do |player|  %>
-      <% if @summoner.summoner_name.downcase == player["player"]["summonerName"].downcase %>
-        <% person = player["participantId"]-1%>
-      <% end %> 
+    <% if @summoner.summoner_name.downcase == player["player"]["summonerName"].downcase %>
+      <% person = player["participantId"]-1%>
     <% end %>
-      <% if @matches[index]["teams"][0]["win"] == "Win" && person <= 4 %>
+    <% end %>
+    <% if person <= 4 %>
+      <% if @matches[index]["teams"][0]["win"] == "Win" %>
         <% players_hash["W/L"] = "Won" %>
       <% else %>
         <% players_hash["W/L"] = "Lost" %>
-      <% end %>
-    <% player_info = @matches[index]["participants"][person] %>
-    <% stats = player_info["stats"] %>
-    <% players_hash["kills"] = stats["kills"] %>
-    <% players_hash["deaths"] = stats["deaths"] %>
-    <% players_hash["assists"] = stats["assists"] %>
-    <% players_hash["championID"] = @matches[index]["participants"][person]["championId"] %>
-    <% players_hash["rank"] = @matches[index]["participants"][person]["highestAchievedSeasonTier"] %>
-    <% players_hash["matchTime"] = @matches[index]["gameDuration"]/60 %>
-    <% @stats_arr << players_hash %>
-<% index += 1 %>
+        <% end %>
+    <% else %>
+      <% if @matches[index]["teams"][1]["win"] == "Win" %>
+      <% players_hash["W/L"] = "Won" %>
+      <% else %>
+      <% players_hash["W/L"] = "Lost" %>
+    <% end %>
+  <% end %>
+  <% player_info = @matches[index]["participants"][person] %>
+  <% stats = player_info["stats"] %>
+  <% players_hash["kills"] = stats["kills"] %>
+  <% players_hash["deaths"] = stats["deaths"] %>
+  <% players_hash["assists"] = stats["assists"] %>
+  <% players_hash["championID"] = @matches[index]["participants"][person]["championId"] %>
+  <% players_hash["rank"] = @matches[index]["participants"][person]["highestAchievedSeasonTier"] %>
+  <% players_hash["matchTime"] = @matches[index]["gameDuration"]/60 %>
+  <% @stats_arr << players_hash %>
+  <% index += 1 %>
 <% end %>
-
-<!--spaces cause wrong champ icons-->
 
 <div class="container">
     <div class="profile-inner">
